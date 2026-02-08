@@ -1,0 +1,114 @@
+﻿l_english:
+
+USA_modify_stagnant_industry_dynamic_modifier_ns_intro:0 "Modify §Y$USA_stagnant_industry_dynamic_modifier$§! by"
+USA_new_deal_growth_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_infrastructure_factor$: §G+10.00%§!"
+USA_stagnant_industry_dynamic_modifier:0 "USA Industry"
+
+
+ USA_new_deal_growth_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §G-10.0%§! \n\n"
+ USA_new_deal_growth_3_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §G-5.0%§! \n\n"
+ USA_agricultural_adjustment_act_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_industrial_complex_factor$: §G+50.0%§! \n\n"
+ USA_tech_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_industrial_complex_factor$: §G+10.0%§! \n\n"
+ USA_tech_4_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_industrial_complex_factor$: §G+10.0%§! \n\n"
+ USA_side_with_big_business_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+5.0%§! \n\n"
+ USA_side_with_workers_union_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+5.0%§! \n\n"
+ USA_flint_strikes_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+10.0%§! \n\n"
+ USA_investigate_uranium_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §R+10.0%§! \n\n"
+ USA_fair_labour_standards_act_1_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_dockyard_factor$: §G+100.0%§! \n\n"
+ USA_fair_labour_standards_act_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_arms_factory_factor$: §G+100.0%§! \n\n"
+ USA_agricultural_adjustment_act_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_infrastructure_factor$: §R-70.00%§!"
+ USA_the_giant_wakes_1_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_dockyard_factor$: §G+70.0%§! \n\n"
+ USA_the_giant_wakes_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_production_speed_arms_factory_factor$: §G+70.0%§! \n\n"
+ USA_the_giant_wakes_3_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §G-50.0%§! \n\n"
+
+ USA_wartime_industry_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+10.00%§! \n £prod_eff Production Efficiency growth: §R-5.00%§!  \n\n"
+ USA_wartime_industry_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n Factory output: §G+10.00%§! \n Dockyard output: §G+10.00%§!  \n\n"
+ USA_wartime_production_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+10.00%§! \n £prod_eff Production Efficiency growth: §R-5.00%§!  \n\n"
+ USA_wartime_production_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+10.00%§! \n £prod_eff Production Efficiency growth: §R-5.00%§!  \n\n"
+ USA_wartime_production_3_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+10.00%§! \n £prod_eff Production Efficiency growth: §R-5.00%§!  \n\n"
+ USA_wartime_company_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n Factory output: §G+10.00%§! \n Dockyard output: §G+10.00%§!  \n\n"
+ USA_wartime_company_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n Factory output: §G+10.00%§! \n Dockyard output: §G+10.00%§!  \n\n"
+ USA_wartime_company_3_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n Factory output: §G+10.00%§! \n Dockyard output: §G+10.00%§!  \n\n"
+ USA_God_of_armaments_production_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+20.00%§! \n £prod_eff Production Efficiency growth: §R-10.00%§!  \n\n"
+ USA_God_of_output_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n Factory output: §G+20.00%§! \n Dockyard output: §G+20.00%§!  \n\n"
+
+
+
+
+ USA_Resource_3_tt:0 "Resource building construction speed + 15%"
+ USA_Resource_4_tt:0 "Resource building construction speed + 15%"
+ USA_rubber_reserve_company_tt:0 "Rubber Refinery construction speed -20%"
+ USA_race_for_rubber_tt:0 "Rubber Refinery construction speed -20%"
+
+ undisturbed_isolation:0 "What the fuck is a kilometer???"
+ USA_new_deal_2:0 "Government contracts for family"
+ USA_flint_strikes:0 "Military-industrial complex Act"
+ USA_side_with_big_business:0 "Invest in MIT"
+ USA_Resource_1:0 "Develop MIT"
+ USA_Resource_4:0 "Final round of funding for MIT"
+ USA_race_for_rubber:0 "Rubber lives matter"
+ USA_congress_campaign:0 "Insider trading act"
+ USA_balance_the_budget:0 "Jewish companies hired for infrastructure construction"
+ USA_deficit_spending:0 "Redirect welfare funding"
+ USA_construction_1:0 "Construction phase 1"
+ USA_construction_2:0 "Construction phase 2"
+ USA_construction_3:0 "Construction phase 3"
+ USA_construction_4:0 "Construction phase 4"
+ USA_construction_5:0 "Construction phase 5"
+ USA_construction_6:0 "Construction phase 6"
+ USA_construction_7:0 "Construction phase 7"
+ USA_construction_8:0 "Construction phase 8"
+ USA_construction_9:0 "Construction phase 9"
+ USA_construction_10:0 "Construction phase 10"
+ USA_construction_11:0 "Construction phase 11"
+ USA_construction_12:0 "Construction phase 12"
+ USA_MIT_gotu_bonus:0 "Invested MIT"
+ USA_MIT_gotu_bonus_2:0 "Developed MIT"
+ USA_MIT_gotu_bonus_3:0 "Final form MIT"
+ USA_Harvard_gotu_bonus:0 "Invested Harvard"
+ USA_Harvard_gotu_bonus_2:0 "Developed Harvard"
+ USA_Harvard_gotu_bonus_3:0 "Final form Harvard"
+ USA_Harvard:0 "Invest in Harvard"
+ USA_Harvard_2:0 "Develop Harvard"
+ USA_Harvard_3:0 "Final round of funding for Harward"
+ USA_General_electric:0 "Invest in GE"
+ USA_General_electric_2:0 "Develop GE"
+ USA_General_electric_3:0 "Final round of funding for GE"
+ USA_general_electric_gotu_bonus:0 "Invested GE"
+ USA_general_electric_gotu_bonus_2:0 "Developed GE"
+ USA_general_electric_gotu_bonus_3:0 "Final form GE"
+ USA_side_with_workers_union:0 "Los Alamos development"
+ USA_Ford_motor:0 "Invest in Ford"
+ USA_Ford_motor_2:0 "Develop Ford"
+ USA_Ford_motor_3:0 "Final round of funding for Ford"
+ USA_Ford_gotu_bonus:0 "Invested Ford"
+ USA_Ford_gotu_bonus_2:0 "Developed Ford"
+ USA_Ford_gotu_bonus_3:0 "Final form Ford"
+
+ USA_tech_2:0 "Civilian industry stimulus check"
+ USA_tech_4:0 "Civilian industry final funding"
+ USA_investigate_uranium:0 "Uranium weapon investigation funding"
+ USA_fair_labour_standards_act:0 "Kickstart the military industry"
+
+
+
+
+
+
+
+
+#USA_modify_stagnant_industry_dynamic_modifier_ns_intro:0 "Modify §Y$USA_stagnant_industry_dynamic_modifier$§! by"
+#USA_new_deal_growth_2_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n$modifier_consumer_goods_factor$: §G-10.00%§!"
+#USA_stagnant_industry_dynamic_modifier:0 "USA Industry"  expected_value EXPECTED_VALUE  USA_new_deal_growth_3_tt
+#		completion_reward = {
+#			add_tech_bonus = {
+#				name = SAF_q_services_corps
+#				bonus = 0.5
+#				uses = 2
+#				technology = motorised_infantry
+#				technology = tech_logistics_company
+#				technology = tech_logistics_company2
+#				technology = tech_logistics_company3
+#				technology = tech_logistics_company4
+#			}
+#		}
