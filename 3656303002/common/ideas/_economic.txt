@@ -276,14 +276,15 @@ ideas = {
 			level = 3
 
 			available = {
-					limit = {
-						OR = {
-							threat > 0.2 }
+					OR = {
+						limit = {
+							threat > 0.2 
 							has_government = fascism
 							has_government = communism
+							
 							}
 						}
-				
+				}
 				if = {
 					limit = {
 						original_tag = USA
@@ -1806,5 +1807,6 @@ ideas = {
 		}
 	}
 }
+
 
 
