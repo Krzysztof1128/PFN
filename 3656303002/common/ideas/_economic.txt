@@ -276,12 +276,9 @@ ideas = {
 			level = 3
 
 			available = {
-				if = {
 					limit = {
-						threat > 0.2 }
-				}
-				else = {
 						OR = {
+							threat > 0.2 }
 							has_government = fascism
 							has_government = communism
 							}
@@ -1809,4 +1806,5 @@ ideas = {
 		}
 	}
 }
+
 
