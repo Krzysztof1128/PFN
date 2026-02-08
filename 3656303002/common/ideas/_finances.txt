@@ -311,7 +311,7 @@ ideas = {
 				infantry_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
-				armor_technology= { 
+				armor = { 
 				build_cost_ic = -0.1 instant = yes
 				}
 			}

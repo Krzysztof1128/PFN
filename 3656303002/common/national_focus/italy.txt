@@ -599,12 +599,6 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			  1140	{ add_building_construction = {
-				    	type = supply_node
-				    	level = 1
-				    	instant_build = yes
-				    }
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -2820,7 +2814,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 				add_resource = {
@@ -2853,7 +2847,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2962,7 +2956,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -2981,7 +2975,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 4
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -3002,7 +2996,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3021,7 +3015,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3042,7 +3036,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3061,7 +3055,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3082,7 +3076,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3101,7 +3095,7 @@ focus_tree = {
 					add_extra_state_shared_building_slots = 3
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 				}
@@ -3112,7 +3106,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = industrial_bonus
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = industry
 			}
 		}
@@ -14820,7 +14814,7 @@ focus_tree = {
 	focus = {
 		id = ITA_albanian_occupation
 		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = ITA_foreign_affairs }
+		prerequisite = { focus = ITA_potential_allies_in_the_balkans focus = ITA_balkan_ambition }
 
 		x = -12
 		y = 1
@@ -14924,7 +14918,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = oil
-					amount = 6
+					amount = 2
 				}
 			}
 		}
@@ -23203,4 +23197,3 @@ focus = {
 }
 
 }
-
