@@ -282,19 +282,22 @@ ideas = {
 			available = {
 				if = {
 					limit = {
-						original_tag = USA
-						NOT = { has_completed_focus = USA_limited_intervention }
+						original_tag = HUN
+									{
+							has_completed_focus = wuw_HUN_secret_rearmament
+							NOT = { has_idea = HUN_treaty_of_triannon_wuw }
+									}
+							}
+
 					}
-					OR = {
-						has_war_support > 0.50
-						date > 1940.1.1
-						has_war_with = JAP
-						has_war_with = ENG
-					}
-				}
-				else = {
-					has_war_support > 0.25
-				}
+				
+				ELSE = {
+						OR = {
+						threat > 0.15
+						has_government = fascism
+						has_government = communism
+							 }
+						}
 
 				IF = {
 					limit = {
@@ -1802,3 +1805,4 @@ ideas = {
 		}
 	}
 }
+
