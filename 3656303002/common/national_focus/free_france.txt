@@ -49,10 +49,14 @@ focus_tree = {
 			else = {
 				add_manpower = 30000
 				add_legitimacy = 15
+				remove_ideas = { FRA_complacent_general_staff_0 }
+				remove_ideas = { FRA_complacent_general_staff_1 }
+				remove_ideas = { FRA_complacent_general_staff_2 }
+				remove_ideas = { FRA_complacent_general_staff_3 }
 				add_timed_idea = {
-                idea = FRA_ungabunga
-                days = 60
-            } 
+                	idea = FRA_ungabunga
+                	days = 60
+            					} 
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -67,6 +71,8 @@ focus_tree = {
 			}
 			complete_national_focus = UFRA_aggressive_focus
 		}
+
+
 	}
 	focus = {
 		id = FRA_appeal_to_overseas_territories
