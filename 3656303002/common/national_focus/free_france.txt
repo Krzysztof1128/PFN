@@ -1,4 +1,4 @@
-﻿focus_tree = {
+focus_tree = {
 	id = free_french_focus
 	
 	country = {
@@ -769,18 +769,6 @@
 			base = 1
 		}
 		available = {
-			OR = {
-				IF = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_legitimacy > 40
-				}
-				ELSE = {
-					num_of_factories > 14
-				}
-				has_war = no
-			}
 			
 		}
 		
@@ -791,7 +779,7 @@
 		
 		available_if_capitulated = yes
 		completion_reward = {
-			remove_ideas = { FRA_defeatism }
+			remove_ideas = { FRA_defeatism FRA_complacent_general_staff_0 FRA_complacent_general_staff_1 FRA_complacent_general_staff_2 FRA_complacent_general_staff_3 }
 		}
 	}
 	focus = {
