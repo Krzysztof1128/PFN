@@ -2239,7 +2239,7 @@ focus_tree = {
 
 			GER_add_or_modify_wehrwirtschaft = yes
 			add_to_variable = { 
-				GER_wehrwirtschaft_production_speed_synthetic_refinery_factor = 0.1
+				GER_wehrwirtschaft_production_speed_rubber_refinery_factor = 0.1
 				tooltip = production_speed_synthetic_refinery_factor_tt
 			}
 			add_to_variable = { 
