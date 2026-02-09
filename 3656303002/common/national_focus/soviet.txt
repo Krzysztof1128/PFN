@@ -6662,8 +6662,11 @@ focus_tree = {
 		cost = 1
 
 		available = {
+			OR = {
 			any_enemy_country = {
 				SOV_is_major_not_original_sov = yes
+				}
+			Date > 1941.9.16
 			}
 		}
 		
@@ -6687,9 +6690,18 @@ focus_tree = {
 			    show_unit_leaders_tooltip = SOV_pavel_rotmistrov
 				set_country_flag = SOV_early_new_generals_available_flag
 			}
+			IF = {
+				limit = {
+					AND = {
+						date > 1941.9.16
+						not = { has_war_with = GER }
+							}
+				}
+				add_ideas = {SOV_Well_developed_industry}
+				
+			}
 		}
 	}
-
 	focus = {
 		id = SOV_an_adaptable_army
 		icon = GFX_SOV_General_Winter
