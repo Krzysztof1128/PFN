@@ -397,7 +397,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			base = 1
@@ -558,7 +558,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 
@@ -622,7 +622,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 10
+		cost = 5
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -775,7 +775,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
 
@@ -838,7 +838,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_shift_to_armaments_production
-		cost = 10
+		cost = 5
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -886,7 +886,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 10
+		cost = 5
 
 		available = {
 			any_owned_state = {
@@ -2098,7 +2098,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_the_ussr_academy_of_sciences
-		cost = 5
+		cost = 2
 
 		available = {
 
@@ -2317,7 +2317,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_transpolar_flights
-		cost = 10
+		cost = 5
 
 		available = {
 			any_owned_state = {
@@ -2386,7 +2386,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_expand_the_aircraft_industry
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -2621,7 +2621,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_women_in_aviation
-		cost = 10
+		cost = 5
 
 		available = {
 			any_enemy_country = {
@@ -2768,7 +2768,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_increase_aircraft_production
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_long_range_aircraft }
 
@@ -2800,7 +2800,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_intensify_pilot_training_program
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_ground_support }
 
@@ -2833,7 +2833,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_ground_support
-		cost = 10
+		cost = 5
 
 		available = {
 			has_war = yes
@@ -4490,7 +4490,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 			if = {
@@ -4628,7 +4628,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -4657,7 +4657,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_superior_war_machines
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -4909,7 +4909,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -4970,7 +4970,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -6594,7 +6594,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 10
+		cost = 8
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -6618,7 +6618,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 8
 
 		select_effect = {
 			add_ideas = SOV_military_reorganization_ns
@@ -6659,7 +6659,7 @@ focus_tree = {
 		x = 3
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 5
+		cost = 1
 
 		available = {
 			any_enemy_country = {
@@ -6698,7 +6698,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -6853,7 +6853,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_lessons_of_war
-		cost = 10
+		cost = 5
 
 		available = {
 			any_owned_state = {
@@ -6929,7 +6929,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_lessons_of_war
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -7299,7 +7299,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 5
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_beaten_but_not_defeated }
 
@@ -7367,7 +7367,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = SOV_the_path_of_marxism_leninism
-		cost = 5
+		cost = 2
 
 		mutually_exclusive = { focus = SOV_the_right_opposition focus = SOV_the_left_opposition }
 
@@ -7597,7 +7597,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -7625,7 +7625,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_socialism_in_one_country
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -8242,7 +8242,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
-		cost = 10
+		cost = 5
 
 		available = {
 			has_country_flag = {
@@ -8789,7 +8789,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_great_commander
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -8818,7 +8818,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = SOV_stalins_cult_of_personality
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -8844,7 +8844,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_freedom_of_debate_unity_of_action
-		cost = 10
+		cost = 5
 
 		available = {
 			num_subjects > 0
@@ -12199,7 +12199,7 @@ focus_tree = {
 		}
 
 		relative_position_id = SOV_the_path_of_marxism_leninism
-		cost = 5
+		cost = 2
 
 		allow_branch = {
 			if = {
@@ -12260,7 +12260,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_addressing_internal_affairs
-		cost = 5
+		cost = 3
 
 		available = {
 
@@ -12374,7 +12374,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_positive_heroism
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -12627,7 +12627,7 @@ focus_tree = {
 		x = 9
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
-		cost = 6
+		cost = 3
 
 		allow_branch = {
 			if = {
@@ -12676,7 +12676,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_the_comintern
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			base = 1
@@ -12733,7 +12733,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_development_aid_for_eastern_allies
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			base = 1
@@ -12773,7 +12773,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_war_measures_in_the_east
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			base = 1
@@ -12850,7 +12850,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_the_comintern
-		cost = 6
+		cost = 3
 
 		ai_will_do = {
 			base = 1
@@ -14231,109 +14231,6 @@ focus_tree = {
 			add_named_threat = { threat = 1 name = SOV_claims_in_baltic }
 		}
 	}
-	focus = {
-		id = SOV_claims_in_baltic
-		icon = GFX_SOV_claims_in_baltic_ccp_2d_sov_compatibility
-		prerequisite = { focus = SOV_the_comintern }
-		x = 3
-		y = -1
-		relative_position_id = SOV_the_comintern
-		offset = {
-			x = 4
-			y = 2
-			trigger = {
-				has_global_flag = his_only
-			}
-		}
-		cost = 10
-
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_civil_war = yes
-					date < 1939.1.1
-				}
-			}	
-		}
-
-		mutually_exclusive = { focus = SOV_respect_baltic_self_determination }
-
-		available = {
-			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
-			is_subject = no
-			if = {
-				limit = {
-					OR = {
-						has_global_flag = his_only
-						
-					}
-				}
-				date > 1938.7.1
-			}
-		}
-
-		bypass = {
-			all_state = {
-				OR = {
-					is_core_of = EST
-					is_core_of = LAT
-					is_core_of = LIT
-				}
-				NOT = { state = 188 }
-				is_controlled_by = ROOT
-			}
-		}
-		
-		search_filters = {FOCUS_FILTER_ANNEXATION}
-
-		completion_reward = {
-			# Estonia
-			custom_effect_tooltip = SOV_estonian_claimed_states_tt
-			hidden_effect = {
-				EST = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
-			# Latvia
-			custom_effect_tooltip = SOV_latvian_claimed_states_tt
-			hidden_effect = {
-				LAT = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
-			# Lithuania
-			custom_effect_tooltip = SOV_lithuanian_claimed_states_tt
-			hidden_effect = {
-				LIT = {
-					every_owned_state = {
-						limit = {
-							is_core_of = PREV
-						}
-						ROOT = { add_state_claim = PREV }
-					}
-				}
-			}
-			#Activate targeted decisions
-			activate_targeted_decision = { target = EST decision = SOV_send_ultimatum_to_country_baltic }
-			activate_targeted_decision = { target = LAT decision = SOV_send_ultimatum_to_country_baltic }
-			activate_targeted_decision = { target = LIT decision = SOV_send_ultimatum_to_country_baltic }
-
-			add_named_threat = { threat = 1 name = SOV_claims_in_baltic }
-		}
-	}
-
 	focus = {
 		id = SOV_secure_leningrad
 		icon = GFX_focus_generic_attack_finland
