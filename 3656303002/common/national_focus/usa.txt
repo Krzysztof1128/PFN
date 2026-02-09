@@ -2020,7 +2020,7 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_norfolk_naval_yard_organization = {
+			mio:USA_electric_boat_company_organization = {
 				add_mio_funds_gain_factor = 0.4
 				}
 
@@ -2040,7 +2040,7 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_norfolk_naval_yard_organization = {
+			mio:USA_electric_boat_company_organization = {
 				add_mio_size = 2
 				}
 
@@ -2060,7 +2060,7 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_norfolk_naval_yard_organization = {
+			mio:USA_electric_boat_company_organization = {
 				add_mio_size = 2
 				}
 
@@ -2080,7 +2080,7 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_newport_news_shipbuilding_organization = {
+			mio:USA_douglas_aircraft_company_organization = {
 				add_mio_funds_gain_factor = 0.4
 				}
 
@@ -2100,7 +2100,7 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_newport_news_shipbuilding_organization = {
+			mio:USA_douglas_aircraft_company_organization = {
 				add_mio_size = 2
 				}
 
@@ -2120,7 +2120,7 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_newport_news_shipbuilding_organization = {
+			mio:USA_douglas_aircraft_company_organization = {
 				add_mio_size = 2
 				}
 
