@@ -1341,6 +1341,15 @@ country_event = {
 		GER = { country_event = france.14 }
 		custom_effect_tooltip = france.10.b_tt
 		set_country_flag = GER_dont_seize_gold_reserves_flag #Can't allow Germany to seize out gold reserves just yet
+		if = {
+		ITA = { transfer_state = 458 }
+		}
+		If = {
+		ITA = { transfer_state = 665 }
+		}
+		If = {
+		ITA = { transfer_state = 1 }
+		}
 	}
 }
 # France wants Armistice (Germany)
@@ -1422,8 +1431,6 @@ country_event = {
 		GER_set_consumer_goods_war_reparations = yes
 
 		# Italian Occupation Zone (if they did well)
-		ITA = { transfer_state = 458 }
-		ITA = { transfer_state = 665 }
 		if = { #if Italy did really well, they get an extra bonus state (but only if that doesn't lead to bordergore)
 			limit = {
 				AND = {
