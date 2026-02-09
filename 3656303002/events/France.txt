@@ -5,59 +5,6 @@
 add_namespace = qof
 add_namespace = france
 
-#Jean III
-country_event = {
-	id = qof.1
-	title = qof.1.t
-	desc = qof.1.d
-	picture = GFX_mort
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-
-	immediate = {
-		set_global_flag = achievement_france_surrender
-	}
-	 
-	option = { # Henri VI is the new king 
-	    name = FRA_qof.1.1.a
-		kill_country_leader = yes
-		add_stability = -0.30
-		hidden_effect = { country_event = {id = qof.2 days = 2 } }
-		
-	}
-}
-#Henri VI
-country_event = {
-	id = qof.2
-	title = qof.2.t
-	desc = qof.2.d
-	picture = GFX_garde_ligne
-	
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-
-	immediate = {
-		set_global_flag = achievement_france_surrender
-	}
-	 
-	option = { # Henri VI is the new king 
-	    name = FRA_qof.2.1.a
-		 
-		create_country_leader = {
-					name = "Henri VI"
-					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
-					picture = GFX_portrait_fra_henry_count_of_paris
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
-						count_of_paris
-					}
-		}
-	}
-}
 #Accident de train
 country_event = {
 	id = qof.3
@@ -214,10 +161,8 @@ country_event = {
 					active = yes
 				}
 			}
-		    ITA = { set_state_controller = 458 }
-			ITA = { set_state_controller = 665 }
-			ITA = { set_state_owner = 458 }
-			ITA = { set_state_owner = 665 }
+		ITA = { transfer_state = 458 }
+		ITA = { transfer_state = 665 }
 		    add_stability = -0.05
             custom_effect_tooltip = 1_FRA_tt			
     }
@@ -1146,24 +1091,6 @@ country_event = {
 			country_event = { days = 5 id = japan.6 }
 		}
 	}
-	option = { # Refuse
-		name = france.1.b
-		trigger = {
-			NOT = {
-				has_global_flag = his_only
-			}
-		}
-		ai_chance = { 
-			base = 25 
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
-		JAP = {
-			country_event = { days = 5 id = japan.7 }
-		}
-	}
 }
 
 # Maginot Line Extension
@@ -1405,17 +1332,6 @@ country_event = {
 		}
 	}
 	
-	option = { # Become Vichy
-		name = france.10.a
-		trigger = { is_ai = no }
-		set_country_flag = become_vichy
-		save_global_event_target_as = vichy_france
-		set_global_flag = fall_of_france
-		GER = { country_event = france.14 }
-		custom_effect_tooltip = france.10.a_tt
-		# Switches to Vichy if GER accepts
-		set_country_flag = GER_dont_seize_gold_reserves_flag #Can't allow Germany to seize out gold reserves just yet
-	}
 	option = { # Become Free French
 		name = france.10.b
 		ai_chance = {
@@ -1427,168 +1343,7 @@ country_event = {
 		custom_effect_tooltip = france.10.b_tt
 		set_country_flag = GER_dont_seize_gold_reserves_flag #Can't allow Germany to seize out gold reserves just yet
 	}
-	option = { # Ask for British Union
-		name = france.10.c
-		ai_chance = {
-			base = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		trigger = {
-			tag = FRA
-			is_in_faction_with = ENG
-			ENG = { has_war_with = GER }
-			NOT = {
-				OR = {
-					has_global_flag = his_only
-				}
-			}
-		}
-		ENG = {
-			country_event = france.11
-			effect_tooltip = {
-				annex_country = { target = FRA transfer_troops = yes }
-			}
-		}
-		custom_effect_tooltip = GAME_OVER_TT
-	}
-	option = { # decide to fight on
-		name = france.10.e
-		ai_chance = {
-			base = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		trigger = { 
-			has_war_support > 0.7 
-			NOT = {
-				OR = {
-					has_global_flag = his_only
-				}
-			}
-		}
-		add_stability = -0.05
-	}
 }
-
-# France suggests a Union (Britain)
-country_event = {
-	id = france.11
-	title = france.11.t
-	desc = france.11.d
-	picture = GFX_report_event_degaulle_churchill
-	
-	is_triggered_only = yes
-	
-	option = { # Refuse Union
-		name = france.11.a
-		ai_chance = {
-			base = 10
-		}
-		FRA = {
-			country_event = { hours = 6 id = france.13 }
-		}
-	}
-	option = { # Agree to Union
-		name = france.11.b
-		ai_chance = {
-			base = 90
-		}
-		FRA = {
-			country_event = { hours = 6 id = france.12 }
-		}
-	}
-}
-
-# Britain agrees to Union (France)
-country_event = {
-	id = france.12
-	title = france.12.t
-	desc = france.12.d
-	picture = GFX_report_event_chamberlain_announce
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = france.12.a
-		# Franco-British Union created
-		set_global_flag = fall_of_france
-		set_global_flag = flag_franco_british_union
-		hidden_effect = {
-			every_state = {
-				limit = {
-					is_core_of = FRA
-				}
-				ENG = {
-					add_state_core = PREV
-				}
-			}
-		}
-		FRA = {
-			every_unit_leader = {
-				set_unit_leader_flag = flag_former_french_general
-				set_nationality = ENG
-			}
-		}
-		ENG = {
-			annex_country = { target = FRA transfer_troops = yes }
-		}
-		custom_effect_tooltip = FRA_franco_british_cores
-		hidden_effect = {
-			ENG = { set_cosmetic_tag = FRA_UK }
-			GER = { 
-				country_event = { hours = 6 id = news.35 }
-			}
-		}
-	}
-}
-
-# Britain refuses Union (France)
-country_event = {
-	id = france.13
-	title = france.13.t
-	desc = france.13.d
-	picture = GFX_report_event_pierre_laval
-	
-	is_triggered_only = yes
-	
-	option = { # Become Vichy
-		name = france.13.a
-		trigger = { is_ai = no }
-		set_country_flag = become_vichy
-		set_global_flag = fall_of_france
-		save_global_event_target_as = vichy_france
-
-		GER = { country_event = france.14 }
-		custom_effect_tooltip = france.10.a_tt
-		# Switches to Vichy if GER accepts
-	}
-	option = { # Become Free France
-		name = france.13.b
-		GER = { country_event = france.14 }
-		save_global_event_target_as = free_france
-		custom_effect_tooltip = france.10.b_tt
-		set_global_flag = fall_of_france
-	}
-	option = { # decide to fight on
-		name = france.10.e
-		ai_chance = {
-			base = 15
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-			}
-		}
-		trigger = { has_war_support > 0.7 }
-		add_stability = -0.05
-		custom_effect_tooltip = france_continue_the_fight_tt
-	}
-}
-
 # France wants Armistice (Germany)
 country_event = {
 	id = france.14
@@ -1668,6 +1423,8 @@ country_event = {
 		GER_set_consumer_goods_war_reparations = yes
 
 		# Italian Occupation Zone (if they did well)
+		ITA = { transfer_state = 458 }
+		ITA = { transfer_state = 665 }
 		if = { #if Italy did really well, they get an extra bonus state (but only if that doesn't lead to bordergore)
 			limit = {
 				AND = {
@@ -1762,17 +1519,7 @@ country_event = {
 				set_state_controller = 20
 				set_state_controller = 33
 				#tunisia
-				if = {
-					limit = {
-						458 = {
-							owner = { original_tag = FRA }
-							controller = { 
-								original_tag = FRA
-							}
-						}
-					}
-					set_state_controller = 458
-				}
+				
 
 				#syria
 				if = {
@@ -1862,7 +1609,7 @@ country_event = {
 				ideology = fascism
 				size = 0.9
 				capital = 26
-				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 459 460 665 553 272 556 543 706 708 713 268 557 514 515 776 777 778 779 780 781 782 786 851 }
+				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 459 460 553 272 556 543 706 708 713 268 557 514 515 776 777 778 779 780 781 782 786 851 }
 				states_filter = {
 					owner = { original_tag = FRA }
 					OR = {		
@@ -2138,17 +1885,7 @@ country_event = {
 					set_state_controller = 33
 
 					#tunisia
-					if = {
-						limit = {
-							458 = {
-								owner = { original_tag = FRA }
-								controller = { 
-									original_tag = FRA
-								}
-							}
-						}
-						set_state_controller = 458
-					}					
+									
 
 					#syria
 					if = {
@@ -2238,7 +1975,7 @@ country_event = {
 				ideology = neutrality
 				size = 0.5
 				capital = 26
-				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 459 460 665 553 272 556 543 706 708 713 268 557 514 515 851 899 }
+				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 459 460  553 272 556 543 706 708 713 268 557 514 515 851 899 }
 				states_filter = {
 					owner = { original_tag = FRA }
 					OR = {		
@@ -2477,7 +2214,7 @@ country_event = {
 					annex_country = { target = COG }
 					annex_everything = COG
 					ITA { set_state_owner = 458 }
-					ITA { set_state_owner = 665 }
+					ITA { set_state_owner =  }
 					every_state = {
                             limit = {
                                 OR = {
@@ -3514,4 +3251,5 @@ news_event = {
 		}
 	}
 }
+
 
