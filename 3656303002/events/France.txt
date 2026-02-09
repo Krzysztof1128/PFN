@@ -1718,7 +1718,7 @@ country_event = {
 				AND = {
 					1 = { #Corsica
 						owner = { original_tag = FRA }
-						is_controlled_by = ITA
+						
 					}
 				}
 			}
@@ -2069,7 +2069,7 @@ country_event = {
 				AND = {
 					1 = { #Corsica
 						owner = { original_tag = FRA }
-						is_controlled_by = ITA
+						
 					}
 				}
 			}
@@ -2476,8 +2476,8 @@ country_event = {
 					}
 					annex_country = { target = COG }
 					annex_everything = COG
-					ITA {set_state_owner = 458}
-					ITA {set_state_owner = 665}
+					ITA { set_state_owner = 458 }
+					ITA { set_state_owner = 665 }
 					every_state = {
                             limit = {
                                 OR = {
@@ -3514,3 +3514,4 @@ news_event = {
 		}
 	}
 }
+
