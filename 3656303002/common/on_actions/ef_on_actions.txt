@@ -1205,7 +1205,6 @@ on_actions = {
 				limit = {
 					OR = {
 						has_global_flag = his_only
-						
 					}
 				}
 				set_global_flag = his_only
@@ -2686,6 +2685,15 @@ on_actions = {
 		}
 	}
 	on_startup = {
+		effect = { 
+			every_country = {
+				 add_timed_idea = {
+				idea = PFN_Produkcja
+				 days = 5
+				 }
+		}
+	}
+
 		effect = { # optimizasyon
 			every_country = {
 				limit = {
