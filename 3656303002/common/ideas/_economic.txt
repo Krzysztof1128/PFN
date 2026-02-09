@@ -578,9 +578,6 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.2
 				production_speed_arms_factory_factor = 0.2
-				production_speed_industrial_complex_factor = -0.1
-
-				production_speed_dockyard_factor = 0.05
 				production_speed_anti_air_building_factor = 0.05
 				production_speed_coastal_bunker_factor = 0.05
 				production_speed_bunker_factor = 0.05
@@ -843,10 +840,9 @@ ideas = {
 				consumer_goods_expected_value = 0.10
 				conscription = -0.02
 				production_speed_arms_factory_factor = 0.3
-				production_speed_industrial_complex_factor = -0.2
+				
 
 				production_speed_air_base_factor = 0.075
-				production_speed_dockyard_factor = 0.075
 				production_speed_anti_air_building_factor = 0.075
 				production_speed_coastal_bunker_factor = 0.075
 				production_speed_bunker_factor = 0.075
@@ -886,12 +882,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.15
+				consumer_goods_expected_value = 0.05
 				conscription = -0.02
-				production_speed_arms_factory_factor = 0.2
-				production_speed_dockyard_factor = 0.2
-				production_speed_industrial_complex_factor = -0.15
-
+				production_speed_arms_factory_factor = 0.4
 				production_speed_anti_air_building_factor = 0.05
 				production_speed_coastal_bunker_factor = 0.05
 				production_speed_bunker_factor = 0.05
@@ -942,11 +935,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.15
-				production_speed_arms_factory_factor = 0.3
-				production_speed_industrial_complex_factor = -0.1
+				consumer_goods_expected_value = 0.05
+				production_speed_arms_factory_factor = 0.4
 				production_speed_air_base_factor = 0.075
-				production_speed_dockyard_factor = 0.075
 				production_speed_anti_air_building_factor = 0.075
 				production_speed_coastal_bunker_factor = 0.075
 				production_speed_bunker_factor = 0.075
@@ -1068,7 +1059,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_expected_value = 0.15
-				production_speed_industrial_complex_factor = -0.1
+				
 				global_building_slots_factor = 0.1
 				factory_energy_consumption = 0.3
 				war_support_factor = 0.1
@@ -1077,7 +1068,6 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_arms_factory_factor = 0.2
-				production_speed_dockyard_factor = 0.2
 			}
 
 			cancel_if_invalid = no
@@ -1540,7 +1530,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				min_export = 0.15
+				min_export = 0.35
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
