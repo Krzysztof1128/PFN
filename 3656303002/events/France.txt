@@ -161,8 +161,7 @@ country_event = {
 					active = yes
 				}
 			}
-		ITA = { transfer_state = 458 }
-		ITA = { transfer_state = 665 }
+
 		    add_stability = -0.05
             custom_effect_tooltip = 1_FRA_tt			
     }
@@ -1885,7 +1884,8 @@ country_event = {
 					set_state_controller = 33
 
 					#tunisia
-									
+		ITA = { transfer_state = 458 }
+		ITA = { transfer_state = 665 }				
 
 					#syria
 					if = {
@@ -3251,5 +3251,6 @@ news_event = {
 		}
 	}
 }
+
 
 
