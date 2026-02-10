@@ -91,7 +91,7 @@ NDefines.NAir.COMBAT_BETTER_SPEED_DAMAGE_INCREASE = 0.45 		-- How much the bette
 NDefines.NDiplomacy.PEACE_TIMED_EFFECT_LENGTH_WAR_REPARATION = 10
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0
-NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 300
+NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 30
 
 --Doctrines
 
@@ -169,9 +169,9 @@ NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0.0
 	NDefines.NNavy.MIN_GUN_COOLDOWN = 0.1											-- minimum cooldown for a gun
 	
 --Positioning--
-	NDefines.NNavy.BASE_POSITIONING												= 0.75	-- base value for positioning
-	NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR					= 0.5 -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
-	NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO				= 4.0  -- maximum penalty to get from larger fleets
+	NDefines.NNavy.BASE_POSITIONING												= 1.0	-- base value for positioning
+	NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR					= 0.25 -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
+	NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO				= 1.0  -- maximum penalty to get from larger fleets
 	MIN_SHIPS_FOR_HIGHER_SHIP_RATIO_PENALTY                        				= 4    -- the minimum fleet size in ships that a fleet must be before having the large fleet penalty applied to them
 	NDefines.NNavy.HIGHER_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR				= 0.2  -- penalty if other side has stronger carrier air force
 	NDefines.NNavy.MAX_CARRIER_RATIO_POSITIONING_PENALTY_FACTOR 				= 0.2  -- max penalty from stronger carrier air force
@@ -179,9 +179,9 @@ NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0.0
 	NDefines.NNavy.MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS 				= 2.0  -- the accumulated penalty from new ships will be clamped to this value
 	NDefines.NNavy.POSITIONING_PENALTY_HOURLY_DECAY_FOR_NEWLY_JOINED_SHIPS		= 0.05 -- the accumulated penalty from new ships will decay hourly by this value
 	
-	NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING 						= 0.8	-- damage penalty at 0% positioning
-	NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING			= 0.8  -- screening efficiency (screen to capital ratio) at 0% positioning
-	NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING					= 0.8  -- AA penalty at 0% positioning
+	NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING 						= 0.5	-- damage penalty at 0% positioning
+	NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING			= 0.5  -- screening efficiency (screen to capital ratio) at 0% positioning
+	NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING					= 0.7  -- AA penalty at 0% positioning
 	NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO									= 0.35	-- total sum of fleet's anti air will be multiplied with this ratio and added to calculations anti-air of individual ships while air damage reduction
 	--Screening-
 	NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS 				= 4.0	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
@@ -243,14 +243,15 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready a
 		2.5,
 		1.8,
 		1.0,
+		0.8,
+		0.8,
+		0.7,
 		0.6,
+		0.5,
 		0.4,
-		0.25,
-		0.15,
+		0.3,
+		0.2,
 		0.1,
-		0.05,
-		0.02,
-		0.01,
-		0.0,
 	}
+
 							
