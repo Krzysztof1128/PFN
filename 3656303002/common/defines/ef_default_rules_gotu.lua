@@ -6,7 +6,8 @@ NDefines.NProduction.MAX_CIV_FACTORIES_PER_LINE = 12	-- Max number of factories 
 NDefines.NProduction.BASE_COUNTRY_ENERGY_PRODUCTION = 30.0 			-- The base energy production of a country
 NDefines.NProduction.BASE_FACTORY_SPEED = 4 					-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
 NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 3 				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
-
+NDefines.NProduction.BASE_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.2       -- Fraction of the hull industry cost which is always included in the refitting cost.
+NDefines.NProduction.BASE_LAND_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.2        -- Fraction of the chassis industry cost which is always included in the conversion cost.
 --Tech
 NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 20.0		-- Base amount of research points a country can save per slot.
 
@@ -107,6 +108,15 @@ NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0.0
 
 --Krzysztof--
 	--Ogólne--
+
+	NDefines.NNavy.NAVAL_COMBAT_PLANE_MIN_STACKING_PENALTY = 400                        -- How many planes flying in a naval combat before penalties are introduced
+    NDefines.NNavy.NAVAL_COMBAT_PLANE_STACKING_PENALTY_EFFECT = 0.005                    -- Each plane above the optimal amount decreases the amount of airplanes being able to takeoff by such %. Subject to diminishing returns
+    NDefines.NNavy.SHIP_SILHOUETTE_VALUE_PLANES_CAPITAL = 10                        -- For dynamic plane efficacy, silhouette value (nominally in planes, but very abstract)
+    NDefines.NNavy.SHIP_SILHOUETTE_VALUE_PLANES_SCREEN = 5                        -- As Above. This one would be nice to split by type, but that's problematic.
+    NDefines.NNavy.SHIP_SILHOUETTE_VALUE_PLANES_CARRIER = 16                        -- As Above
+    NDefines.NNavy.SHIP_SILHOUETTE_VALUE_PLANES_SUPPORT = 3                        -- As Above
+    NDefines.NNavy.SHIP_SILHOUETTE_VALUE_PLANES_CONVOY = 4                        -- As Above
+    NDefines.NNavy.SHIP_SILHOUETTE_VALUE_PLANES_SUBMARINE = 7                        -- As Above
 	NDefines.NAir.CARRIER_COMBAT_DAMAGE_STATS_MULTIPLIER = 0.5
 	NDefines.NNavy.COMBAT_DAMAGE_TO_STR_FACTOR = 0.6								-- casting damage value to ship strength multiplier. Use it ot balance the game difficulty.
 	NDefines.NNavy.COMBAT_DAMAGE_TO_ORG_FACTOR = 1.0							-- casting damage value to ship organisation multiplier. Use it to balance the game difficulty.
@@ -176,7 +186,7 @@ NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0.0
 	--Screening-
 	NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS 				= 4.0	-- this screen ratio to num capital/carriers is needed for full screening beyond screen line
 	NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS 					= 0.5	-- this screen ratio to num convoys is needed for full screening beyond screen line
-	NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CARRIERS 				= 2.0  -- this capital ratio to num carriers is needed for full screening beyond screen line
+	NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CARRIERS 				= 4.0  -- this capital ratio to num carriers is needed for full screening beyond screen line
 	NDefines.NNavy.CAPITAL_RATIO_FOR_FULL_SCREENING_FOR_CONVOYS 				= 0.25  -- this capital ratio to num convoys is needed for full screening beyond screen line
 	
 	--HIT PROFILES--
