@@ -1,0 +1,165 @@
+on_actions = {
+	on_startup = {
+		effect = {
+		# EQ Equipment
+
+			CHI = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 100000
+				}
+			}
+			FRA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 8000
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 1200
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 2500
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 480
+					producer = FRA
+					variant_name = "FT mod. 31"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_0
+					amount = 480
+					producer = FRA
+					variant_name = "FT Char Cannon"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 240
+					producer = FRA
+					variant_name = "H-35"
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 82
+				}
+				
+			}
+			SAF = {
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 15
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 15000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 1200
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 1000
+				}
+			}
+			SOV = {
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 250
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 30000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 3000
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 3000
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 1500
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 1300
+					producer = SOV
+					variant_name = "T-26TU mod. 1933"
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 1800
+					producer = SOV
+					variant_name = "BT-5"
+				}
+			}
+			RAJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_0
+					amount = 20000
+				}
+			}
+			CAN = {
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 15
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 15000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 1200
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 1000
+				}
+			}
+			GER = {
+				add_equipment_to_stockpile = {
+					type = medium_plane_airframe_1
+					amount = 1200
+					creator = GER
+					version_name = "He 111"
+				}
+				add_equipment_to_stockpile = {
+					type = train_equipment_1
+					amount = 45
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 24900
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 1500
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_0
+					amount = 0
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment_1
+					amount = 1500
+				}
+				add_equipment_to_stockpile = {
+					type = anti_air_equipment_1
+					amount = 1500
+				}
+				add_equipment_to_stockpile = {
+					type = light_tank_chassis_1
+					amount = 720
+					producer = GER
+					variant_name = "Panzer I Ausf. A"
+				}
+			}	
+		}
+	}
+}
+}
