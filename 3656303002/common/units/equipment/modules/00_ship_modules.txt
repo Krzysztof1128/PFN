@@ -400,7 +400,7 @@ equipment_modules = {
 			build_cost_ic = 4000
 		}
 		build_cost_resources = {
-			steel = 1
+			steel = 3
 			chromium = 1
 		}
 		multiply_stats = {
@@ -3087,4 +3087,5 @@ equipment_modules = {
 		dismantle_cost_ic = 4000
 	}		
 }
+
 
