@@ -17,9 +17,107 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.6
 			}
 		}
-		
+		PFN_Vols_6 = {
+			allowed = {
+				always = no 	
+			}
 
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				send_volunteer_size = 6
+			}
 		}
+			PFN_Vols_6_GER = {
+			allowed = {
+				always = no 	
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				send_volunteer_size = 6
+				air_volunteer_cap = 17
+			}
+		}
+		PFN_Vols_6_ITA = {
+			allowed = {
+				always = no 	
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				send_volunteer_size = 6
+				air_volunteer_cap = 13
+			}
+		}
+		PFN_Vols_6_JAP = {
+			allowed = {
+				always = no 	
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				send_volunteer_size = 6
+				air_volunteer_cap = 12
+			}
+		}
+		PFN_Vols_3 = {
+			allowed = {
+				always = no 	
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				send_volunteer_size = 3
+			}
+		}
+		PFN_Vols_1 = {
+			allowed = {
+				always = no 	
+			}
+
+			allowed_civil_war = {
+				always = yes 
+			}
+
+			removal_cost = -1 
+
+			modifier = {
+				send_volunteer_size = 1
+			}
+		}
+		PFN_Vols_0 = {
+			 modifier = {
+				send_volunteer_size = -1
+				air_volunteer_cap = -10
+			}
+		}
+
+		
 		
 		EUYL_south_american_dreadnought_race = {
 			picture = EUYL_south_american_dreadnought_race
@@ -211,7 +309,7 @@ ideas = {
 			removal_cost = -1
 			modifier = { production_factory_efficiency_gain_factor = 0.05
 			}
-
+		}
 #		sp_multi_charge_large_caliber_gun_small_size_ns = { #MM: Used for Small version of V-3 SP. Uncomment if Code Support gets implemented 
 #			allowed = {
 #				always = no
@@ -227,7 +325,7 @@ ideas = {
 #				production_speed_mega_gun_emplacement_factor = 0.5
 #			}
 #		}
-	}
+	
 
 	# Special ones that can be applied on other countries through focus system.
 	country = {
@@ -3022,4 +3120,5 @@ ideas = {
 		}
 	}
 
+}
 }

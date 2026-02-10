@@ -2252,6 +2252,29 @@ ideas = {
 				justify_war_goal_time = -0.25
 			}
 		}
+		FRA_furia_francese = {
+			picture = generic_victors_of_ww1
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				special_forces_cap = 0.03
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+				experience_loss_factor = -0.10
+				breakthrough_factor = 0.05
+				no_supply_grace = 48
+
+
+			}
+		}
 
 		FRA_factory_strikes = {
 			picture = generic_production_bonus

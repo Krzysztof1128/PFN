@@ -4350,6 +4350,23 @@ country_event = {
 			base = 100
 		}
 		effect_tooltip = { FRA = { FRA_transfer_syria_effect = yes } }
+				SYR = { every_core_state ={
+			transfer_state_to = FRA
+		}}
+		every_state = {
+        limit = {
+        owner = FRA
+        is_core_of = SYR
+        }
+        add_compliance = 100
+		}
+		every_state = {
+        limit = {
+        owner = FRA
+        is_core_of = LEB
+        }
+        add_compliance = 100
+		}
 	}
 }
 
@@ -4386,6 +4403,17 @@ country_event = {
 			base = 100
 		}
 		effect_tooltip = { FRA = { FRA_transfer_western_africa_effect = yes } }
+		COG = { every_core_state ={
+			transfer_state_to = FRA
+		}}
+		effect_tooltip = { FRA = { FRA_transfer_western_africa_effect = yes } }
+		RWA = { every_core_state ={
+			transfer_state_to = FRA
+		}}
+		effect_tooltip = { FRA = { FRA_transfer_western_africa_effect = yes } }
+		BRD = { every_core_state ={
+			transfer_state_to = FRA
+		}}
 	}
 }
 

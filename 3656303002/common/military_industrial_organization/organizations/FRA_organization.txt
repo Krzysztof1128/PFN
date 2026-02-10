@@ -181,17 +181,6 @@ FRA_amx_organization = {
 	}
 	available = {
 		IF = {
-			limit = {
-				FROM = { original_tag = FRA } 
-			}
-			FROM = { 
-				OR = { 
-			has_completed_focus = UFRA_form_the_state_arsenals
-			has_completed_focus = UFRA_furia_francese
-			 } 
-			}
-		}
-		IF = {
 			limit = { 
 			FROM = { 
 			original_tag = CAN 

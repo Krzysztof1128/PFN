@@ -7042,19 +7042,7 @@ shared_focus = {
 			remove_idea = special_forces
 			add_idea = FRA_furia_francese
 		}
-		IF = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = FRA_amx_organization
-
-			mio:FRA_amx_organization = {
-				add_mio_size = 1
-			}
 	}
-}
 }
 
 shared_focus = {

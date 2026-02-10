@@ -1889,10 +1889,7 @@ country_event = {
 					set_state_controller = 25
 					set_state_controller = 20
 					set_state_controller = 33
-
-					#tunisia
-		ITA = { transfer_state = 458 }
-		ITA = { transfer_state = 665 }				
+			
 
 					#syria
 					if = {

@@ -88,7 +88,9 @@ NDefines.NAir.COMBAT_BETTER_SPEED_DAMAGE_INCREASE = 0.45 		-- How much the bette
 --Diplomacy
 
 NDefines.NDiplomacy.PEACE_TIMED_EFFECT_LENGTH_WAR_REPARATION = 10
-
+NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0
+NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0
+NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 300
 
 --Doctrines
 
@@ -98,7 +100,9 @@ NDefines.NDoctrines.MAX_MONTHLY_MASTERY_GAIN = 100.0                        -- M
 NDefines.NDoctrines.MIN_MASTERY_GAIN_PER_DAY = 0.1                         -- If we have any mastery gain, it will be boosted to be at least this much per day (lower cap)
 NDefines.NDoctrines.MASTERY_BANK_MAX = 300.0                              -- The maximum amount of mastery that can be banked
 
-
+--Countries
+NDefines.NCountry.AIR_VOLUNTEER_BASES_CAPACITY_LIMIT = 0.0
+NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0.0
 
 
 --Krzysztof--

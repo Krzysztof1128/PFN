@@ -8733,7 +8733,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GER_remilitarize_the_rhineland
 
-		cost = 3
+		cost = 2
 
 		available = {
 			if = {
