@@ -2751,7 +2751,7 @@ on_actions = {
 				 days = 5
 				 }
 		}
-	}
+		}
 
 		effect = { # optimizasyon
 			every_country = {

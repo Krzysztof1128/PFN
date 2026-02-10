@@ -556,6 +556,51 @@ PFN_JAP_categories = {
 	}
 	}
 }
+################################# SPR #################################
 
+PFN_SPR_categories = {
 
+	SPR_END_WAR = {
+	
+	icon = ger_mefo_bills
+	
+	available = {
+		surrender_progress > 0.70
+		fascism > 0.25
+		}
+	fire_only_once = yes
+	
+	days_re_enable = 1000
+	
+	visible = {
+	}
+	
+	ai_will_do = { base = 2000000 }
 
+	cost = 0
+	
+		complete_effect = {
+		SPR = {
+        annex_country = {
+            target = D01
+            transfer_troops = yes
+        	}
+		}
+        every_state = {
+        limit = {
+            owner = SPR
+            is_core_of = D01
+        }
+        add_compliance = 100
+		}
+		SOV = {
+			add_ideas = { SOV_WIN }
+			army_expirence = 150 
+			}
+		
+		set_global_flag = scw_over
+		}
+	}
+}
+
+	

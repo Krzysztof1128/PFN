@@ -23,6 +23,17 @@ ideas = {
 				production_speed_arms_factory_factor = 0.2
 			}
 		}
+		SOV_WIN = {
+        	name = SOV_WIN
+
+			removal_cost = -1
+
+			avaliable = { }
+			
+			modifier = {
+				consumer_goods_expected_value = -0.05
+			}
+		}
 
 		SOV_intel = {
 

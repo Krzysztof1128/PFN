@@ -102,4 +102,13 @@ PFN_JAP_categories = {
 	}
 }
 
+PFN_SPR_categories = {
+	priority = 1000
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = SPR
+	}
+	visible = {
+	}
+}
 
