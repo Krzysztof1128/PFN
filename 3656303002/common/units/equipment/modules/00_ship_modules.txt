@@ -397,7 +397,7 @@ equipment_modules = {
 		
 		add_stats = {
 			hg_attack = 27
-			build_cost_ic = 2000
+			build_cost_ic = 4000
 		}
 		build_cost_resources = {
 			steel = 1
@@ -2899,7 +2899,7 @@ equipment_modules = {
 		gfx = ship_armor_thick_3
 		
 		multiply_stats = {
-			build_cost_ic = 0.30
+			build_cost_ic = 0.50
 			naval_speed = -0.12
 			max_strength = 0.1
 		}
@@ -2908,7 +2908,7 @@ equipment_modules = {
 			chromium = 1
 		}
 		add_stats = {
-			armor_value = 55
+			armor_value = 45
 			naval_torpedo_enemy_critical_chance_factor = -0.25
 			naval_torpedo_damage_reduction_factor = 0.15
 		}
@@ -3087,3 +3087,4 @@ equipment_modules = {
 		dismantle_cost_ic = 4000
 	}		
 }
+
