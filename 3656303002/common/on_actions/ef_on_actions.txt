@@ -2698,6 +2698,22 @@ on_actions = {
 	}
 	on_startup = {
 		effect = {
+			AFG = {
+				add_ideas = free_trade
+				add_ideas = finances_resources
+				add_ideas = nationalization_capital
+				add_ideas = r56i_laws_social_normal
+			}
+			ATC = {
+				add_ideas = free_trade
+				add_ideas = finances_resources
+				add_ideas = nationalization_capital
+				add_ideas = r56i_laws_social_normal
+
+			}
+			
+		}
+		effect = {
 			SOV = {
 			add_ideas = { PFN_Vols_6 }
 			}

@@ -40,7 +40,11 @@ ideas = {
 		finances_resources = {
 
 			available = {
+				OR = {
 				NOT = { has_idea = tot_economic_mobilisation }
+				tag = SPR 
+				}
+
 			}
 			
 			modifier = {
@@ -57,7 +61,7 @@ ideas = {
 			
 			
 			ai_will_do = {
-				base = 0
+   				base = 1000000
    			}
 		}
 		

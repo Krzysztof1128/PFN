@@ -123,10 +123,8 @@ ideas = {
 		    available = {
 				NOT = {
 					has_government = communism
-					AND = {
-					tag = SPR
 					NOT = { is_ai = yes }
-					}
+					
 				}
 			}
 			
@@ -152,6 +150,8 @@ ideas = {
 		    available = {
 				OR = {
 				tag = SPR
+				tag = AFG
+				tag = ATC
 				NOT = {
 				    OR = { 
 					    has_government = communism
@@ -170,23 +170,8 @@ ideas = {
 			cost = 100
 			
 
-			ai_will_do = { #suanlık bunu bazı durumlarda alcak bise eklemedim onu yerine state capitalism alıcak
-   				base = 0
-				modifier = {
-					is_major = yes
-					OR = { 
-						check_variable = {
-							resource_produced@steel > 200
-						}
-						check_variable = {
-							resource_produced@aluminium > 200
-						}
-						check_variable = {
-							resource_produced@tungsten > 200
-						}
-					}
-					add = 75
-				}
+			ai_will_do = {
+   				base = 10000000
    			}
 		}
 

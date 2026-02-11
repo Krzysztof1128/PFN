@@ -4340,7 +4340,7 @@ focus_tree = {
 				}
 			}
 		}
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			base = 1
 			modifier = {
@@ -4422,7 +4422,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = uk_empire_focus
-		cost = 8
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -9804,7 +9804,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 9
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -9919,7 +9919,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = uk_india_focus
-		cost = 8
+		cost = 1
 
 		available_if_capitulated = yes
 
@@ -9996,7 +9996,7 @@ focus_tree = {
 			}
 		}
 		relative_position_id = uk_support_education_in_india
-		cost = 8
+		cost = 5
 
 		available_if_capitulated = yes
 
@@ -10072,7 +10072,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 9
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -10267,7 +10267,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = uk_australia_focus
-		cost = 9
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -10462,7 +10462,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 9
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -10705,7 +10705,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = uk_commonwealth_focus
-		cost = 9
+		cost = 2
 
 		available_if_capitulated = yes
 
@@ -10882,7 +10882,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = uk_support_education_in_india
-		cost = 8
+		cost = 5
 		ai_will_do = {
 			base = 1
 			#modifier = {

@@ -5774,6 +5774,8 @@ focus_tree = {
 			add_ideas = {SPA_Volsy}
 			add_ideas = {free_trade}
 			add_ideas = {nationalization_capital}
+			add_ideas = {finances_resources}
+			add_ideas = {r56i_laws_social_normal}
 
 			set_party_name = { ideology = fascism long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
 			set_party_name = { ideology = neutrality long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
