@@ -91,7 +91,7 @@ NDefines.NAir.COMBAT_BETTER_SPEED_DAMAGE_INCREASE = 0.45 		-- How much the bette
 NDefines.NDiplomacy.PEACE_TIMED_EFFECT_LENGTH_WAR_REPARATION = 10
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0
-NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 30
+NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 0
 
 --Doctrines
 
@@ -255,3 +255,4 @@ NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready a
 	}
 
 							
+
