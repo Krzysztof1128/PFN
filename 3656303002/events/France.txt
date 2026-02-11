@@ -2210,10 +2210,10 @@ country_event = {
 					transfer_units_fraction = {
 						target = event_target:vichy_france
 						size = 0
-						stockpile_ratio = 0
-						army_ratio = 0
+						stockpile_ratio = 1
+						army_ratio = 1
 						navy_ratio = 0
-						air_ratio = 0
+						air_ratio = 1
 					}
 					annex_country = { target = COG }
 					annex_everything = COG
