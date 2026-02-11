@@ -5746,7 +5746,7 @@ focus_tree = {
 		id = USA_iowa_class_battleships
 		icon = GFX_focus_generic_navy_battleship3alt
 		prerequisite = { focus = USA_battleship_primacy }
-		x = 3
+		x = 1
 		y = 1
 		relative_position_id = USA_battleship_primacy
 		cost = 10
@@ -5826,43 +5826,28 @@ focus_tree = {
 	}
 
 	focus = {
-		id = USA_advanced_mahanian_doctrine
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = USA_battleship_primacy }
-		x = 1
-		y = 1
-		relative_position_id = USA_battleship_primacy
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+        id = USA_Advanced_submarine_doctrine
+        icon = GFX_goal_generic_navy_doctrines_tactics
+        prerequisite = { focus = USA_unrestricted_submarine_warfare }
+        x = 0
+        y = 1
+        relative_position_id = USA_unrestricted_submarine_warfare
+        cost = 10
+        #ai_will_do = {
+        #    factor = 1
+        #}
 
-		available_if_capitulated = yes
+        available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
-		completion_reward = {
-			
-			add_mastery_bonus = {
-				name = USA_advanced_mahanian_doctrine
-				bonus = 0.1
-				days = 180
-				grand_doctrine = new_base_strike
-			}
+        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
+        completion_reward = {
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			random_navy_leader = {
-				limit = {
-					NOT = {
-						is_character = USA_ernest_king
-						is_character = USA_william_halsey_jr
-					}
-					NOT = { has_trait = battleship_adherent }
-				}
-				add_trait = { trait = battleship_adherent }
-			}
-		}
-	}
+            custom_effect_tooltip = generic_skip_one_line_tt
+            USA_ernest_king = {
+                add_trait = { trait = seawolf }
+            }
+        }
+    }
 
 	focus = {
 		id = USA_improved_high_velocity_naval_guns
@@ -5951,48 +5936,11 @@ focus_tree = {
 				tooltip = naval_coordination_tt 
 			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:USA_newport_news_shipbuilding_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.1
-					add_mio_research_bonus = 0.05
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			random_navy_leader = {
-				limit = {
-					NOT = {
-						is_character = USA_frank_jack_fletcher
-					}
-					OR = {
-						NOT = { has_trait = air_controller }
-						AND = {
-							has_trait = air_controller
-							NOT = { has_trait = flight_deck_manager }
-						}
-					}
-				}
-				if = {
-					limit = {
-						has_trait = air_controller
-					}
-					add_trait = { trait = flight_deck_manager }
-
-				}
-				else = {
-					add_trait = { trait = air_controller }
-				}
+			USA_william_halsey_jr = {	
+				add_trait = { trait = air_controller }
 			}
 		}
 	}
-
 	focus = {
 		id = USA_extended_carrier_range_operations
 		icon = GFX_GENERIC_High_Seas_Airforce
@@ -6395,7 +6343,7 @@ focus_tree = {
 	focus = {
 		id = USA_fleet_submarines
 		icon = GFX_z_goal_submarine_hunters
-		x = 6
+		x = 4
 		y = 1
 		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_bureau_of_ships
@@ -6629,6 +6577,7 @@ focus_tree = {
 		prerequisite = { focus = USA_emergency_repair_procedures }
 		prerequisite = { focus = USA_anti_submarine_warfare }
 		prerequisite = { focus = USA_advanced_fire_control_systems }
+		prerequisite = { focus = USA_Advanced_submarine_doctrine }
 		x = 0
 		y = 2
 		relative_position_id = USA_expand_naval_shipyards
@@ -6647,11 +6596,9 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_navy_leader = {
-				limit = {
-					NOT = { has_trait = blue_water_expert }
-				}
-				add_trait = { trait = blue_water_expert }
+			USA_chester_w_nimitz = {
+				add_trait = { trait = bold }
+				add_trait = { trait = battleship_adherent }
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt

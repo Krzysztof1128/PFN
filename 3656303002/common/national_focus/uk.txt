@@ -3138,25 +3138,10 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			if = {
-				limit = {
-					ENG_andrew_cunningham = {
-						is_unit_leader = yes
-						NOT = { has_trait = green_water_expert }
-					}
-				}
-				ENG_andrew_cunningham = {
-					add_trait = { trait = green_water_expert }
-				}
+			ENG_james_somerville = {
+			add_trait = { trait = spotter}
 			}
-			else = {
-				random_navy_leader = {
-					limit = {
-						NOT = { has_trait = green_water_expert }
-					}
-					add_trait = { trait = green_water_expert }
-				}
-			}
+
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

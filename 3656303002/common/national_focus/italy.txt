@@ -8019,86 +8019,13 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_flotta_d_evasione_admiral_traits_tt
-			#Stupid tooltips oh my god I hate this game
-			hidden_effect = {
-				#First admiral trait
-				if = { #Try to select high level admirals
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-				else_if = {
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-
-				#Second admiral trait
-				if = { #Try to select high level admirals
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-				else_if = {
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-			}
-			
+		
+		ITA_carlo_bergamini = {
+		add_trait = { trait = bold }
+		}
+		ITA_inigo_campioni = {
+		add_trait = { trait = bold }
+		}
 			navy_experience = 50
 
 			###########
