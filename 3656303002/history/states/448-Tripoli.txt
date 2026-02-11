@@ -19,7 +19,7 @@ state={
 			infrastructure = 2
 			air_base = 6
 			1149 = {
-				naval_base = 5
+				naval_base = 10
 			}
 		}
 		add_core_of = LBA
