@@ -104,6 +104,8 @@ NDefines.NDoctrines.MASTERY_BANK_MAX = 300.0                              -- The
 --Countries
 NDefines.NCountry.AIR_VOLUNTEER_BASES_CAPACITY_LIMIT = 0.0
 NDefines.NCountry.AIR_VOLUNTEER_PLANES_RATIO = 0.0
+NDefines.NCountry.REINFORCEMENT_EQUIPMENT_DELIVERY_SPEED = 0.3
+NDefines.NCountry.REINFORCEMENT_MANPOWER_DELIVERY_SPEED = 80
 
 
 --Krzysztof--

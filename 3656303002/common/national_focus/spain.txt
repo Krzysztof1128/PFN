@@ -4776,12 +4776,6 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_idea = closed_economy }
-				}
-				add_ideas = closed_economy
-			}
 			swap_ideas = {
 				remove_idea = SPA_national_recovery_1
 				add_idea = SPA_national_recovery_2
@@ -5777,7 +5771,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 
-			add_ideas = { SPA_Volsy }
+			add_ideas = {SPA_Volsy}
+			add_ideas = {free_trade}
+			add_ideas = {nationalization_capital}
 
 			set_party_name = { ideology = fascism long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }
 			set_party_name = { ideology = neutrality long_name = SPR_fascism_francoist_party_long name = SPR_fascism_francoist_party }

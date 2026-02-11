@@ -4405,15 +4405,18 @@ country_event = {
 		effect_tooltip = { FRA = { FRA_transfer_western_africa_effect = yes } }
 		COG = { every_core_state ={
 			transfer_state_to = FRA
-		}}
+		} }
 		effect_tooltip = { FRA = { FRA_transfer_western_africa_effect = yes } }
 		RWA = { every_core_state ={
 			transfer_state_to = FRA
-		}}
+		} }
 		effect_tooltip = { FRA = { FRA_transfer_western_africa_effect = yes } }
 		BRD = { every_core_state ={
 			transfer_state_to = FRA
-		}}
+		} }
+		FRA = {
+			set_capital = { state = 295 }
+		}
 	}
 }
 

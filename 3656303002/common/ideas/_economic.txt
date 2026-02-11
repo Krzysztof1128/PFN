@@ -1266,6 +1266,12 @@ ideas = {
 			available = {
 				if = {
 					limit = {
+						original_tag = SPR
+					}
+					NOT = { is_ai = yes }
+				}
+				if = {
+					limit = {
 						original_tag = GER
 					}
 					NOT = { has_completed_focus = GER_autarky_efforts }
@@ -1395,6 +1401,12 @@ ideas = {
 						original_tag = GER
 					}
 					NOT = { has_idea = GER_anarko_comisim }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+					}
+					NOT = { is_ai = yes }
 				}
 
 				if = {
@@ -1608,6 +1620,12 @@ ideas = {
 
 			available = {
 				has_war = yes
+				if = {
+					limit = {
+						original_tag = SPR
+					}
+					NOT = { is_ai = yes }
+				}
 				if = {
 					limit = {
 						original_tag = GER

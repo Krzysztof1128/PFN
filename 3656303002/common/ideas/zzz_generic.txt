@@ -78,6 +78,7 @@ ideas = {
 			modifier = {
 				send_volunteer_size = 6
 				air_volunteer_cap = 12
+				send_volunteers_tension = -1
 			}
 		}
 		PFN_Vols_3 = {
@@ -93,6 +94,12 @@ ideas = {
 
 			modifier = {
 				send_volunteer_size = 3
+				send_volunteers_tension = -1
+				on_add = {
+				set_rule = { 
+					can_send_volunteers = yes 
+				}
+			}
 			}
 		}
 		PFN_Vols_1 = {
@@ -108,8 +115,14 @@ ideas = {
 
 			modifier = {
 				send_volunteer_size = 1
+				send_volunteers_tension = -1
+				on_add = {
+				set_rule = { 
+					can_send_volunteers = yes 
+				}
 			}
-		}
+			}
+		}	
 		PFN_Vols_0 = {
 			 modifier = {
 				send_volunteer_size = -1

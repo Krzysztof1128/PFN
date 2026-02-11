@@ -2316,7 +2316,6 @@ ideas = {
 
 			modifier = {
 				air_intercept_efficiency = 0.1
-			 	air_superiority_efficiency = 0.1
 			 	air_night_penalty = -0.1
 			}
 		}

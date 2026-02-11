@@ -5916,7 +5916,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_to_variable = { ITA_ra_air_superiority_bonus_in_combat = 0.05 }
-			add_to_variable = { ITA_ra_air_superiority_efficiency = 0.05 }
 			add_to_variable = { ITA_ra_air_intercept_efficiency = 0.05 }
 			custom_effect_tooltip = ITA_supremacy_in_the_skies_ra_tt
 
