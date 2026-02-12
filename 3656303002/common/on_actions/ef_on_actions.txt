@@ -1208,9 +1208,6 @@ on_actions = {
 					}
 				}
 				set_global_flag = his_only
-				every_country = {
-					add_ideas = EF_country_histroical_pp
-				}
 				set_global_flag = EF_HIST_MP_ONLY_FLAG
 				set_global_flag = KR_no_unit_limits
 				TUR = {
