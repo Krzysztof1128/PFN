@@ -1,0 +1,32 @@
+####Base Animations####
+
+animation = {
+	name = "wheelchair_idle_anim"
+	file = "wheelchair/wheelchair_idle.anim"
+}
+
+animation = {
+	name = "wheelchair_move_anim"
+	file = "wheelchair/wheelchair_run.anim"
+}
+
+animation = {
+	name = "wheelchair_attack_anim"
+	file = "wheelchair/wheelchair_attack.anim"
+}
+
+
+animation = {
+	name = "blind_idle_anim"
+	file = "blind/blind_idle.anim"
+}
+
+animation = {
+	name = "blind_move_anim"
+	file = "blind/blind_run.anim"
+}
+
+animation = {
+	name = "blind_attack_anim"
+	file = "blind/blind_attack.anim"
+}
