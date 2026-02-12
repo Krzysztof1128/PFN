@@ -123,8 +123,6 @@ ideas = {
 		    available = {
 				NOT = {
 					has_government = communism
-					NOT = { is_ai = yes }
-					
 				}
 			}
 			
@@ -141,7 +139,7 @@ ideas = {
 			
 
 			ai_will_do = {
-   				base = 55
+   				base = 0
    			}
 		}
 		
@@ -171,7 +169,7 @@ ideas = {
 			
 
 			ai_will_do = {
-   				base = 10000000
+   				base = 10000
    			}
 		}
 

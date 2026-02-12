@@ -320,7 +320,7 @@ ideas = {
 			}
 			
 			removal_cost = -1
-			modifier = { production_factory_efficiency_gain_factor = 0.05
+			modifier = { production_factory_efficiency_gain_factor = 0.1
 			}
 		}
 #		sp_multi_charge_large_caliber_gun_small_size_ns = { #MM: Used for Small version of V-3 SP. Uncomment if Code Support gets implemented 

@@ -12953,7 +12953,6 @@ focus_tree = {
 		available = {
 			is_subject = no
 			144 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-			918 = { is_fully_controlled_by = SWE }
 
 		}
 
@@ -12971,66 +12970,81 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					OR = {
-						has_global_flag = his_only
-						
-					}
-				}
-				AFG = {
-					give_resource_rights = {
-						receiver = ROOT 
-						state = 918 #Västerbotten 
-					}
-				}
+			666 = {
+			add_resource = {
+					type = steel
+					amount = -50
+			}	
+			add_resource = {
+					type = chromium
+					amount = -25
+			}		
+			add_resource = {
+					type = tungsten
+					amount = -44
+			}	
 			}
-			else = {
-				SWE = {
-					country_event = { 
-						id = AAT_germany.1 
-						hours = 5 
-						random_hours = 5 
-					} 
-				}
-	
-				custom_effect_tooltip = if_they_accept_tt
-				effect_tooltip = {
-					SWE = {
-						add_offsite_building = {
-							type = industrial_complex
-							level = 2
-						}
-	
-						add_offsite_building = {
-							type = arms_factory
-							level = 1
-						}
-	
-						add_timed_idea = {
-							idea = GER_german_swedish_trade_agreement
-							days = 480
-						}
-	
-						give_resource_rights = {
-							receiver = ROOT 
-							state = 918 #Västerbotten 
-						}
-					}
-	
-					add_opinion_modifier = {
-						target = SWE # target of the relation
-						modifier = GER_SWE_historic_trade_Partners
-					}
-	
-					custom_effect_tooltip = if_they_refuse_tt
-					create_wargoal = {
-						type = take_state_focus
-						target = SWE
-						expire = 0
-						generator = { 918 666 }
-					}
-				}
+			918 = {
+			add_resource = {
+					type = steel
+					amount = -39
+			}
+			add_resource = {
+					type = chromium
+					amount = -15
+			}
+			add_resource = {
+					type = tungsten
+					amount = -35
+			}				
+			}
+			141 = {
+			add_resource = {
+					type = steel
+					amount = -24
+			}
+						add_resource = {
+					type = aluminium
+					amount = -6
+			}
+			}
+			144 = {
+			add_resource = {
+					type = steel
+					amount = 70
+			}
+			add_resource = {
+					type = chromium
+					amount = 30
+			}
+			add_resource = {
+					type = tungsten
+					amount = 50
+			}			
+			}
+			920 = {
+			add_resource = {
+					type = steel
+					amount = 50
+			}
+						add_resource = {
+					type = chromium
+					amount = 20
+			}
+			add_resource = {
+					type = tungsten
+					amount = 40
+			}				
+			}
+			143 = {
+			add_resource = {
+					type = steel
+					amount = 50
+			}
+						add_resource = {
+					type = aluminium
+					amount = 15
+			}
 			}
 		}
 	}
