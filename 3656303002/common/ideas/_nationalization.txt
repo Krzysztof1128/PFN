@@ -169,7 +169,7 @@ ideas = {
 			
 
 			ai_will_do = {
-   				base = 10000
+   				base = 100
    			}
 		}
 

@@ -1201,7 +1201,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				base = 1000
+   				base = 50
    			}
 		}
 
@@ -1287,7 +1287,7 @@ ideas = {
 					}
 				}
 				modifier = {
-					factor = 1000
+					factor = 100
 					has_idea = uncontrolled_exports #Poland should try and escape this as soon as they can
 				}
    			}

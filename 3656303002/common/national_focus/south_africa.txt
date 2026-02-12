@@ -3435,129 +3435,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SAF_establish_the_atomics_energy_board
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = SAF_fund_the_university_of_south_africa }
-		x = 0
-		y = 6
-		relative_position_id = SAF_south_african_railways
 
-		cost = 10
-
-		ai_will_do = {
-			base = 5
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		
-		
-		
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = {
-						has_tech = atomic_research
-					}
-				}
-				add_tech_bonus = {
-					name = SAF_establish_the_atomics_energy_board
-					bonus = 0.5
-					uses = 1
-					category = nuclear
-				}
-			}
-			else = {
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 0.75
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = SAF_the_cape_defense_institute
-		icon = GFX_focus_research
-		prerequisite = { focus = SAF_establish_the_atomics_energy_board }
-		x = -1
-		y = 7
-		relative_position_id = SAF_south_african_railways
-
-		cost = 8
-
-		ai_will_do = {
-			base = 100
-		}
-
-		available = {
-			#is_subject = no
-		}
-		
-		bypass = {
-
-		}
-
-		
-		
-		
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-
-	focus = {
-		id = SAF_defense_collaboration_initiative
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = SAF_establish_the_atomics_energy_board }
-		x = 1
-		y = 7
-		relative_position_id = SAF_south_african_railways
-
-		cost = 5
-
-		ai_will_do = {
-			base = 25
-		}
-
-		available = {
-			is_subject = no
-			has_war = yes
-			is_in_faction = yes
-			OR = {
-				num_of_factories > 50
-				any_other_country = {
-					is_in_faction_with = ROOT
-					num_of_factories > 50
-				}
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		
-		
-		
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			#add_research_slot = 1
-			add_ideas = EF_generic_secret_weapons_ns
-		}
-	}
 
 
 	############################
@@ -3865,7 +3743,7 @@ focus_tree = {
 						
 					}
 				}
-				add_ideas = SAF_mass_production_line
+				add_ideas = SAF_standard_panzer
 				681 = { 
 					add_building_construction = {
 						type = arms_factory
