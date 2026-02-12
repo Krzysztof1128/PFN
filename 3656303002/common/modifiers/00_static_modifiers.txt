@@ -38,7 +38,7 @@ weather_rain_heavy = { # on Region
 weather_snow = { # on Region
 	air_accidents = 0.1
 	air_detection = -0.15
-	air_mission_efficiency = -0.1
+	air_mission_efficiency = -0.2
 	naval_detection = -0.15
 	naval_hit_chance = -0.05
 	naval_retreat_speed = 0.05
@@ -46,14 +46,14 @@ weather_snow = { # on Region
 	naval_strike = -0.3
 	org_loss_when_moving = 0.1
 	positioning = -0.1
-	supply_factor = -0.10
+	supply_factor = -0.15
 	truck_attrition_factor = 0.3
 }
 weather_blizzard = { # on Region
 	air_accidents = 0.3
 	air_bombing_targetting = -0.7
 	air_detection = -0.3
-	air_mission_efficiency = -0.3
+	air_mission_efficiency = -0.5
 	carrier_traffic = -1.0
 	local_org_regain = -0.1
 	naval_detection = -0.3
@@ -63,7 +63,7 @@ weather_blizzard = { # on Region
 	naval_strike = -0.4
 	org_loss_when_moving = 0.25
 	positioning = -0.2
-	supply_consumption_factor = 0.15
+	supply_consumption_factor = 0.20
 	supply_factor = -0.25
 	truck_attrition_factor = 1.0
 	army_attack_speed_factor = -0.25
@@ -102,18 +102,20 @@ weather_extreme_cold = { # on Province
 	local_org_regain = -0.05
 	supply_factor = -0.15
 	truck_attrition_factor = 1.0
-	winter_attrition = 0.4
+	winter_attrition = 0.5
 }
 weather_very_cold = { # on Province
 	army_attack_factor = -0.1
 	breakthrough_factor = -0.15
 	dig_in_speed_factor = -0.3
-	winter_attrition = 0.25
+	winter_attrition = 0.30
 }
 weather_very_hot = { # on Province
+    army_attack_factor = -0.05
 	heat_attrition = 0.1
 	local_org_regain = -0.05
 	supply_factor = -0.05
+	truck_attrition_factor = 0.05
 }
 weather_extreme_hot = { # on Province
 	army_attack_factor = -0.1
@@ -161,6 +163,7 @@ unplanned_offensive = { # on Province
 	local_org_regain = -0.5
 }
 
+
 night = { # On province. Multiplied by amount of darkness.
 	air_bombing_targetting = -0.5
 	carrier_traffic = -1.0
@@ -206,6 +209,7 @@ non_core_controller = {
 	#local_manpower = -0.75
 	local_resources = -0.65
 }
+
 
 lacking_consumer_goods = {
 }
@@ -365,18 +369,6 @@ attache_sent = {
 # Difficulty modifiers
 
 diff_very_easy_player = {
-	production_factory_max_efficiency_factor = 0.3
-	research_speed_factor = 0.15
-	political_power_factor = 0.5
-	production_lack_of_resource_penalty_factor = -0.8
-	army_fuel_consumption_factor = -0.5
-	air_fuel_consumption_factor = -0.5
- 	navy_fuel_consumption_factor = -0.5
-	supply_consumption_factor = -0.1
-	no_supply_grace = 72
-}
-
-diff_easy_player = {
 	production_factory_max_efficiency_factor = 0.2
 	research_speed_factor = 0.07
 	political_power_factor = 0.25
@@ -388,8 +380,21 @@ diff_easy_player = {
 	no_supply_grace = 48
 }
 
+diff_easy_player = {
+	production_factory_max_efficiency_factor = 0.1
+	research_speed_factor = 0.03
+	political_power_factor = 0.10
+	production_lack_of_resource_penalty_factor = -0.1
+	army_fuel_consumption_factor = -0.15
+    air_fuel_consumption_factor = -0.15
+ 	navy_fuel_consumption_factor = -0.15
+	#supply_consumption_factor = -0.05
+	no_supply_grace = 24
+}
+
 diff_normal_player = {
 	no_supply_grace = 36
+	resistance_activity = 0.20
 }
 
 diff_hard_player = {
@@ -398,6 +403,10 @@ diff_hard_player = {
 	political_power_factor = -0.1
 	supply_consumption_factor = 0.05
 	no_supply_grace = 24
+	resistance_activity = 0.3
+	resistance_growth = 0.10
+	resistance_target = 0.10
+	resistance_decay = -0.10
 }
 
 diff_very_hard_player = {
@@ -405,6 +414,11 @@ diff_very_hard_player = {
 	research_speed_factor = -0.30
 	political_power_factor = -0.15
 	supply_consumption_factor = 0.1
+	resistance_activity = 0.4
+	compliance_growth = -0.05
+	resistance_growth = 0.10
+	resistance_target = 0.15
+	resistance_decay = -0.15
 }
 
 
@@ -414,11 +428,15 @@ diff_very_easy_ai = {
 
 diff_easy_ai = {
 	no_supply_grace = 24
-	peace_score_ratio_transferred_to_players = 0.1
+	#peace_score_ratio_transferred_to_players = 0.1
 }
 
 diff_normal_ai = {
+	army_fuel_consumption_factor = -0.15
+	air_fuel_consumption_factor = -0.15
+ 	navy_fuel_consumption_factor = -0.15
 	no_supply_grace = 36
+	research_speed_factor = 0.05
 }
 
 diff_hard_ai = {
@@ -426,6 +444,7 @@ diff_hard_ai = {
 	air_fuel_consumption_factor = -0.25
  	navy_fuel_consumption_factor = -0.25
 	no_supply_grace = 48
+	research_speed_factor = 0.15
 }
 
 diff_very_hard_ai = {
@@ -433,6 +452,7 @@ diff_very_hard_ai = {
 	air_fuel_consumption_factor = -0.5
  	navy_fuel_consumption_factor = -0.5
 	no_supply_grace = 72
+	research_speed_factor = 0.25
 }
 
 
@@ -492,7 +512,7 @@ air_wing_experience_malus_min = {
 	#air_defence_factor = -0.15
 	air_agility_factor = -0.15
 	air_night_penalty = 0.15
-	air_accidents_factor = 0.5
+	air_accidents_factor = 0.10
 	#air_weather_penalty = 0.15
 }
 
@@ -584,7 +604,7 @@ intel_network_state_level_bonus = {
 
 # modifiers applied to enemy divisions in an intel network
 intel_network_state_level_penalty = {
-	max_planning_factor = -1
+	max_planning_factor = -0.50
 	max_dig_in = -5
 }
 
@@ -610,6 +630,30 @@ operative_nationality_operation = {
 	# NOTE: all modifiers used here need to be pre-defined in modifier_definitions if dynamic
 	operation_outcome = 0.1
 	operation_cost = -0.1
+}
+
+GER_axis_military_developments = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	license_purchase_cost = 0 #base cost reduction
+	license_production_speed = 0.25 #speed increase for being a license
+	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level 
+}
+
+USA_allies_military_developments = {
+	valid_relation_trigger = {
+		FROM = {
+			NOT = { has_war_with = ROOT }
+		}
+	}
+
+	license_purchase_cost = 0 #base cost reduction
+	license_production_speed = 0.25 #speed increase for being a license
+	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level 
 }
 
 #LaR Compliance
