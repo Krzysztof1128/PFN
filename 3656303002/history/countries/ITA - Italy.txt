@@ -470,13 +470,6 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_cheating
-}
-
 # DIPLOMACY / WAR 36
 if = {
 	limit = {
