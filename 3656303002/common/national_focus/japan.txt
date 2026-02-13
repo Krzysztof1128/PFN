@@ -12809,7 +12809,7 @@ focus_tree = {
 		id = JAP_nanshin_ron
 		icon = GFX_focus_JAP_nanshin_ron
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -21
+		x = -22
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
@@ -12836,7 +12836,6 @@ focus_tree = {
 		}
 
 		available = {
-			JAP_naval_faction_is_not_subdued = yes
 			OR = {
 				NOT = {
 					has_completed_focus = JAP_hokushin_ron
@@ -12925,13 +12924,14 @@ focus_tree = {
 		id = JAP_soviet_japanese_neutrality_pact
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 3
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = JAP_nanshin_ron
 
 		dynamic = yes
 
-		prerequisite = { focus = JAP_nanshin_ron }
+		prerequisite = { focus = JAP_occupy_indochina }
+		prerequisite = { focus = JAP_occupy_siam }
 
 		cost = 5
 
@@ -12983,7 +12983,7 @@ focus_tree = {
 		id = JAP_unsinkable_aircraft_carriers
 		icon = GFX_focus_generic_air_bases
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = JAP_nanshin_ron
 
@@ -13459,10 +13459,10 @@ focus_tree = {
 		icon = GFX_focus_GER_south_east_asian_natural_wealth
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
 		x = 0
-		y = 5
-		relative_position_id = JAP_nanshin_ron
+		y = 1
+		relative_position_id = JAP_strike_the_southern_road
 
-		prerequisite = { focus = JAP_nanshin_ron }
+		prerequisite = { focus = JAP_strike_the_southern_road }
 
 		cost = 10
 
@@ -13583,118 +13583,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = JAP_demand_tonkinese_bases
-		icon = GFX_focus_generic_attack_indochina
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -2
-		y = 1
-		relative_position_id = JAP_nanshin_ron
-
-		prerequisite = { focus = JAP_nanshin_ron }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			671 = { 
-				CONTROLLER = { 
-					NOT = {
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				} 
-			}
-			OR = {
-				AND = {
-					custom_trigger_tooltip = {
-						tooltip = JAP_demand_tonkinese_bases_tt
-						671 = { 
-							CONTROLLER = { 
-								OR = { 
-									tag = FRA 
-									tag = VIC 
-									is_subject_of = FRA
-									is_subject_of = VIC
-								} 
-							}
-						}
-					}
-					OR = {
-						AND = {
-							has_army_manpower = { size > 799999 }
-							has_war_support > 0.9
-						}
-						16 = { NOT = { is_controlled_by = FRA } } #Paris has fallen
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = JAP_demand_tonkinese_bases_2_tt
-					671 = { 
-						CONTROLLER = { 
-							NOT = {
-								tag = FRA 
-								tag = VIC 
-								is_subject_of = FRA
-								is_subject_of = VIC
-							}
-						}
-					}
-				}
-			}
-			1033 = { 
-				CONTROLLER = { 
-					OR = {
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				} 
-			}
-		}
-
-		bypass = {
-			671 = { 
-				CONTROLLER = { 
-					OR = {
-						has_war_with = ROOT
-						is_ally_with = ROOT
-					}
-				} 
-			}
-		}
-
-		will_lead_to_war_with = FRA
-		will_lead_to_war_with = VIN
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			
-			671 = {
-				OWNER = {
-					country_event = {
-						id = SEA_japan_foreign_policy.10
-						days = 1
-						random_days = 2
-					}
-				}
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				add_political_power = 25
-				transfer_state = 671
-			}
-			
-		}
-	}
 
 	focus = {
 		id = JAP_occupy_indochina
@@ -13702,7 +13590,7 @@ focus_tree = {
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
 		x = 0
 		y = 1
-		relative_position_id = JAP_demand_tonkinese_bases
+		relative_position_id = JAP_nanshin_ron
 
 		prerequisite = { focus = JAP_demand_tonkinese_bases }
 
@@ -13987,81 +13875,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_sea_pressure_siam
-		icon = GFX_focus_generic_befriend_siam
-		mutually_exclusive = { focus = JAP_occupy_siam }
-		x = -1
-		y = 2
-		relative_position_id = JAP_demand_tonkinese_bases
-
-		enable_automatic_bypass = no
-
-		prerequisite = { focus = JAP_demand_tonkinese_bases }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			is_faction_leader = yes
-			SIA = {
-				exists = yes
-				is_subject = no
-				is_in_faction = no
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				NOT = { country_exists = SIA }
-				SIA = {
-					is_ally_with = ROOT
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			SIA = {
-				country_event = {
-					id = SEA_japan_foreign_policy.4
-					hours = 6
-					random_hours = 12
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				ROOT = {
-					add_to_faction = SIA
-				}
-			}
-			
-		}
-	}
-
-	focus = {
 		id = JAP_occupy_siam
 		icon = GFX_focus_generic_attack_siam
-		mutually_exclusive = { focus = JAP_sea_pressure_siam }
-		x = 1
-		y = 2
-		relative_position_id = JAP_demand_tonkinese_bases
+		x = -2
+		y = 1
+		relative_position_id = JAP_nanshin_ron
 
 		enable_automatic_bypass = no
 
-		prerequisite = { focus = JAP_demand_tonkinese_bases }
+		prerequisite = { focus = JAP_nanshin_ron }
 
 		cost = 5
 
@@ -14097,94 +13919,99 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
-			SIA = {
-				every_core_state = {
-					limit = {
-						NOT = {
-							is_core_of = ROOT
-							is_claimed_by = ROOT
-						}
-					}
-					add_claim_by = ROOT
-				}
+		annex_country = {
+		target = SIA
+		transfer_troops = yes
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			create_wargoal = {
-				type = annex_everything
-				target = SIA
-				expire = 0
-			}	
-
 		}
 	}
 
 	focus = {
 		id = JAP_strike_the_southern_road
 		icon = GFX_focus_jap_strike_south
-		#mutually_exclusive = { focus = JAP_sea_pressure_siam }
-		x = -1
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = JAP_occupy_siam
 
-		prerequisite = { focus = JAP_occupy_siam focus = JAP_sea_pressure_siam }
-
-		cost = 5
+		prerequisite = { focus = JAP_soviet_japanese_neutrality_pact}
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			is_subject = no
-			IF = {
-				limit = {
-					is_ai = no
-				}
-				JAP_naval_faction_is_at_least_influential = yes
-			}
-			OR = {
-				has_government = fascism
-				AND = {
-					has_war_support > 0.95
-					has_army_manpower = { size > 999999 }
-				}
-			}
+
+		OR = { 
+		AND = {
+		Date > 1941.1.1
+		Date < 1941.3.1
 		}
+		
+		AND = {
+		Date > 1941.11.1
+		Date < 1942.1.1
+			}
+		}	
+					}
 
 		bypass = {
-			OR = {			
-				has_wargoal_against = INS
-				has_war_with = INS
+			Date > 1942.1.1
+		}
+		bypass_effect = { 			
+			JAP = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
 			}
-			OR = {
-				has_wargoal_against = MAL
-				has_war_with = MAL
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
 			}
-			OR = {
-				has_wargoal_against = PHI
-				has_war_with = PHI
+			hidden_effect = {
+			declare_war_on = {
+				target = SAF
+				type = annex_everything
 			}
-			OR = {
-				AND = {
-					671 = {
-						NOT = { is_controlled_by = FRA }
-					}
-					670 = {
-						NOT = { is_controlled_by = FRA }
-					}
-					286 = {
-						NOT = { is_controlled_by = FRA }
-					}
-					741 = {
-						NOT = { is_controlled_by = FRA }
-					}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RAJ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = INS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MAL
+				type = annex_everything
+			}
 				}
-				has_wargoal_against = FRA
-				has_war_with = FRA
 			}
+			GER = {
+				declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			}
+			ITA = {
+				declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			}
+
 		}
 
 		will_lead_to_war_with = PHI
@@ -14207,392 +14034,72 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_IMPERIAL_INFLUENCE }
 
 		completion_reward = {
-				
-			IF = {
-				limit = {
-					PHI = {
-						exists = yes
-						NOT = {
-							is_ally_with = ROOT
-							has_war_with = ROOT
-						}
-					}
-				}
-				create_wargoal = {
-					target = PHI
-					type = puppet_wargoal_focus
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = PHI
-					value = 200
-				}
+			USA = {
+			add_timed_idea = {
+			idea = JAP_day_of_infamy_2 
+			days = 180
 			}
-
-			IF = {
-				limit = {
-					country_exists = INS
-					NOT = { 
-						has_wargoal_against = INS 
-						has_war_with = INS
-					}
-					IF = {
-						limit = {
-							INS = { is_subject_of = HOL }
-						}
-						OR = {
-							has_country_flag = HOL_declare_war_indies_allowed
-							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
-						}
-					}
-				}
-				create_wargoal = {
-					target = INS
-					type = annex_everything
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = INS
-					value = 200
-				}
-
-				IF = {
-					limit = {
-						INS = {
-							any_core_state = {
-								NOT = {
-									is_owned_and_controlled_by = INS
-								}
-							}
-						}
-					}
-
-					INS = { #I see what you are doing you cheeky exploiter
-						every_core_state = {
-							limit = {
-								NOT = { is_owned_and_controlled_by = PREV }
-							}
-
-							ROOT = {
-								create_wargoal = {
-									target = PREV.controller
-									type = annex_everything
-									expire = 0
-								}
-							}
-						}
-					}
-				}
-			}
-			IF = {
-				limit = {
-					INS = { exists = no }
-					335 = {
-						CONTROLLER = {
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-					IF = {
-						limit = {
-							335 = {
-								CONTROLLER = {
-									tag = HOL
-								}
-							}
-						}
-						OR = {
-							has_country_flag = HOL_declare_war_indies_allowed
-							HOL = { NOT = { has_completed_focus = HOL_placate_the_japanese } }
-						}
-					}
-				}
-				335 = {
-					OWNER = {
-						ROOT = {
-							create_wargoal = {
-								target = PREV
-								type = take_state_focus
-								expire = 0
-								generator = { 335 334 672 673 668 667 669 738 }
-							}
-							add_ai_strategy = {
-								type = conquer
-								id = PREV
-								value = 200
-							}
-						}
-					}
-				}
-			}
-			IF = {
-				limit = {
-					NOT = { has_wargoal_against = MAL }
-					NOT = { has_war_with = MAL }
-					country_exists = MAL
-				}
-				create_wargoal = {
-					target = MAL
-					type = annex_everything
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = MAL
-					value = 200
-				}
-			}
-			IF = {
-				limit = {
-					MAL = { exists = no }
-					336 = {
-						CONTROLLER = {
-							NOT = {
-								is_in_faction_with = ROOT
-							}
-						}
-					}
-				}
-				336 = {
-					OWNER = {
-						ROOT = {
-							create_wargoal = {
-								target = PREV
-								type = take_state_focus
-								expire = 0
-								generator = { 336 }
-							}
-							add_ai_strategy = {
-								type = conquer
-								id = PREV
-								value = 200
-							}
-						}
-					}
-				}
-			}
-			IF = {
-				limit = {
-					OR = {
-						671 = {
-							is_controlled_by = FRA
-						}
-						670 = {
-							is_controlled_by = FRA
-						}
-						286 = {
-							is_controlled_by = FRA
-						}
-						741 = {
-							is_controlled_by = FRA
-						}
-					}
-					NOT = { has_wargoal_against = FRA }
-					NOT = { has_war_with = FRA }
-				}
-				#Might be generating on states FRA does not own, but not worth the time to get it exact. Should have no gameplay impact.
-				create_wargoal = {
-					target = FRA
-					type = take_state_focus
-					expire = 0
-					generator = { 671 670 286 741 }
-				}
-			}
-			IF = {
-				limit = {
-					NOT = { has_wargoal_against = WPG }
-					NOT = { has_war_with = WPG }
-					country_exists = WPG
-				}
-				create_wargoal = {
-					target = WPG
-					type = annex_everything
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = WPG
-					value = 200
-				}
-			}
-			IF = {
-				limit = {
-					NOT = { has_wargoal_against = SNG }
-					NOT = { has_war_with = SNG }
-					country_exists = SNG
-				}
-				create_wargoal = {
-					target = SNG
-					type = annex_everything
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = SNG
-					value = 200
-				}
-			}
-			IF = {
-				limit = {
-					NOT = { has_wargoal_against = SAR }
-					NOT = { has_war_with = SAR }
-					country_exists = SAR
-				}
-				create_wargoal = {
-					target = SAR
-					type = annex_everything
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = SAR
-					value = 200
-				}
-			}
-			IF = {
-				limit = {
-					NOT = { has_wargoal_against = SAB }
-					NOT = { has_war_with = SAB }
-					country_exists = SAB
-				}
-				create_wargoal = {
-					target = SAB
-					type = annex_everything
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = SAB
-					value = 200
-				}
-			}
-			IF = {
-				limit = {
-					NOT = { has_wargoal_against = BRN }
-					NOT = { has_war_with = BRN }
-					country_exists = BRN
-				}
-				create_wargoal = {
-					target = BRN
-					type = annex_everything
-					expire = 0
-				}
-				add_ai_strategy = {
-					type = conquer
-					id = BRN
-					value = 200
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			unlock_decision_tooltip = {
-				decision = JAP_establish_the_state_of_burma_decision
-				show_effect_tooltip = no 
-			}
-			unlock_decision_tooltip = {
-				decision = JAP_establish_the_provisional_government_of_free_india_decision
-				show_effect_tooltip = no 
-			}	
-			unlock_decision_tooltip = {
-				decision = JAP_establish_the_second_philippine_republic_decision
-				show_effect_tooltip = no 
-			}	
-
-		}
-
-	}
-
-	focus = {
-		id = JAP_occupy_east_timor
-		icon = GFX_focus_generic_attack_timor
-		#mutually_exclusive = { focus = JAP_sea_pressure_siam }
-		x = 0
-		y = 1
-		relative_position_id = JAP_strike_the_southern_road
-
-		prerequisite = { focus = JAP_strike_the_southern_road }
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			667 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			721 = {
-				OWNER = {
-					has_war = no
-					OR = {
-						original_tag = POR
-						original_tag = TML
-					}
-					NOT = {
-						is_ally_with = ROOT
-					}
-					controls_state = 721
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		will_lead_to_war_with = POR
-		will_lead_to_war_with = TML
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			
-			IF = {
-				limit = {
-					721 = {
-						is_owned_by = TML
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = TML
-					expire = 0
+		country_event = {
+		id = SEA_japan_foreign_policy.136
+		hours = 6
 				}	
 			}
-			ELSE_IF = {
-				limit = {
-					721 = {
-						is_owned_by = POR
-					}
-				}
-				custom_effect_tooltip = JAP_occupy_east_timor_tt
-				POR = {
-					country_event = { 
-						id = SEA_japan_foreign_policy.13
-						days = 1
-						random_days = 2
-					}	
-				} 
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				721 = {
-					transfer_state_to = ROOT
+			JAP = {
+			declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			hidden_effect = {
+			declare_war_on = {
+				target = SAF
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RAJ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AST
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = FRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = INS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = MAL
+				type = annex_everything
+			}
 				}
 			}
-			
+			GER = {
+				declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			}
+			ITA = {
+				declare_war_on = {
+				target = USA
+				type = annex_everything
+			}
+			}
 		}
+
 	}
+
 
 
 

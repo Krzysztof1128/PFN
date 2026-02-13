@@ -2572,10 +2572,10 @@ focus_tree = {
 					}
 				}
 				random_select_amount = 3
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2614,15 +2614,15 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 1
+						size > 0
 						include_locked = yes
 					}
 				}
-				random_select_amount = 2
-				add_extra_state_shared_building_slots = 2
+				random_select_amount = 4
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2652,19 +2652,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			random_core_state = {
+			every_core_state = {
 				limit = {
-					is_controlled_by = ROOT
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				random_select_amount = 4
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 4
 					instant_build = yes
 				}
 			}
@@ -2774,7 +2775,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_concentrated_armament_program
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 			has_civil_war = no
@@ -2840,7 +2841,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -2892,7 +2893,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -15287,57 +15288,38 @@ focus_tree = {
 				type = annex_everything
 			}
 			add_ideas = { ger_skill_issue }
-		}
-		
-		historical_ai = {
-			# Only if we have defeated our enemies
-			NOT = {
-				any_home_area_neighbor_country = {
-					has_war_with = ROOT
-					has_capitulated = no
-					# Honestly, let's not care about the scandinavian countries
-					NOT = {
-						OR = {
-							tag = NOR
-							tag = DEN 
-							tag = LUX # Or Luxenburg for that matter. 
-						}
-					}
-				}
+			hidden_effect = {
+			HUN = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			ROM = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			ITA = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			BUL = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			FIN = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
 			}
 		}
+		}
+		
 		
 		ai_will_do = {
-			base = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_army_manpower = { size < 1199999 }
-					any_home_area_neighbor_country = {
-						has_war_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				factor = 0 #AI should not pick this focus if it does not share a border with the Soviets
-				NOT = { 
-					any_home_area_neighbor_country = {
-						tag = SOV
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				date < 1941.2.1
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
+			base = 1000000
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
@@ -15355,6 +15337,33 @@ focus_tree = {
 				target = SOV
 				type = annex_everything
 			}
+			hidden_effect = {
+			HUN = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			ROM = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			ITA = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			BUL = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+			FIN = { declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			}
+		}
 		}
 	}
 	focus = {
@@ -40710,7 +40719,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 4 }
+			add_offsite_building = { type = arms_factory level = 12 }
 		}
 	}
 

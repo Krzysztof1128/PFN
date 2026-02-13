@@ -1636,7 +1636,9 @@ focus_tree = {
 		cost = 5
 
 		available = {
-
+			JAP = {
+				has_completed_focus = JAP_strike_the_southern_road
+			}
 		}
 		completion_reward = {
 
@@ -1676,7 +1678,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_oy_alkoholiliike
 		prerequisite = { focus = USA_wartime_production }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_wartime_production
 		cost = 5
 
@@ -1720,11 +1722,15 @@ focus_tree = {
 		prerequisite = { focus = USA_military_spec_tonk_3 }
 		prerequisite = { focus = USA_military_spec_inf_3 }
 		prerequisite = { focus = USA_wartime_production_3 }
+		prerequisite = { focus = USA_military_spec_screen_3 }
+		prerequisite = { focus = USA_military_spec_carrier_3 }
+		prerequisite = { focus = USA_wartime_company_3 }
 		
-		x = 0
+
+		x = 1
 		y = 1
 		relative_position_id = USA_wartime_production_3
-		cost = 1
+		cost = 5
 
 		available = {
 
@@ -1735,6 +1741,10 @@ focus_tree = {
 		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.2 }
 		add_to_variable = { USA_stagnant_industry_modifier_production_factory_efficiency_gain_factor = -0.1 }
 		custom_effect_tooltip = USA_God_of_armaments_production_tt
+		USA_modify_economy_modifier = yes
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.20 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.20 }
+		custom_effect_tooltip = USA_God_of_output_tt
 
 		}
 	}
@@ -1786,7 +1796,7 @@ focus_tree = {
 		icon = GFX_focus_AFG_a_modern_economy
 		prerequisite = { focus = USA_wartime_company_2 }
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = USA_wartime_company_2
 		cost = 5
 
@@ -1802,38 +1812,14 @@ focus_tree = {
 
 		}
 	}
-	focus = {
-		id = USA_God_of_output
-		icon = GFX_focus_SWE_the_lion_of_the_north
-		prerequisite = { focus = USA_wartime_company_3 }
-		prerequisite = { focus = USA_military_spec_screen_3 }
-		prerequisite = { focus = USA_military_spec_carrier_3 }
-		
-		x = 0
-		y = 1
-		relative_position_id = USA_wartime_company_3
-		cost = 1
-
-		available = {
-
-		}
-		completion_reward = {
-
-		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.20 }
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.20 }
-		custom_effect_tooltip = USA_God_of_output_tt
-
-		}
-	}
 
 	focus = {
 		id = USA_military_spec_inf
 		icon = GFX_focus_BEL_poudreries_reunies_de_belgique
-		prerequisite = { focus = USA_wartime_industry }
+		prerequisite = { focus = USA_the_giant_wakes }
 		x = -3
 		y = 1
-		relative_position_id = USA_wartime_industry
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
@@ -1852,7 +1838,7 @@ focus_tree = {
 		icon = GFX_focus_HUN_form_the_gyorshadtest
 		prerequisite = { focus = USA_military_spec_inf }
 		x = 0
-		y = 1
+		y = 3
 		relative_position_id = USA_military_spec_inf
 		cost = 5
 
@@ -1890,10 +1876,10 @@ focus_tree = {
 	focus = {
 		id = USA_military_spec_tonk
 		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
-		prerequisite = { focus = USA_wartime_industry }
+		prerequisite = { focus = USA_the_giant_wakes }
 		x = -5
 		y = 1
-		relative_position_id = USA_wartime_industry
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
@@ -1912,7 +1898,7 @@ focus_tree = {
 		icon = GFX_focus_generic_communist_industry
 		prerequisite = { focus = USA_military_spec_tonk }
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = USA_military_spec_tonk
 		cost = 5
 
@@ -1932,7 +1918,7 @@ focus_tree = {
 		icon = GFX_SOV_the_fourth_international_ccp_2d_sov_compatibility
 		prerequisite = { focus = USA_military_spec_tonk_2 }
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = USA_military_spec_tonk_2
 		cost = 5
 
@@ -1950,10 +1936,10 @@ focus_tree = {
 	focus = {
 		id = USA_military_spec_air
 		icon = GFX_focus_SMB_purchase_aircraft
-		prerequisite = { focus = USA_wartime_industry }
+		prerequisite = { focus = USA_the_giant_wakes }
 		x = -7
 		y = 1
-		relative_position_id = USA_wartime_industry
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
@@ -1972,7 +1958,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_marauder_bombers
 		prerequisite = { focus = USA_military_spec_air }
 		x = 0
-		y = 1
+		y = 3
 		relative_position_id = USA_military_spec_air
 		cost = 5
 
@@ -2012,10 +1998,10 @@ focus_tree = {
 	focus = {
 		id = USA_military_spec_screen
 		icon = GFX_focus_generic_navy_research_bonus
-		prerequisite = { focus = USA_wartime_industry }
+		prerequisite = { focus = USA_the_giant_wakes }
 		x = 3
 		y = 1
-		relative_position_id = USA_wartime_industry
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
@@ -2034,7 +2020,7 @@ focus_tree = {
 		icon = GFX_focus_generic_cruiser_submarines
 		prerequisite = { focus = USA_military_spec_screen }
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = USA_military_spec_screen
 		cost = 5
 
@@ -2054,7 +2040,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_Vasa_II
 		prerequisite = { focus = USA_military_spec_screen_2 }
 		x = 0
-		y = 2
+		y = 3
 		relative_position_id = USA_military_spec_screen_2
 		cost = 5
 
@@ -2072,10 +2058,10 @@ focus_tree = {
 	focus = {
 		id = USA_military_spec_carrier
 		icon = GFX_focus_generic_copy_plane_designs
-		prerequisite = { focus = USA_wartime_industry }
+		prerequisite = { focus = USA_the_giant_wakes }
 		x = 5
 		y = 1
-		relative_position_id = USA_wartime_industry
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
@@ -2114,7 +2100,7 @@ focus_tree = {
 		icon = GFX_SOV_expand_the_morskaya_aviatsiya_ccp_2d_sov_compatibility
 		prerequisite = { focus = USA_military_spec_carrier_2 }
 		x = 0
-		y = 1
+		y = 3
 		relative_position_id = USA_military_spec_carrier_2
 		cost = 5
 

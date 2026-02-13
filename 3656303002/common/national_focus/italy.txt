@@ -42,6 +42,15 @@ focus_tree = {
 	}
 
 
+
+
+
+
+
+
+
+
+
 ########  ##    ##    ########  ##        #######   #######  ########        ###    ##        #######  ##    ## ######## 
 ##     ##  ##  ##     ##     ## ##       ##     ## ##     ## ##     ##      ## ##   ##       ##     ## ###   ## ##       
 ##     ##   ####      ##     ## ##       ##     ## ##     ## ##     ##     ##   ##  ##       ##     ## ####  ## ##       
@@ -1049,7 +1058,7 @@ focus_tree = {
 		completion_reward = {
 		
 				849 = {
-				add_extra_state_shared_building_slots = 
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -1057,7 +1066,7 @@ focus_tree = {
 				}
 				}
 								162 = {
-				add_extra_state_shared_building_slots = 
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -18669,75 +18678,81 @@ focus = {
 		add_ideas = FRA_state_atheism
 	}
 }
-focus = {
-	id = ITA_state_of_papal
-	icon = GFX_goal_italy_john
-	x = -1
-	y = 1
-	relative_position_id = ITA_crush_opposition
-	prerequisite = { focus = ITA_crush_opposition }
-	cost = 10
-	ai_will_do = {
-		factor = 1
-	}
-	available = {
-	}
-	bypass = {
-	}
-	
-	
-	
-	search_filters = { }
-	completion_reward = {
-		if = {
-				limit = {
-					159 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				159 = { #LOMBARDY (Milano)
-					add_extra_state_shared_building_slots = 4
-					add_building_construction = {
-						type = arms_factory
-						level = 4
-						instant_build = yes
-					}
-				}
-			}
-		VAT = {
-			transfer_state = 2
-			add_offsite_building = { type = industrial_complex level = 3 }
-		}
-		ROOT = { 
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				set_autonomy = {
-					target = VAT
-					autonomy_state = autonomy_personal_union
-				}
-			}
-			else_if = {
-				limit = {
-					has_dlc = "Together for Victory"
-				}
-				set_autonomy = {
-					target = VAT
-					autonomy_state = autonomy_integrated_puppet
-				}
-			}
-			else = {
-				puppet = VAT
-			}
-		}
-	}
-}
+	focus = {
+		id = ITA_WAR_WTIH_WEST
+		icon = GFX_focus_attack_britain
+		x = 5
+		y = 1
 
+		relative_position_id = ITA_triumph_in_africa_bba
+		cost = 1
+
+		will_lead_to_war_with = ENG
+
+		available = {
+			GER = {
+				has_war_with = ENG
+			}
+			}
+		
+		bypass = {
+			Date > 1940.01.01
+		}
+		bypass_effect = { declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			create_wargoal ={
+			target = YUG
+			type = annex_everything
+			}
+		hidden_effect = {
+			declare_war_on = {
+				target = SAF
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RAJ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AST
+				type = annex_everything
+			}
+		}
+		}
+		completion_reward = { declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+		create_wargoal = {
+			target = YUG
+			type = annex_everything
+			}
+					hidden_effect = {
+			declare_war_on = {
+				target = SAF
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RAJ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AST
+				type = annex_everything
+			}
+		}
+		}
+	}
 }
 
 
