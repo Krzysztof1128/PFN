@@ -611,12 +611,7 @@ focus_tree = {
 		relative_position_id = ITA_litoranea_balbo
 		cost = 5
 		available = {
-			451 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-			452 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
+
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1838,7 +1833,6 @@ focus_tree = {
 		id = ITA_a_bandits_war
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = ITA_army_primacy_bba }
-		mutually_exclusive = { focus = ITA_preserve_army_traditions }
 		x = 3
 		y = 1
 		relative_position_id = ITA_army_primacy_bba
