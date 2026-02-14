@@ -35,27 +35,6 @@ ideas = {
 			}
 		}
 
-		SOV_intel = {
-
-			name = SOV_intel
-
-			removal_cost = -1
-
-			available = {
-
-							not = {
-				has_war_with = GER
-					}
-			}
-
-			modifier = {
-				civilian_intel_to_others = -200
-				army_intel_to_others = -200
-				navy_intel_to_others = -200
-				airforce_intel_to_others = -200
-		
-					}
-			}
 		SOV_second_five_year_plan_fake_1936_ns = { #Only used for 1936 bookmark (dynamic modifiers don't show up there)
 			name = SOV_second_five_year_plan_dynamic_modifier
 
