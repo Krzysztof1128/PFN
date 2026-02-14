@@ -942,7 +942,6 @@ add_ideas = {
 	home_of_revolution
 	trotskyite_plot_nsb
 	SOV_politicized_military
-	SOV_intel
 
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
 	SOV_duplicate_research_efforts #Edit the tooltip in SOV_modernize_aircraft_facilities focus if this will be removed
