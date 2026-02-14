@@ -2734,6 +2734,10 @@ on_actions = {
 			FIN = {
 			add_ideas = {PFN_Vols_1}
 			}
+			AST = {
+			add_ideas = {PFN_Vols_1}
+			}
+
 		}
 		effect = {
 			every_country = {
