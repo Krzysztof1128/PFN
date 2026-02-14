@@ -324,7 +324,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 5
+		cost = 10
 
 		available = {
 			custom_trigger_tooltip = {
@@ -464,7 +464,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -558,7 +558,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 
@@ -622,7 +622,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -775,7 +775,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
 
@@ -838,7 +838,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_shift_to_armaments_production
-		cost = 5
+		cost = 10
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -2033,7 +2033,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_development
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -4399,7 +4399,7 @@ focus_tree = {
 		x = 15
 		y = 0
 		relative_position_id = SOV_expand_the_red_fleet
-		cost = 5
+		cost = 10
 
 		ai_will_do = {
 			base = 1
@@ -4427,7 +4427,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
-		cost = 5
+		cost = 10
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -4657,7 +4657,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_superior_war_machines
-		cost = 5
+		cost = 10
 
 		available = {
 		}
@@ -4909,7 +4909,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 5
+		cost = 10
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
@@ -5049,7 +5049,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_pc_of_mortar_armament
-		cost = 5
+		cost = 10
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -5183,7 +5183,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 5
+		cost = 10
 		dynamic = yes 
 		available = {
 			if = {
@@ -6594,7 +6594,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_strengthen_the_mobilization_plan
-		cost = 8
+		cost = 10
 
 		available = {
 			NOT = { has_country_flag = SOV_paranoia_system_active_flag }
@@ -6618,7 +6618,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_rehabilitated_military
-		cost = 8
+		cost = 15
 
 		select_effect = {
 			add_ideas = SOV_military_reorganization_ns
@@ -6761,7 +6761,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_desperate_measures
-		cost = 5
+		cost = 10
 
 		available = {
 			NOT = { has_idea = SOV_desperate_measures_ns }
@@ -7508,7 +7508,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_stalin_constitution
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -7830,7 +7830,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
-		cost = 5
+		cost = 10
 
 		available = {
 			has_country_flag = {
@@ -8132,7 +8132,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
-		cost = 5
+		cost = 10
 
 		available = {
 			has_country_flag = {
@@ -8254,7 +8254,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
-		cost = 5
+		cost = 10
 
 		available = {
 			has_country_flag = {
@@ -12211,7 +12211,7 @@ focus_tree = {
 		}
 
 		relative_position_id = SOV_the_path_of_marxism_leninism
-		cost = 2
+		cost = 5
 
 		allow_branch = {
 			if = {
@@ -12272,7 +12272,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_addressing_internal_affairs
-		cost = 3
+		cost = 5
 
 		available = {
 
@@ -12386,7 +12386,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_positive_heroism
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -12639,7 +12639,7 @@ focus_tree = {
 		x = 9
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
-		cost = 3
+		cost = 5
 
 		allow_branch = {
 			if = {
@@ -12862,7 +12862,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = SOV_the_comintern
-		cost = 3
+		cost = 5
 
 		ai_will_do = {
 			base = 1
