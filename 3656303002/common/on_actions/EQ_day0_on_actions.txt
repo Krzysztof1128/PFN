@@ -3,12 +3,6 @@ on_actions = {
 		effect = {
 		# EQ Equipment
 
-			CHI = {
-				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
-					amount = 100000
-				}
-			}
 			FRA = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
