@@ -993,7 +993,8 @@ focus_tree = {
 			add_tech_bonus = {
 				name = USA_Harvard
 				bonus = 3
-				category = air_equipment
+				category = light_air
+				category = tactical_bomber
 			}
 			add_ideas = USA_Harvard_gotu_bonus
 		}
@@ -3905,7 +3906,6 @@ focus_tree = {
 					uses = 2
 					bonus = 1.0
 					category = artillery
-					category = support_tech
 					}
 			}
 	}
