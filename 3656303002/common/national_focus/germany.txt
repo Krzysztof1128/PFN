@@ -15035,7 +15035,7 @@ focus_tree = {
 		cost = 5
 		
 		bypass = {
-			Date > 1942.9.16
+			Date > 1942.1.1
 		}
 
 		available = {
@@ -15228,28 +15228,19 @@ focus_tree = {
 		will_lead_to_war_with = SOV
 
 		available = {
-
-		OR = { 
 		AND = {
 		Date > 1941.6.15
 		Date < 1941.9.15
 		}
-		
-		AND = {
-		Date > 1942.6.15
-		Date < 1942.9.15
-			}
-		}	
-					}
+	}
 		
 		bypass = {
-			Date > 1942.9.16
+			Date > 1942.1.1
 		}
 		bypass_effect = { declare_war_on = {
 				target = SOV
 				type = annex_everything
 			}
-			add_ideas = { ger_skill_issue }
 			hidden_effect = {
 			HUN = { declare_war_on = {
 				target = SOV
