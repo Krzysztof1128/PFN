@@ -16642,21 +16642,7 @@ focus_tree = {
 			OR = {
 				wuw_HUN_does_not_have_trianon = yes
 				has_idea = HUN_bled_agreement_wuw
-				AND = {
-					ROM = {
-						OR = {
-							exists = no
-							is_puppet = yes
-						}
-					}
-					FRA = {
-						OR = {
-							exists = no
-							is_puppet = yes
-							NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
-						}
-					}
-				}
+
 			}
 		}
 

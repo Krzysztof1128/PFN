@@ -5924,9 +5924,8 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			Date > 1941.12.1
 		}
-
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 		available_if_capitulated = no
@@ -6015,7 +6014,9 @@ focus_tree = {
 		}
 
 		bypass = {
-
+				bypass = {
+			Date > 1942.1.1
+		}
 		}
 
 		cancel_if_invalid = yes
@@ -6803,8 +6804,129 @@ focus_tree = {
 			
 		}
 
-		bypass = {
 
+		bypass = {
+			Date > 1941.12.1
+		}
+		
+		bypass_effect = {
+				
+			IF = {
+				limit = {
+					FRA = {
+						OR = {
+							controls_state = 670
+							670 = { CONTROLLER = { is_subject_of = FRA } }
+							controls_state = 286
+							286 = { CONTROLLER = { is_subject_of = FRA } }
+							controls_state = 1017
+							1017 = { CONTROLLER = { is_subject_of = FRA } }
+							controls_state = 741
+							741 = { CONTROLLER = { is_subject_of = FRA } }
+						}
+					}
+				}
+				FRA = { 
+					country_event = { 
+						id = france.1 
+						hours = 12
+						random_hours = 24
+					} 
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			ELSE_IF = {
+				limit = {
+					VIC = {
+						OR = {
+							controls_state = 670
+							controls_state = 286
+							controls_state = 1017
+							controls_state = 741
+							670 = { CONTROLLER = { is_subject_of = VIC } }
+							286 = { CONTROLLER = { is_subject_of = VIC } }
+							1017 = { CONTROLLER = { is_subject_of = VIC } }
+							741 = { CONTROLLER = { is_subject_of = VIC } }
+						}
+					}
+				}
+				VIC = { 
+					country_event = { 
+						id = france.1 
+						hours = 12
+						random_hours = 24
+					} 
+				}
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+			IF = {
+				limit = {
+					any_state = {
+						OR = {
+							state = 670
+							state = 286
+							state = 1017
+							state = 741
+							state = 728
+						}
+						OWNER = {
+							NOT = {
+								original_tag = FRA
+								is_subject_of = FRA
+								is_subject_of = VIC
+							}
+							OR = {
+								original_tag = VIN
+								original_tag = CAM
+								original_tag = LAO
+								original_tag = CHM
+								original_tag = SIA
+								original_tag = BRM
+								original_tag = GXC
+								original_tag = GDC
+								original_tag = YUN
+							}
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						OR = {
+							owns_state = 670
+							owns_state = 286
+							owns_state = 1017
+							owns_state = 741
+							owns_state = 728
+						}
+						NOT = {
+							original_tag = FRA
+							is_subject_of = FRA
+							is_subject_of = VIC
+						}
+						OR = {
+							original_tag = VIN
+							original_tag = CAM
+							original_tag = LAO
+							original_tag = CHM
+							original_tag = SIA
+							original_tag = BRM
+							original_tag = GXC
+							original_tag = GDC
+							original_tag = YUN
+						}
+					}
+					
+					ROOT = {
+						create_wargoal = {
+							type = puppet_wargoal_focus
+							target = PREV
+							expire = 0
+						}	
+					}
+				}
+			} 
+			
 		}
 
 		will_lead_to_war_with = FRA
@@ -6968,11 +7090,14 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				NOT = { country_exists = SIA }
-				SIA = {
-					has_war_with = ROOT
-				}
+				bypass = {
+			Date > 1942.1.1
+		}
+		}
+		bypass_effect = {
+		annex_country = {
+		target = SIA
+		transfer_troops = yes
 			}
 		}
 
@@ -7021,9 +7146,7 @@ focus_tree = {
 		}	
 					}
 
-		bypass = {
-			Date > 1942.1.1
-		}
+	
 		bypass_effect = { 			
 			JAP = {
 			declare_war_on = {
