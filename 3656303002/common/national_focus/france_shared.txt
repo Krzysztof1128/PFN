@@ -682,7 +682,9 @@ shared_focus = {
 		focus = UFRA_foreign_policy
 	}
 	relative_position_id = UFRA_foreign_policy
-	cost = 8
+	cost = 3
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -5836,7 +5838,9 @@ shared_focus = {
 	}
 	prerequisite = {}
 	mutually_exclusive = { }
-	cost = 6
+	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -5862,18 +5866,18 @@ shared_focus = {
 
     		type = infantry_equipment_1
 
-    		amount = 2500
+    		amount = 7500
 
 		}
-		random_owned_state = {
+		295 = {
 			limit = {
 				is_controlled_by = ROOT
 				is_core_of = ROOT
 			}
-			add_extra_state_shared_building_slots = 2
+			add_extra_state_shared_building_slots = 4
 			add_building_construction = {
 				type = arms_factory
-				level = 2
+				level = 4
 				instant_build = yes
 			}
 		}
@@ -5894,7 +5898,10 @@ shared_focus = {
 	relative_position_id = UFRA_begin_rearmament
 	x = 7
 	y = 1
-	cost = 6
+	cost = 4
+	
+	available_if_capitulated = yes
+	
 	ai_will_do = {
 		factor = 0
 	    factor = 0.05
@@ -5907,8 +5914,8 @@ shared_focus = {
 	available = {
 		is_subject = no
 		OR = {
-			date > 1939.9.1
-			num_of_factories > 135
+			date > 1938.9.1
+			num_of_factories > 100
 			has_tech = atomic_research
 		}
 	}
@@ -6126,7 +6133,7 @@ shared_focus = {
 	id = UFRA_defensive_focus
 	icon = GFX_u_fra_UFRA_defensive_focus
 	mutually_exclusive = { focus = UFRA_aggressive_focus }
-	x = -3
+	x = -2
 	y = 1
 	cost = 5
 	available = {
@@ -6155,15 +6162,7 @@ shared_focus = {
 	icon = GFX_goal_generic_army_artillery
 	x = -4
 	y = 1
-	offset = {
-		x = 4
-		y = 0
-		trigger = {
-			OR = {
-				has_focus_tree = free_french_focus
-			}
-		}
-	}
+	
 
 	allow_branch = {
 		NOT = { has_focus_tree = free_french_focus }
@@ -6172,7 +6171,9 @@ shared_focus = {
 	prerequisite = { focus = UFRA_defensive_focus }
 	mutually_exclusive = { }
 	relative_position_id = UFRA_defensive_focus
-	cost = 8
+	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -6276,20 +6277,14 @@ shared_focus = {
 	mutually_exclusive = { }
 	relative_position_id = UFRA_defensive_focus
 	cost = 5
-
+	
+	available_if_capitulated = yes
+	
 	ai_will_do = {
 		factor = 1
 	}
 
 	available = {
-		if = {
-			limit = {			
-				has_focus_tree = free_french_focus
-			}
-			NOT = {
-				has_focus_tree = free_french_focus
-			}
-		}
 	}
 	
 	bypass = {
@@ -6307,6 +6302,8 @@ shared_focus = {
 			uses = 2
 			cost_reduction = 0.5
 		}
+		custom_effect_tooltip = available_theorist
+		show_ideas_tooltip = charles_de_gaulle
 	}
 }
 shared_focus = {
@@ -6385,7 +6382,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_firepower_kills
-	cost = 8
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -6401,7 +6398,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_infantry_focus
-	cost = 8
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -6435,7 +6432,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_artillery_focus
-	cost = 8
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -6462,13 +6459,14 @@ shared_focus = {
 			has_focus_tree = free_french_focus
 		}
 	}
+	available_if_capitulated = yes
 	prerequisite = {
 		focus = UFRA_heavy_armor_focus
 		focus = UFRA_light_medium_armor
 	}
 	relative_position_id = UFRA_heavy_armor_focus
 	mutually_exclusive = { }
-	cost = 6
+	cost = 5
 
 	ai_will_do = {
 		factor = 1
@@ -6488,7 +6486,7 @@ shared_focus = {
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
 		army_experience = 5
-		random_owned_state = {
+		295 = {
 			limit = {
 				is_controlled_by = ROOT
 				is_core_of = ROOT
@@ -6551,10 +6549,10 @@ shared_focus = {
 				is_controlled_by = ROOT
 				is_core_of = ROOT
 			}
-			add_extra_state_shared_building_slots = 3
+			add_extra_state_shared_building_slots = 6
 			add_building_construction = {
 				type = arms_factory
-				level = 3
+				level = 6
 				instant_build = yes
 			}
 		}
@@ -6611,13 +6609,15 @@ shared_focus = {
 			army_experience = 10
 			add_tech_bonus = {
 				name = fra_newgun
-				bonus = 1
+				bonus = 2
 				uses = 2
 				technology = antitank1
 				technology = antitank2
 				technology = antitank3
 				technology = antitank4
 				technology = antitank5
+				technology = antitank6
+				technology = antitank7
 
 			}
 		}
@@ -6632,22 +6632,9 @@ shared_focus = {
 	y = 1
 	relative_position_id = UFRA_newgun
 	cost = 10
-	
+	available_if_capitulated = yes
 	available = {
 		date > 1940.01.01
-		country_exists = GER
-		GER = {
-			OR = {
-				is_subject_of = FRA
-				is_ally_with = FRA
-				has_government = democratic
-				has_government = communism
-			}
-
-			NOT = {
-				has_war_with = FRA
-			}
-		}
 	}
 	available_if_capitulated = yes
 
@@ -6753,6 +6740,8 @@ shared_focus = {
 	mutually_exclusive = { }
 	relative_position_id = UFRA_firepower_kills
 	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -6785,7 +6774,7 @@ shared_focus = {
 		IF = {
 			limit = { has_dlc = "Arms Against Tyranny" }
 			mio:FRA_renault_organization = {
-				add_mio_funds = 2000
+				add_mio_funds = 4000
 			}
 		}
 		ELSE = {
@@ -6802,7 +6791,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_infantry_tanks
-	cost = 6
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -6821,7 +6810,7 @@ shared_focus = {
 	id = UFRA_aggressive_focus
 	icon = GFX_ef_goal_generic_angel
 	mutually_exclusive = { focus = UFRA_defensive_focus }
-	x = 1
+	x = 2
 	y = 1
 	cost = 5
 	relative_position_id = UFRA_begin_rearmament
@@ -6846,13 +6835,13 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = UFRA_aggressive_focus
-	cost = 6
+	cost = 5
 
 	available_if_capitulated = yes
 
 	search_filters = { FOCUS_FILTER_INDUSTRY }
 	completion_reward = {
-		random_owned_state = {
+		295 = {
 				limit = {
 					is_controlled_by = ROOT
 					is_core_of = ROOT
@@ -6872,7 +6861,7 @@ shared_focus = {
 	mutually_exclusive = { }
 	x = 0
 	y = 1
-	cost = 6
+	cost = 5
 	relative_position_id = UFRA_create_matra
 	available_if_capitulated = yes
 
@@ -6970,8 +6959,10 @@ shared_focus = {
 	prerequisite = { focus = UFRA_war_games }
 	mutually_exclusive = { }
 	relative_position_id = UFRA_war_games
-	cost = 6
-
+	cost = 5
+	
+	available_if_capitulated = yes
+	
 	ai_will_do = {
 		factor = 1
 	}
@@ -6989,7 +6980,6 @@ shared_focus = {
 	
 
 	completion_reward = {
-		add_ideas = { special_forces }
 
 		add_tech_bonus = {
 			name = FRA_special_forces
@@ -7019,15 +7009,17 @@ shared_focus = {
 	}
 	
 	relative_position_id = UFRA_special_forces
-	cost = 6
-
+	cost = 5
+	
+	available_if_capitulated = yes
+	
 	ai_will_do = {
 		factor = 1
 	}
 
 	available = {
 		has_war_support > 0.75
-		has_stability > 0.90
+		has_stability > 0.80
 	}
 	
 	bypass = {
@@ -7038,10 +7030,7 @@ shared_focus = {
 	
 
 	completion_reward = {
-		swap_ideas = {
-			remove_idea = special_forces
-			add_idea = FRA_furia_francese
-		}
+		add_ideas = { FRA_furia_francese }
 	}
 }
 
@@ -7057,8 +7046,10 @@ shared_focus = {
 	prerequisite = { focus = UFRA_aggressive_focus }
 	mutually_exclusive = { }
 	relative_position_id = UFRA_aggressive_focus
-	cost = 6
-
+	cost = 5
+	
+	available_if_capitulated = yes
+	
 	ai_will_do = {
 		factor = 1
 	}
@@ -7076,6 +7067,12 @@ shared_focus = {
 	
 
 	completion_reward = {
+	add_doctrine_cost_reduction = {
+			name = FRA_methodical_battle
+			category = land_doctrine
+			uses = 2
+			cost_reduction = 0.5
+		}
 		custom_effect_tooltip = available_theorist
 		show_ideas_tooltip = charles_de_gaulle
 	}
@@ -7087,7 +7084,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_battle_of_maneuver
-	cost = 6
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -7103,7 +7100,10 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_motorized_focus
-	cost = 6
+	cost = 5
+	
+	available_if_capitulated = yes
+	
 	completion_reward = {
 		army_experience = 5
 		add_tech_bonus = {
@@ -7121,7 +7121,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_mechanized_focus
-	cost = 6
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -7169,7 +7169,9 @@ shared_focus = {
 	prerequisite = { focus = UFRA_aggressive_focus }
 	mutually_exclusive = { }
 	relative_position_id = UFRA_aggressive_focus
-	cost = 8
+	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -7200,7 +7202,7 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UFRA_air_dominance
-	cost = 8
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -7241,7 +7243,9 @@ shared_focus = {
 	prerequisite = { focus = UFRA_cas_focus }
 	mutually_exclusive = { }
 	relative_position_id = UFRA_air_dominance
-	cost = 8
+	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -7280,7 +7284,9 @@ shared_focus = {
 	prerequisite = { focus = UFRA_air_ground_cooperation }
 	mutually_exclusive = { }
 	relative_position_id = UFRA_air_dominance
-	cost = 8
+	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -7324,7 +7330,9 @@ shared_focus = {
 	}
 	relative_position_id = UFRA_flying_artillery
 	mutually_exclusive = { }
-	cost = 6
+	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -7417,6 +7425,7 @@ shared_focus = {
 		factor = 1
 	}
 	available = {
+		FRA = {exists = no}
 		has_completed_focus = UFRA_create_dga
 	}
 	available_if_capitulated = yes
@@ -7600,7 +7609,9 @@ shared_focus = {
 	}
 	prerequisite = { focus = UFRA_review_radio_role }
 	relative_position_id = UFRA_review_radio_role
-	cost = 7
+	cost = 5
+	
+	available_if_capitulated = yes
 
 	ai_will_do = {
 		factor = 1
@@ -7651,27 +7662,13 @@ shared_focus = {
 	available = {
 		OR = {
 			AND = {
-				has_army_manpower = { size > 649999 }
+				has_army_manpower = { size > 10000 }
 				check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
-				custom_trigger_tooltip = {
-					tooltip = FRA_tank_role_infantry_eq_trigger_tt
-					check_variable = { num_equipment_in_armies_k@infantry_equipment > 40 }
-				}
 			}
 			AND = {
 				has_army_size = {
-					size > 9
+					size > 3
 					type = armor
-				}
-				custom_trigger_tooltip = {
-					tooltip = FRA_tank_role_eq_trigger_tt
-					OR = {
-						check_variable = { num_equipment_in_armies_k@light_tank_chassis > 3 }
-						check_variable = { num_equipment_in_armies_k@medium_tank_chassis > 3 }
-						check_variable = { num_equipment_in_armies_k@heavy_tank_chassis > 3 }
-						check_variable = { num_equipment_in_armies_k@super_heavy_tank_chassis > 3 }
-						check_variable = { num_equipment_in_armies_k@modern_tank_chassis > 3 }
-					}
 				}
 			}
 		}
@@ -7706,12 +7703,13 @@ shared_focus = {
 		x = 0
 		y = 0
 	}
+	available_if_capitulated = yes
 	prerequisite = {
 		focus = UFRA_review_tanks_role
 	}
 	mutually_exclusive = { }
 	relative_position_id = UFRA_review_tanks_role
-	cost = 6
+	cost = 3
 
 	ai_will_do = {
 		factor = 1
@@ -7795,8 +7793,8 @@ shared_focus = {
 	}
 	mutually_exclusive = { }
 	relative_position_id = UFRA_medium_tanks
-	cost = 6
-
+	cost = 5
+	available_if_capitulated = yes
 	ai_will_do = {
 		factor = 1
 	}
@@ -7894,7 +7892,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	relative_position_id = UFRA_review_tanks_role
-	cost = 10
+	cost = 5
 
 	available_if_capitulated = yes
 
@@ -7912,7 +7910,7 @@ shared_focus = {
 			else = {
 				NOT = { has_idea = FRA_disjointed_government }
 			}
-			has_army_manpower = { size > 749999 }
+			has_army_manpower = { size > 10000 }
 		}
 	}
 	search_filters = { }
@@ -7951,8 +7949,10 @@ shared_focus = {
 	prerequisite = { focus = UFRA_army_reform }
 	mutually_exclusive = { }
 	relative_position_id = UFRA_army_reform
-	cost = 7
-
+	cost = 5
+	
+	available_if_capitulated = yes
+	
 	ai_will_do = {
 		factor = 1
 	}
@@ -7977,7 +7977,7 @@ shared_focus = {
 			category = infantry_weapons
 		}
 		add_tech_bonus = {
-			bonus = 0.5
+			bonus = 1.0
     		ahead_reduction = 1.0
 			uses = 1
 			category = artillery

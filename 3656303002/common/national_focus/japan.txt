@@ -14996,8 +14996,8 @@ focus_tree = {
 
 			JAP_isoroku_yamamoto = {	
 				add_trait = { trait = air_controller }
+				add_trait = { trait = blockade_runner }
 			}
-			
 		}
 
 	}
@@ -15188,7 +15188,10 @@ focus_tree = {
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-
+			JAP_tamon_yamaguchi = {
+				 add_trait = { trait = ironside }
+				 add_trait = { trait = air_controller } 
+			}
 		}
 
 	}
@@ -15260,7 +15263,9 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			JAP_soemu_toyoda = { add_trait = { trait = ironside } }
+			JAP_soemu_toyoda = { add_trait = { trait = ironside } 
+			add_trait = { trait = battleship_adherent }
+			}
 		}
 
 	}

@@ -1261,14 +1261,12 @@ focus_tree = {
 				name = USA_Resource_1
 				bonus = 2
 				uses = 1
-				category = construction_tech
+				category = cat_production
 			}
-			add_tech_bonus = {
-				name = USA_Resource_1
-				bonus = 1.0
-				uses = 2
-				category = cat_synth_resources
-			}
+			add_to_variable = { USA_stagnant_industry_modifier_local_resources_factor = 0.1}
+			custom_effect_tooltip = USA_Resource_1_tt
+
+
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		USA_modify_economy_modifier = yes
@@ -1305,9 +1303,9 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = USA_tech_2
-				bonus = 1
-				uses = 2
-				category = industry
+				bonus = 2
+				uses = 1
+				category = construction_tech
 			}
 		}
 	}
@@ -1333,14 +1331,11 @@ focus_tree = {
 				name = USA_Resource_4
 				bonus = 2
 				uses = 1
-				category = construction_tech
+				category = cat_production
 			}
-			add_tech_bonus = {
-				name = USA_Resource_4
-				bonus = 1.0
-				uses = 2
-				category = cat_synth_resources
-			}
+			add_to_variable = { USA_stagnant_industry_modifier_local_resources_factor = 0.1}
+			custom_effect_tooltip = USA_Resource_2_tt
+
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		USA_modify_economy_modifier = yes
@@ -1373,11 +1368,11 @@ focus_tree = {
 		add_to_variable = { USA_stagnant_industry_modifier_production_speed_industrial_complex_factor = 0.10 }
 		custom_effect_tooltip = USA_tech_4_tt
 
-			add_tech_bonus = {
+				add_tech_bonus = {
 				name = USA_tech_2
-				bonus = 1
-				uses = 2
-				category = industry
+				bonus = 2
+				uses = 1
+				category = construction_tech
 			}
 		}
 	}
@@ -1483,7 +1478,10 @@ focus_tree = {
 		cost = 1
 
 		available = {
+			or = {
 			GER = { has_completed_focus = GER_fate_of_czechoslovakia }
+			date > 1939.1.1
+			}
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1539,7 +1537,8 @@ focus_tree = {
             OR = {
             CHI = {has_capitulated = yes}
             CHI = { is_subject_of = JAP }
-            }
+			date > 1939.1.1
+			}
         }
 
 		available_if_capitulated = yes
@@ -1624,17 +1623,51 @@ focus_tree = {
 			custom_effect_tooltip = USA_the_giant_wakes_2_tt
 			add_to_variable = { USA_stagnant_industry_modifier_consumer_goods_expected_value = -0.5 }
 			custom_effect_tooltip = USA_the_giant_wakes_3_tt
+			add_to_variable = { USA_production_factory_efficiency_gain_factor = -0.7 }
+
+		}
+	}
+		focus = {
+		id = USA_Military_Production_is_back
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = USA_peacetime_Land_and_air_production }
+		prerequisite = { focus = USA_peacetime_naval_production }
+		prerequisite = { focus = USA_military_spec_screen_2}
+		prerequisite = { focus = USA_military_spec_carrier_2}
+		prerequisite = { focus = USA_military_spec_tonk_2}
+		prerequisite = { focus = USA_military_spec_air_2}
+		
+		x = 0
+		y = 4
+		relative_position_id = USA_the_giant_wakes
+		cost = 10
+
+		available = {
+			OR = {
+			JAP = {
+				has_completed_focus = JAP_strike_the_southern_road
+			}
+			Date > 1941.3.1
+		}
+		}
+		completion_reward = {
+
+		USA_modify_economy_modifier = yes
+		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.15 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.10 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.10 }
 
 		}
 	}
 	focus = {
 		id = USA_wartime_industry
 		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = USA_the_giant_wakes }
-		x = 0
-		y = 1
+		prerequisite = { focus = USA_Military_Production_is_back}
+
+		x = -1
+		y = 5
 		relative_position_id = USA_the_giant_wakes
-		cost = 5
+		cost = 1
 
 		available = {
 			JAP = {
@@ -1642,243 +1675,127 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-
-		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.1 }
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_efficiency_gain_factor = -0.05 }
-		custom_effect_tooltip = USA_wartime_industry_tt
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.10 }
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.10 }
-		custom_effect_tooltip = USA_wartime_industry_2_tt
+		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.175 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.15 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.15 }
 
 		}
 	}
 	focus = {
-		id = USA_wartime_production
+		id = USA_peacetime_Land_and_air_production
 		icon = GFX_focus_generic_mass_production
-		prerequisite = { focus = USA_wartime_industry }
+		prerequisite = { focus = USA_Rebuild_military_production }
 		x = -1
-		y = 2
-		relative_position_id = USA_wartime_industry
+		y = 3
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
-
+			num_of_military_factories > 150
 		}
 		completion_reward = {
 
 		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.1 }
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_efficiency_gain_factor = -0.05 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.25 }
 		custom_effect_tooltip = USA_wartime_production_tt
 
 		}
 	}
-	focus = {
-		id = USA_wartime_production_2
-		icon = GFX_focus_FIN_oy_alkoholiliike
-		prerequisite = { focus = USA_wartime_production }
+		focus = {
+		id = USA_Rearment_drives_Inovation
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = USA_Rebuild_military_production }
 		x = 0
 		y = 2
-		relative_position_id = USA_wartime_production
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
-
+			num_of_factories > 800
 		}
 		completion_reward = {
-
-		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.1 }
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_efficiency_gain_factor = -0.05 }
-		custom_effect_tooltip = USA_wartime_production_2_tt
-
+			add_tech_bonus = {
+				name = USA_Rearment_drives_Inovation
+				uses = 1
+				ahead_reduction = 5
+				category = cat_production
+			}
 		}
 	}
-	focus = {
-		id = USA_wartime_production_3
-		icon = GFX_focus_PER_ally_bazaari
-		prerequisite = { focus = USA_wartime_production_2 }
-		x = 0
-		y = 2
-		relative_position_id = USA_wartime_production_2
-		cost = 5
 
-		available = {
-
-		}
-		completion_reward = {
-
-		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.1 }
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_efficiency_gain_factor = -0.05 }
-		custom_effect_tooltip = USA_wartime_production_3_tt
-
-		}
-	}
 	focus = {
 		id = USA_God_of_armaments_production
 		icon = GFX_focus_ETH_restore_the_empire_of_axum
-		prerequisite = { focus = USA_military_spec_air_3 }
-		prerequisite = { focus = USA_military_spec_tonk_3 }
-		prerequisite = { focus = USA_military_spec_inf_3 }
-		prerequisite = { focus = USA_wartime_production_3 }
-		prerequisite = { focus = USA_military_spec_screen_3 }
-		prerequisite = { focus = USA_military_spec_carrier_3 }
-		prerequisite = { focus = USA_wartime_company_3 }
-		
+		prerequisite = { focus = USA_Military_Production_is_back }
 
 		x = 1
 		y = 1
-		relative_position_id = USA_wartime_production_3
-		cost = 5
+		relative_position_id = USA_Military_Production_is_back
+		cost = 20
 
 		available = {
-
+		has_tech = streamlined_line2
 		}
 		completion_reward = {
-
+			
 		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.2 }
-		add_to_variable = { USA_stagnant_industry_modifier_production_factory_efficiency_gain_factor = -0.1 }
-		custom_effect_tooltip = USA_God_of_armaments_production_tt
-		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.20 }
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.20 }
-		custom_effect_tooltip = USA_God_of_output_tt
-
+		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.175 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.15 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.15 }
 		}
 	}
 
 	focus = {
-		id = USA_wartime_company
+		id = USA_peacetime_naval_production
 		icon = GFX_focus_CHL_enlarge_the_textile_industries
-		prerequisite = { focus = USA_wartime_industry }
+		prerequisite = { focus = USA_Rebuild_military_production }
 		x = 1
-		y = 2
-		relative_position_id = USA_wartime_industry
+		y = 3
+		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
-
+			dockyard > 69
 		}
 		completion_reward = {
 
 		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.10 }
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.10 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.25 }
 		custom_effect_tooltip = USA_wartime_company_tt
 
 		}
 	}
 	focus = {
-		id = USA_wartime_company_2
-		icon = GFX_focus_RAJ_khadi_movement
-		prerequisite = { focus = USA_wartime_company }
-		x = 0
-		y = 2
-		relative_position_id = USA_wartime_company
-		cost = 5
-
-		available = {
-
-		}
-		completion_reward = {
-
-		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.10 }
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.10 }
-		custom_effect_tooltip = USA_wartime_company_2_tt
-
-		}
-	}
-	focus = {
-		id = USA_wartime_company_3
-		icon = GFX_focus_AFG_a_modern_economy
-		prerequisite = { focus = USA_wartime_company_2 }
-		x = 0
-		y = 2
-		relative_position_id = USA_wartime_company_2
-		cost = 5
-
-		available = {
-
-		}
-		completion_reward = {
-
-		USA_modify_economy_modifier = yes
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.10 }
-		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.10 }
-		custom_effect_tooltip = USA_wartime_company_3_tt
-
-		}
-	}
-
-	focus = {
-		id = USA_military_spec_inf
-		icon = GFX_focus_BEL_poudreries_reunies_de_belgique
+		id = USA_Rebuild_military_production
+		icon = GFX_focus_CHL_enlarge_the_textile_industries
 		prerequisite = { focus = USA_the_giant_wakes }
-		x = -3
+		x = 0
 		y = 1
 		relative_position_id = USA_the_giant_wakes
 		cost = 5
 
 		available = {
-
+			OR ={
+			Date > 1940.1.1
+			FRA = { has_capitulated = yes}
+			}
 		}
 		completion_reward = {
 
-			mio:USA_springfield_armory_organization = {
-				add_mio_funds_gain_factor = 0.4
-				}
+		USA_modify_economy_modifier = yes
+		add_to_variable = { USA_stagnant_industry_modifier_production_factory_max_efficiency_factor = 0.1 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_factory = 0.05 }
+		add_to_variable = { USA_stagnant_industry_modifier_industrial_capacity_dockyard = 0.05 }
+		custom_effect_tooltip = USA_wartime_company_tt
 
 		}
 	}
-	focus = {
-		id = USA_military_spec_inf_2
-		icon = GFX_focus_HUN_form_the_gyorshadtest
-		prerequisite = { focus = USA_military_spec_inf }
-		x = 0
-		y = 3
-		relative_position_id = USA_military_spec_inf
-		cost = 5
 
-		available = {
-
-		}
-		completion_reward = {
-
-			mio:USA_springfield_armory_organization = {
-				add_mio_size = 2
-				}
-
-		}
-	}
-	focus = {
-		id = USA_military_spec_inf_3
-		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		prerequisite = { focus = USA_military_spec_inf_2 }
-		x = 0
-		y = 3
-		relative_position_id = USA_military_spec_inf_2
-		cost = 5
-
-		available = {
-
-		}
-		completion_reward = {
-
-			mio:USA_springfield_armory_organization = {
-				add_mio_size = 2
-				}
-
-		}
-	}
 	focus = {
 		id = USA_military_spec_tonk
 		icon = GFX_SOV_reorganize_the_pc_of_heavy_industry_ccp_2d_sov_compatibility
 		prerequisite = { focus = USA_the_giant_wakes }
-		x = -5
+		x = -3
 		y = 1
 		relative_position_id = USA_the_giant_wakes
 		cost = 5
@@ -1899,7 +1816,7 @@ focus_tree = {
 		icon = GFX_focus_generic_communist_industry
 		prerequisite = { focus = USA_military_spec_tonk }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = USA_military_spec_tonk
 		cost = 5
 
@@ -1909,36 +1826,17 @@ focus_tree = {
 		completion_reward = {
 
 			mio:USA_okmo_organization = {
-				add_mio_size = 2
+				add_mio_size = 4
 				}
 
 		}
 	}
-	focus = {
-		id = USA_military_spec_tonk_3
-		icon = GFX_SOV_the_fourth_international_ccp_2d_sov_compatibility
-		prerequisite = { focus = USA_military_spec_tonk_2 }
-		x = 0
-		y = 3
-		relative_position_id = USA_military_spec_tonk_2
-		cost = 5
 
-		available = {
-
-		}
-		completion_reward = {
-
-			mio:USA_okmo_organization = {
-				add_mio_size = 2
-				}
-
-		}
-	}
 	focus = {
 		id = USA_military_spec_air
 		icon = GFX_focus_SMB_purchase_aircraft
 		prerequisite = { focus = USA_the_giant_wakes }
-		x = -7
+		x = -5
 		y = 1
 		relative_position_id = USA_the_giant_wakes
 		cost = 5
@@ -1959,7 +1857,7 @@ focus_tree = {
 		icon = GFX_focus_SWE_marauder_bombers
 		prerequisite = { focus = USA_military_spec_air }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = USA_military_spec_air
 		cost = 5
 
@@ -1969,27 +1867,7 @@ focus_tree = {
 		completion_reward = {
 
 			mio:USA_north_american_aviation_organization = {
-				add_mio_size = 2
-				}
-
-		}
-	}
-	focus = {
-		id = USA_military_spec_air_3
-		icon = GFX_focus_YUG_ikarus
-		prerequisite = { focus = USA_military_spec_air_2 }
-		x = 0
-		y = 3
-		relative_position_id = USA_military_spec_air_2
-		cost = 5
-
-		available = {
-
-		}
-		completion_reward = {
-
-			mio:USA_north_american_aviation_organization = {
-				add_mio_size = 2
+				add_mio_size = 4
 				}
 
 		}
@@ -2010,7 +1888,7 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_electric_boat_company_organization = {
+			mio:USA_detroit_arsenal_organization = {
 				add_mio_funds_gain_factor = 0.4
 				}
 
@@ -2021,7 +1899,7 @@ focus_tree = {
 		icon = GFX_focus_generic_cruiser_submarines
 		prerequisite = { focus = USA_military_spec_screen }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = USA_military_spec_screen
 		cost = 5
 
@@ -2030,32 +1908,13 @@ focus_tree = {
 		}
 		completion_reward = {
 
-			mio:USA_electric_boat_company_organization = {
-				add_mio_size = 2
+			mio:USA_detroit_arsenal_organization = {
+				add_mio_size = 4
 				}
 
 		}
 	}
-	focus = {
-		id = USA_military_spec_screen_3
-		icon = GFX_focus_SWE_Vasa_II
-		prerequisite = { focus = USA_military_spec_screen_2 }
-		x = 0
-		y = 3
-		relative_position_id = USA_military_spec_screen_2
-		cost = 5
 
-		available = {
-
-		}
-		completion_reward = {
-
-			mio:USA_electric_boat_company_organization = {
-				add_mio_size = 2
-				}
-
-		}
-	}
 	focus = {
 		id = USA_military_spec_carrier
 		icon = GFX_focus_generic_copy_plane_designs
@@ -2081,7 +1940,7 @@ focus_tree = {
 		icon = GFX_focus_generic_air_carrier
 		prerequisite = { focus = USA_military_spec_carrier }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = USA_military_spec_carrier
 		cost = 5
 
@@ -2091,45 +1950,24 @@ focus_tree = {
 		completion_reward = {
 
 			mio:USA_douglas_aircraft_company_organization = {
-				add_mio_size = 2
+				add_mio_size = 4
 				}
 
 		}
 	}
-	focus = {
-		id = USA_military_spec_carrier_3
-		icon = GFX_SOV_expand_the_morskaya_aviatsiya_ccp_2d_sov_compatibility
-		prerequisite = { focus = USA_military_spec_carrier_2 }
-		x = 0
-		y = 3
-		relative_position_id = USA_military_spec_carrier_2
-		cost = 5
 
-		available = {
-
-		}
-		completion_reward = {
-
-			mio:USA_douglas_aircraft_company_organization = {
-				add_mio_size = 2
-				}
-
-		}
-	}
 
 	focus = {
 		id = USA_rubber_reserve_company
 		icon = GFX_focus_generic_rubber
-		prerequisite = { focus = USA_Resource_1 }
-		relative_position_id = USA_Resource_1
-		x = -2
+		prerequisite = { focus = USA_wartime_industry }
+		relative_position_id = USA_wartime_industry
+		x = -1
 		y = 1
 		cost = 10
 
 		available = {
-			NOT = {
-				has_completed_focus = USA_fair_labour_standards_act
-			}
+			has_completed_focus = USA_Resource_4
 			industrial_complex > 39
 		}
 
@@ -2157,10 +1995,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			NOT = {
-				has_completed_focus = USA_fair_labour_standards_act
-			}
-			industrial_complex > 39
+
 		}
 		
 		completion_reward = {
@@ -4074,115 +3909,7 @@ focus_tree = {
 #  #  #  #  #       # #   #  #  #   #  #  # #  # 
 #  # ### #  #     ##  ###  ##   #  ###  ##  #  # 
 
-    focus = {
-		id = USA_strengthen_the_air_corps
-		icon = GFX_goal_USA_air_corps
-		x = 3
-		y = 1
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		prerequisite = { focus = USA_war_department }
-		relative_position_id = USA_war_department
-
-		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_MILITARY_CHARACTER }
-		completion_reward = {
-			air_experience = 25
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			USA_modify_air_modifier = yes
-			add_to_variable = { 
-				USA_army_air_training_xp_gain_factor = 0.05
-				tooltip = air_training_xp_gain_factor_tt 
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = available_chief_of_airforce
-			show_ideas_tooltip = henry_arnold
-		}
-	}
-
-	focus = {
-		id = USA_air_war_plans_division
-		icon = GFX_goal_generic_air_naval_bomber2_new
-		x = 1
-		y = 1
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		prerequisite = { focus = USA_strengthen_the_air_corps }
-		relative_position_id = USA_strengthen_the_air_corps
-		
-		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
-	
-		completion_reward = {
-			air_experience = 25
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					is_in_home_area = yes
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.25
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			USA_modify_air_modifier = yes
-			add_to_variable = { 
-				USA_army_air_training_xp_gain_factor = 0.05
-				tooltip = air_training_xp_gain_factor_tt 
-			}
-		}
-	}
+    
 
 	focus = {
 		id = USA_advanced_pilot_training_program
@@ -4193,17 +3920,32 @@ focus_tree = {
 		#ai_will_do = {
 		#	factor = 1
 		#}
-		prerequisite = { focus = USA_air_war_plans_division }
-		relative_position_id = USA_air_war_plans_division
+		prerequisite = { focus = USA_us_army_airforce }
+		relative_position_id = USA_us_army_airforce
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_MILITARY_CHARACTER }
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = USA_aerial_maneuvers
+				uses = 2
+				cost_reduction = 0.25
+				category = air_doctrine
+			}
+
 			air_experience = 25
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			USA_modify_air_modifier = yes
+			add_to_variable = { 
+				USA_army_air_training_xp_gain_factor = 0.05
+				tooltip = air_training_xp_gain_factor_tt 
+			}
+			add_to_variable = { 
+				USA_army_air_training_xp_gain_factor = 0.05
+				tooltip = air_training_xp_gain_factor_tt 
+			}
 			add_to_variable = { 
 				USA_army_air_training_xp_gain_factor = 0.05
 				tooltip = air_training_xp_gain_factor_tt 
@@ -4228,114 +3970,24 @@ focus_tree = {
 				callsign = Tex
 				type = fighter_genius
 			}
+			
 		}
 	}
 
-	focus = {
-		id = USA_the_b_17_project
-		icon = GFX_goal_USA_b17_project
-		x = 0
-		y = 1
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		prerequisite = { focus = USA_advanced_pilot_training_program }
-		relative_position_id = USA_advanced_pilot_training_program
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
 	
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_the_b_17_project
-				bonus = 0.5
-				uses = 1
-				category = heavy_air
-			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				create_equipment_variant = { 
-					name = "B-17 Flying Fortress" 
-					type = large_plane_airframe_1
-					allow_without_tech = no
-					modules = {
-						fixed_main_weapon_slot = large_bomb_bay
-				        fixed_auxiliary_weapon_slot_1 = large_bomb_bay
-				        engine_type_slot = engine_3_4x
-				        special_type_slot_1 = hmg_defense_turret_2x
-				        special_type_slot_2 = hmg_defense_turret_2x
-				        special_type_slot_3 = bomb_sights_1
-					}
-					icon = "GFX_USA_strategic_bomber1_medium"
-					design_team = mio:USA_boeing_organization
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			USA_modify_air_modifier = yes
-			add_to_variable = { 
-				USA_army_air_strategic_bomber_bombing_factor = 0.05
-				tooltip = air_strategic_bomber_bombing_factor_tt 
-			}
-		}
-	}
-
-	focus = {
-		id = USA_escort_fighters
-		icon = GFX_focus_generic_escort_efficiency #GFX_focus_usa_escort_fighters
-		x = -2
-		y = 1
-		prerequisite = { focus = USA_advanced_pilot_training_program }
-		relative_position_id = USA_advanced_pilot_training_program
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:USA_lockheed_organization = {
-					add_mio_size = 1
-				}
-			}
-		}
-	}
 
 	focus = {
 		id = USA_boost_transport_capacity
 		icon = GFX_goal_generic_air_production
-		x = 0
+		x = -1
 		y = 1
 		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
-		prerequisite = { focus = USA_escort_fighters }
-		prerequisite = { focus = USA_the_b_17_project }
-		relative_position_id = USA_the_b_17_project
+		prerequisite = { focus = USA_advanced_pilot_training_program }
+		relative_position_id = USA_advanced_pilot_training_program
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	
@@ -4368,12 +4020,15 @@ focus_tree = {
 	focus = {
 		id = USA_us_air_force
 		icon = GFX_USA_USAF
-		x = -1
-		y = 4
+		x = 2
+		y = 1
+		prerequisite = { focus = USA_combined_bomber_offensive }
+		prerequisite = { focus = USA_CAS }
+		prerequisite = { focus = USA_boost_transport_capacity }
 		prerequisite = { focus = USA_airborne_divisions }
-		prerequisite = { focus = USA_escort_fighters }
-		prerequisite = { focus = USA_expand_aircraft_production_lines }
-		relative_position_id = USA_escort_fighters
+
+		
+		relative_position_id = USA_combined_bomber_offensive
 		cost = 10
 
 		ai_will_do = {
@@ -4479,108 +4134,17 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = USA_army_airfields_expansion
-		icon = GFX_GENERIC_International_Airport
-		x = 2
-		y = 2
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		prerequisite = { focus = USA_advanced_pilot_training_program }
-		relative_position_id = USA_advanced_pilot_training_program
+	
 
-		search_filters = {}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-					is_in_home_area = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 3
-					air_base < 9
-					is_in_home_area = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 2
-					air_base < 9
-					is_in_home_area = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					air_base > 1
-					air_base < 9
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = USA_radar_and_targetting_improvements
-		icon = GFX_goal_generic_radar
-		x = -3
-		y = 1
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		prerequisite = { focus = USA_army_airfields_expansion focus = USA_escort_fighters }
-		relative_position_id = USA_army_airfields_expansion
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
-				name = USA_radar_and_targetting_improvements
-				bonus = 1
-				uses = 1
-				category = radar_tech
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			USA_modify_air_modifier = yes
-			add_to_variable = { 
-				USA_army_air_weather_penalty = -0.15
-				tooltip = air_weather_penalty_tt 
-			}
-		}
-	}
+	
 
 	focus = {
 		id = USA_airborne_divisions
 		icon = GFX_USA_Form_Airborne_Divisions
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = USA_radar_and_targetting_improvements }
-		relative_position_id = USA_radar_and_targetting_improvements
+		prerequisite = { focus = USA_advanced_pilot_training_program }
+		relative_position_id = USA_advanced_pilot_training_program
 		cost = 5
 
 		ai_will_do = {
@@ -4646,47 +4210,17 @@ focus_tree = {
 	# 	}
 	# }
 
-	focus = {
-		id = USA_aerial_maneuvers
-		icon = GFX_goal_generic_air_doctrine
-		x = -1
-		y = 1
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		prerequisite = { focus = USA_strengthen_the_air_corps }
-		relative_position_id = USA_strengthen_the_air_corps
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = USA_aerial_maneuvers
-				uses = 2
-				cost_reduction = 0.25
-				category = air_doctrine
-			}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			USA_modify_air_modifier = yes
-			add_to_variable = { 
-				USA_army_air_doctrine_cost_factor = -0.1
-				tooltip = air_doctrine_cost_factor_tt 
-			}
-		}
-	}
 
 	focus = {
 		id = USA_us_army_airforce
 		icon = GFX_USA_US_Army_Air_Corps
 
-		x = 1
+		x = 4
 		y = 1
-		prerequisite = { focus = USA_aerial_maneuvers }
+		prerequisite = { focus = USA_war_department }
 		prerequisite = { focus = USA_air_war_plans_division }
-		relative_position_id = USA_aerial_maneuvers
+		relative_position_id = USA_war_department
 		cost = 10
 
 		dynamic = yes
@@ -4777,6 +4311,11 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
+						add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.25
+			}
+
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -4794,44 +4333,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = USA_jet_propulsion_research
-		icon = GFX_ef_goal_generic_jet_research
-		x = 0
-		y = 2
-		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
-		prerequisite = { focus = USA_fighter_procurement_board }
-		relative_position_id = USA_fighter_procurement_board
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	
-		completion_reward = {
-			custom_effect_tooltip = USA_modify_aircorps_modifier_tt
-			add_to_variable = { 
-				USA_army_sp_tag_jet_speed_factor = 0.05
-				tooltip = sp_tag_jet_speed_factor_tt 
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_tech_bonus = {
-				name = USA_jet_propulsion_research
-				bonus = 1
-				uses = 1
-				category = rocketry
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.75
-			}
-		}
-	}
 
 	focus = {
 		id = USA_heavy_bomber_fleet_expansion
@@ -4888,19 +4390,6 @@ focus_tree = {
 				USA_army_air_fuel_consumption_factor = 0.05
 				tooltip = air_fuel_consumption_factor_tt 
 			}
-			custom_effect_tooltip = USA_large_airframe_cost_tt
-			hidden_effect = {
-				add_equipment_bonus = {
-					name = USA_heavy_bomber_fleet_expansion
-					bonus = {
-						large_plane_airframe = {
-							build_cost_ic = -0.15 #WARNING! If you change this value, you need to update USA_airframe_cost_tt
-							instant = yes
-						}
-					}
-				}
-			}
-
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -4968,7 +4457,23 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = { USA_army_air_strategic_bomber_night_penalty = -0.1 }
 			}
+			
+			add_tech_bonus = {
+				name = USA_radar_and_targetting_improvements
+				bonus = 1
+				uses = 1
+				category = radar_tech
+			}
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			USA_modify_air_modifier = yes
+			add_to_variable = { 
+				USA_army_air_weather_penalty = -0.15
+				tooltip = air_weather_penalty_tt 
+			}
 		}
+		
 	}
 
 	focus = {
@@ -5046,8 +4551,8 @@ focus_tree = {
 		id = USA_CAS
 		icon = GFX_goal_generic_air_CAS_german
 		prerequisite = { focus = USA_tactical_bomber_command focus = USA_fighter_procurement_board }
-		x = 0
-		y = 1
+		x = -1
+		y = 2
 		relative_position_id = USA_tactical_bomber_command
 		cost = 10
 		#ai_will_do = {
@@ -5101,6 +4606,43 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_AIR_XP }
 
 		completion_reward = {
+			add_tech_bonus = {
+				name = USA_the_b_17_project
+				bonus = 0.5
+				uses = 1
+				category = heavy_air
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				create_equipment_variant = { 
+					name = "B-17 Flying Fortress" 
+					type = large_plane_airframe_1
+					allow_without_tech = no
+					modules = {
+						fixed_main_weapon_slot = large_bomb_bay
+				        fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+				        engine_type_slot = engine_3_4x
+				        special_type_slot_1 = hmg_defense_turret_2x
+				        special_type_slot_2 = hmg_defense_turret_2x
+				        special_type_slot_3 = bomb_sights_1
+					}
+					icon = "GFX_USA_strategic_bomber1_medium"
+					design_team = mio:USA_boeing_organization
+				}
+
+				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+
+			USA_modify_air_modifier = yes
+			add_to_variable = { 
+				USA_army_air_strategic_bomber_bombing_factor = 0.05
+				tooltip = air_strategic_bomber_bombing_factor_tt 
+			}
 			air_experience = 25
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -5130,20 +4672,16 @@ focus_tree = {
 	focus = {
 		id = USA_expand_aircraft_production_lines
 		icon = GFX_focus_generic_aircraft_production
-		prerequisite = { focus = USA_combined_bomber_offensive focus = USA_jet_propulsion_research }
-		x = -1
+		prerequisite = { focus = USA_wartime_industry }
+		x = 1
 		y = 1
-		relative_position_id = USA_combined_bomber_offensive
+		relative_position_id = USA_wartime_industry
 		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
 		available = {
-			NOT = {
-				has_idea = great_depression
-				has_idea = great_depression_2
-				has_idea = great_depression_3
-			}
+
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -5226,6 +4764,33 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = USA_Strategic_bomber_mass_production
+		icon = GFX_ef_goal_generic_heavy_bomber
+		prerequisite = { focus = USA_expand_aircraft_production_lines }
+		x = 0
+		y = 1
+		relative_position_id = USA_expand_aircraft_production_lines
+		cost = 5
+
+		available = {
+	
+		}
+		completion_reward = {
+
+		add_equipment_bonus = {
+					name = USA_heavy_bomber_fleet_expansion
+					bonus = {
+						large_plane_airframe = {
+							build_cost_ic = -0.15 #WARNING! If you change this value, you need to update USA_airframe_cost_tt
+							instant = yes
+						}
+					}
+				}
+
+		}
+	}
+	
 
 	focus = {
 		id = USA_enter_the_jet_age
@@ -5365,7 +4930,7 @@ focus_tree = {
 		}
 
 		dynamic = yes
-		x = 19
+		x = 14
 		y = 1
 		relative_position_id = USA_war_department
 		cost = 5
@@ -5416,7 +4981,7 @@ focus_tree = {
 	focus = {
 		id = USA_naval_radar
 		icon = GFX_ef_goal_generic_naval_radar
-		x = 0
+		x = -2
 		y = 1
 		prerequisite = { focus = USA_fund_the_navy }
 		relative_position_id = USA_fund_the_navy
@@ -5467,7 +5032,7 @@ focus_tree = {
 	focus = {
 		id = USA_two_ocean_navy_act
 		icon = GFX_focus_generic_navy_battleship2
-		x = -2
+		x = 0
 		y = 1
 		prerequisite = { focus = USA_fund_the_navy }
 		relative_position_id = USA_fund_the_navy
@@ -5698,6 +5263,7 @@ focus_tree = {
 				name = USA_battleship_primacy
 				bonus = 1.0
 				uses = 1
+				ahead_reduction = 1
 				category = bb_tech
 			}
 
@@ -5712,7 +5278,7 @@ focus_tree = {
 				USA_navy_naval_coordination = 0.05
 				tooltip = naval_coordination_tt 
 			}
-
+			USA_chester_w_nimitz = { add_trait = { trait = battleship_adherent } }
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -5731,31 +5297,28 @@ focus_tree = {
 	focus = {
 		id = USA_iowa_class_battleships
 		icon = GFX_focus_generic_navy_battleship3alt
-		prerequisite = { focus = USA_battleship_primacy }
+		prerequisite = { focus = USA_arsenal_of_the_oceans }
 		x = 1
 		y = 1
-		relative_position_id = USA_battleship_primacy
-		cost = 10
+		relative_position_id = USA_arsenal_of_the_oceans
+		mutually_exclusive = { focus = USA_essex_class_aircraft_carriers }
+		cost = 20
 		available = {
 			IF = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-				has_tech = improved_ship_hull_heavy
+				has_tech = advanced_ship_hull_heavy
 			}
 			ELSE = {
 				has_tech = improved_battleship
 			}
+			has_tech = advanced_heavy_battery
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_iowa_class_battleships
-				bonus = 1.0
-				uses = 1
-				category = bb_tech
-			}
+
 
 			if = {
 				limit = { 
@@ -5808,32 +5371,12 @@ focus_tree = {
 					industrial_manufacturer = mio:USA_brooklyn_naval_yard_organization
 				}
 			}
+			USA_chester_w_nimitz = {
+				add_trait = { trait = ironside }
+			}
 		}
 	}
 
-	focus = {
-        id = USA_Advanced_submarine_doctrine
-        icon = GFX_goal_generic_navy_doctrines_tactics
-        prerequisite = { focus = USA_unrestricted_submarine_warfare }
-        x = 0
-        y = 1
-        relative_position_id = USA_unrestricted_submarine_warfare
-        cost = 10
-        #ai_will_do = {
-        #    factor = 1
-        #}
-
-        available_if_capitulated = yes
-
-        search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
-        completion_reward = {
-
-            custom_effect_tooltip = generic_skip_one_line_tt
-            USA_ernest_king = {
-                add_trait = { trait = seawolf }
-            }
-        }
-    }
 
 	focus = {
 		id = USA_improved_high_velocity_naval_guns
@@ -5967,11 +5510,11 @@ focus_tree = {
 	focus = {
 		id = USA_bureau_of_aeronautics
 		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = { focus = USA_carrier_primacy }
-		prerequisite = { focus = USA_advanced_pilot_training_program }
-		x = -3
+		prerequisite = { focus = USA_extended_carrier_range_operations }
+
+		x = -1
 		y = 1
-		relative_position_id = USA_carrier_primacy
+		relative_position_id = USA_extended_carrier_range_operations
 		cost = 10
 		#ai_will_do = {
 		#	factor = 1
@@ -6004,9 +5547,10 @@ focus_tree = {
 		icon = GFX_GENERIC_Aircraft_Cruiser
 		x = -1
 		y = 1
-		prerequisite = { focus = USA_carrier_primacy }
-		relative_position_id = USA_carrier_primacy
-		cost = 10
+		prerequisite = { focus = USA_arsenal_of_the_oceans }
+		relative_position_id = USA_arsenal_of_the_oceans
+		mutually_exclusive = { focus = USA_iowa_class_battleships }
+		cost = 20
 
 		ai_will_do = {
 			base = 1
@@ -6017,7 +5561,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-				has_tech = improved_ship_hull_carrier
+				has_tech = advanced_ship_hull_carrier
 			}
 			ELSE = {
 				has_tech = improved_carrier
@@ -6026,12 +5570,7 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_essex_class_aircraft_carriers
-				bonus = 1.0
-				uses = 1
-				category = cv_tech
-			}
+
 
 			if = {
 				limit = { 
@@ -6091,6 +5630,9 @@ focus_tree = {
 					amount = 1
 					industrial_manufacturer = mio:USA_newport_news_shipbuilding_organization
 				}
+			}
+			USA_william_halsey_jr = {	
+				add_trait = { trait = cuts_corners }
 			}
 		}
 	}
@@ -6166,24 +5708,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			if = {
-				limit = {
-					threat < 0.6
-					has_war_support < 0.6
-					has_war = no
-					NOT = { has_country_flag = USA_shut_down_congress_flag }
-				}
-				congress_medium_support_trigger = yes
-			}
-			else_if = {
-				limit = {
-					NOT = { has_country_flag = USA_shut_down_congress_flag }
-				}
-				congress_low_support_trigger = yes
-			}
-			else = {
-				has_navy_experience > 50
-			}
+			has_war_with_major = yes
 		}
 
 		continue_if_invalid = yes
@@ -6329,7 +5854,7 @@ focus_tree = {
 	focus = {
 		id = USA_fleet_submarines
 		icon = GFX_z_goal_submarine_hunters
-		x = 4
+		x = -3
 		y = 1
 		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_bureau_of_ships
@@ -6452,6 +5977,9 @@ focus_tree = {
 					}
 				}
 			}
+			USA_ernest_king = {
+            add_trait = { trait = seawolf }
+            }
 		}
 	}
 
@@ -6494,41 +6022,17 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_ideas = USA_expanded_usmc
-		}
-	}
+			add_ideas = USA_expanded_usmc2
 
-	focus = {
-		id = USA_amphibious_operations
-		icon = GFX_focus_generic_naval_invasion
-		prerequisite = { focus = USA_expand_the_USMC }
-		x = 1
-		y = 1
-		relative_position_id = USA_expand_the_USMC
-		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
-
-		available_if_capitulated = yes
-		
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		completion_reward = {
-			add_tech_bonus = {
+						add_tech_bonus = {
 				name = USA_amphibious_operations
 				bonus = 1.0
 				uses = 2
 				category = tp_tech 
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			swap_ideas = {
-				remove_idea = USA_expanded_usmc
-				add_idea = USA_expanded_usmc2
-			}
 		}
 	}
+
 
 	focus = {
 		id = USA_arsenal_of_the_oceans
@@ -6563,7 +6067,6 @@ focus_tree = {
 		prerequisite = { focus = USA_emergency_repair_procedures }
 		prerequisite = { focus = USA_anti_submarine_warfare }
 		prerequisite = { focus = USA_advanced_fire_control_systems }
-		prerequisite = { focus = USA_Advanced_submarine_doctrine }
 		x = 0
 		y = 2
 		relative_position_id = USA_expand_naval_shipyards
@@ -6572,7 +6075,8 @@ focus_tree = {
 		dynamic = yes
 
 		available = {
-			has_war_with_major = yes
+			NOT = { Has_idea = JAP_Day_of_infamy_2}
+
 		}
 		
 		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_MILITARY_CHARACTER }
@@ -6584,8 +6088,14 @@ focus_tree = {
 
 			USA_chester_w_nimitz = {
 				add_trait = { trait = bold }
-				add_trait = { trait = battleship_adherent }
 			}
+			USA_ernest_king = {
+            add_trait = { trait = bold }
+            }
+			USA_william_halsey_jr = {	
+				add_trait = { trait = blockade_runner }
+			}
+
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
