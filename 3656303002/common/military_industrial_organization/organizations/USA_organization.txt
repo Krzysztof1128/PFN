@@ -339,7 +339,7 @@ USA_detroit_arsenal_organization = {
 			limit = {
 				FROM = { original_tag = USA } 
 			}
-			FROM = { has_completed_focus = USA_main_battle_tanks }
+			FROM = { has_completed_focus = USA_military_spec_screen }
 		}
 
 		if = {
