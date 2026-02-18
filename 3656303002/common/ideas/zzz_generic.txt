@@ -29,7 +29,7 @@ ideas = {
 			removal_cost = -1 
 
 			modifier = {
-				send_volunteer_size = 6
+				send_volunteer_size = 3
 			}
 		}
 			PFN_Vols_6_GER = {
@@ -127,6 +127,7 @@ ideas = {
 			 modifier = {
 				send_volunteer_size = -1
 				air_volunteer_cap = -10
+				send_volunteers_tension = -1
 			}
 		}
 
