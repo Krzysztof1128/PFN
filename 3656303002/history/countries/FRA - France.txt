@@ -620,10 +620,10 @@ if = {
 		design_team = mio:FRA_hotchkiss_organization
 		parent_version = 0
 		modules = {
-			main_armament_slot = tank_small_cannon
-			turret_type_slot = tank_light_one_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_cast_armor
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_welded_armor
 			engine_type_slot = tank_gasoline_engine
 		}
 		upgrades = {
@@ -631,6 +631,25 @@ if = {
 			tank_nsb_armor_upgrade = 4
 		}
 		icon = "GFX_FRA_basic_light_tank_medium"
+	}
+	create_equipment_variant = {
+		name = "Ungabunga Zabka"
+		type = light_tank_chassis_2
+		design_team = mio:FRA_renault_organization
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_three_man_tank_turret
+			suspension_type_slot = tank_christie_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = secondary_turret_small_cannon
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 4
+		}
 	}
 	create_equipment_variant = {
 		name = "Char B1"
