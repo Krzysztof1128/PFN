@@ -1,0 +1,112 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = latvia_tree
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LAT
+			has_dlc = "No Step Back"
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1000 }
+
+#	focus = {
+#		id = LAT_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		
+#		
+#		
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+	shared_focus = BALTIC_rejoin_the_railways
+	shared_focus = BALTIC_restore_workers_republic
+	
+	###############################################
+	#### SUSPEND THE CONSTITUTION (HISTORICAL) ####
+	###############################################
+	focus = {
+		id = LAT_suspend_the_constitution
+		icon = GFX_focus_LAT_suspend_constitution_of_latvia
+		mutually_exclusive = { focus = BALTIC_restore_workers_republic }
+		x = 5
+		y = 0
+
+		cost = 5
+
+		ai_will_do = {
+			base = 100
+		}
+
+		available = {
+		}
+
+		bypass = {
+			
+		}
+
+		
+		
+		
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			every_core_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+###END OF DEMOCRACY###
+}
