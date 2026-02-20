@@ -97,6 +97,7 @@ USA_stagnant_industry_dynamic_modifier:0 "USA Industry"
  USA_ECO_WAR_6_tt:0 "$USA_modify_stagnant_industry_dynamic_modifier_ns_intro$ \n £prod_eff_cap Production Efficiency Cap: §G+20.00%§! \n Factory output: §G+10.00%§! \n $MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §G-10.0%§! \n\n"
 
  continuous_air_production:0 "Factories Retooling"
+ GER_a_strong_successor_trigger_tt:0 ""All §Y2§! Ascended Advisors within the §YInner Circle§! have completed their capstone focus.""
 
 
 
