@@ -364,7 +364,7 @@ characters={
 			cost = 50.000
 			
 			traits = {
-				grand_battle_plan_expert
+				mobile_warfare_expert
 			}
 			ai_will_do = {
 				factor = 1.000
