@@ -181,13 +181,13 @@ if = {
 }
 
 #CONSUMER GOODS INCREASE AND PENALTIES VARIABLES
-set_variable = { GER_monthly_consumer_goods_start = 0.03 } #Starting amount of monthly increasing CG for MEFO Bills 
-set_variable = { GER_change_monthly_CG_vichy_france = 0.005 } #Changing monthly CG when capitulating FRance
-set_variable = { GER_change_monthly_CG_price_controls = 0.005 } #Changing monthly CG when taking Price Controls focus
-set_variable = { GER_change_monthly_CG_occupied_states = 0.005 } #Changing monthly CG based on none-core states
+set_variable = { GER_monthly_consumer_goods_start = 0.02 } #Starting amount of monthly increasing CG for MEFO Bills 
+set_variable = { GER_change_monthly_CG_vichy_france = 0.003 } #Changing monthly CG when capitulating FRance
+set_variable = { GER_change_monthly_CG_price_controls = 0.003 } #Changing monthly CG when taking Price Controls focus
+set_variable = { GER_change_monthly_CG_occupied_states = 0.003 } #Changing monthly CG based on none-core states
 set_variable = { GER_expected_consumer_goods_penalty = 0.1} #Consumer Goods penalty when hitting 100% CGFF
-set_variable = { GER_factory_output_penalty = 0.2 } #Factory output penalty when hitting 100% CGFF
-set_variable = { GER_dockyard_output_penalty = 0.2 } #Dockyard output penalty when hitting 100% CGFF
+set_variable = { GER_factory_output_penalty = 0.1 } #Factory output penalty when hitting 100% CGFF
+set_variable = { GER_dockyard_output_penalty = 0.1 } #Dockyard output penalty when hitting 100% CGFF
 set_variable = { GER_reduce_russian_CG_bonus = 0 } #Used to reduce Soviet Gold Reserves if Germany has taken gold from various Soviet cities before capping them
 
 #INDUSTRAY: MEFO Bills/Economy of Conquest/Recovering Economy/Wirtschaftswunder
@@ -839,8 +839,6 @@ if = {
 			engine_type_slot = tank_gasoline_engine
 			special_type_slot_1 = tank_radio_1
 			special_type_slot_2 = secondary_turret_hmg
-			special_type_slot_3 = secondary_turret_hmg
-			special_type_slot_4 = secondary_turret_hmg
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 6
