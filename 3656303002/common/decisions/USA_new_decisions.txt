@@ -422,30 +422,7 @@ USA_congress = {
 		}
 	}
 
-	USA_works_progress_administration_mission = {
-		icon = generic_construction
-
-		allowed = {
-			original_tag = USA
-		}
-
-		available = {
-			always = no
-		}
-
-		days_mission_timeout = 1095
-		is_good = yes
-
-		activation = {
-			has_idea = USA_works_progress_administration
-            has_global_flag = his_only
-		}
-
-		timeout_effect = {
-			remove_ideas = USA_works_progress_administration
-			add_timed_idea = { idea = USA_works_progress_administration2 days = 365 }
-		}
-	}
+	
 }
 
 USA_war_plans = {
