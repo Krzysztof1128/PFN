@@ -62,7 +62,7 @@ sub_units = {
 			heavy_tank_chassis = 50
 		}
 
-		manpower = 500
+		manpower = 1000
 		max_organisation = 10
 		default_morale = 0.3
 		max_strength = 2
