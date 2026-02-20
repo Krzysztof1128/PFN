@@ -21638,23 +21638,6 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler_ww
-						has_completed_focus = GER_oppose_hitler
-					}
-				}
-			}
-			NOT = {
-				has_global_flag = his_only
-			}
 		}
 
 		#Focus will need to pause while events are pending
@@ -21706,13 +21689,6 @@ focus_tree = {
 		x = 5
 		y = 5
 		offset = {
-			x = -5
-			y = 0
-			trigger = {
-				OR = {
-					has_global_flag = his_only
-				}
-			}
 		}
 		relative_position_id = GER_fuhrerprinzip
 		cost = 5
@@ -41818,23 +41794,6 @@ focus_tree = {
 		}
 
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler_ww
-						has_completed_focus = GER_oppose_hitler
-					}
-				}
-			}
-			NOT = {
-				has_global_flag = his_only
-			}
 		}
 
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_WAR_SUPPORT }
@@ -42299,23 +42258,6 @@ focus_tree = {
 		}	
 		
 		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = GER_oppose_hitler_ww
-						has_completed_focus = GER_oppose_hitler
-					}
-				}
-			}
-			NOT = {
-				has_global_flag = his_only
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_STABILITY }
@@ -42766,7 +42708,6 @@ focus_tree = {
 		}	
 		
 		allow_branch = {
-			#always = no
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INNER_CIRCLE FOCUS_FILTER_STABILITY }
