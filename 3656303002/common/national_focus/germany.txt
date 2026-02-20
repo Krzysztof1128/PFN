@@ -9402,7 +9402,8 @@ focus_tree = {
 		
 		
 		available = {
-					}
+		Date > 1937.01.01
+		}
 
 		ai_will_do = {
 			base = 10
@@ -10373,7 +10374,7 @@ focus_tree = {
 		}
 
 		available = {
-
+		Date > 1938.01.01
 		}
 		
 		cancel = {
