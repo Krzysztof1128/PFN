@@ -16442,55 +16442,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "Arms Against Tyranny"
-					}
-				}
-				IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_wuw
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_wuw
-						add_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
-						add_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_aat_wuw
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_aat_wuw
-						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
-						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
-					}
-				}
-			}
+	
 
 			air_experience = 15
 			add_doctrine_cost_reduction = {
@@ -16498,21 +16450,6 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					wuw_HUN_does_not_have_trianon = no
-				}
-				custom_effect_tooltip = available_theorist
-				show_ideas_tooltip = HUN_gyorgy_jendrassik
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				custom_effect_tooltip = available_military_high_command
-				show_ideas_tooltip = HUN_sandor_magyarossy
 			}
 
 		}
@@ -16549,67 +16486,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					NOT = {
-						has_dlc = "Arms Against Tyranny"
-					}
-				}
-				IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_wuw
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_wuw
-						add_idea = HUN_treaty_of_triannon_wuw_no_army_exp_debuff
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_wuw_no_air_debuff
-						add_idea = HUN_treaty_of_triannon_wuw_no_air_or_army_debuff
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_aat_wuw
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_aat_wuw
-						add_idea = HUN_treaty_of_triannon_aat_wuw_no_army_exp_debuff
-					}
-				}
-				ELSE_IF = {
-					limit = {
-						has_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
-					}
-					swap_ideas = {
-						remove_idea = HUN_treaty_of_triannon_aat_wuw_no_air_debuff
-						add_idea = HUN_treaty_of_triannon_aat_wuw_no_air_or_army_debuff
-					}
-				}
-			}
 
 			army_experience = 30
 
-			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					wuw_HUN_does_not_have_trianon = no
-				}
-				custom_effect_tooltip = available_theorist
-				show_ideas_tooltip = HUN_shvoy_kalman
-			}
+
+
 
 		}
 	}
