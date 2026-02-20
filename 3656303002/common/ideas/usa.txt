@@ -2641,12 +2641,12 @@ ideas = {
 			equipment_bonus = {
 				armor = {
 					instant = yes
-					build_cost_ic = -0.1
+					build_cost_ic = -0.05
 					reliability = 0.1
 				}
 				artillery = {
 					instant = yes
-					build_cost_ic = -0.1
+					build_cost_ic = -0.05
 					reliability = 0.1
 				}
 			}
@@ -2672,12 +2672,12 @@ ideas = {
 			equipment_bonus = {
 				armor = {
 					instant = yes
-					build_cost_ic = -0.15
+					build_cost_ic = -0.10
 					reliability = 0.15
 				}
 				artillery = {
 					instant = yes
-					build_cost_ic = -0.15
+					build_cost_ic = -0.10
 					reliability = 0.15
 				}
 			}
