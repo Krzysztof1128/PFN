@@ -1,0 +1,57 @@
+﻿l_english:
+PFN_ENG_categories:0 "UK Categories"
+PFN_ENG_categories_desc:0 "Ungabunga"
+PFN_uk_annex_indochina:0 "Annex Indochin"
+PFN_uk_annex_indochina_desc:0 "hop hop dawaj surki"
+PFN_uk_annex_malay:0 "Annex Malajów"
+PFN_uk_annex_malay_desc:0 "hop hop dawaj gume"
+PFN_uk_annex_ire:0 "Annex Irlandii"
+PFN_uk_annex_ire_desc:0 "Anektujesz Irlandie z corami po 38"
+
+PFN_SAF_categories:0 "SAF Categories"
+PFN_SAF_categories_desc:0 ""
+PFN_saf_annex_can:0 "Annex Kanady"
+PFN_saf_annex_can_desc:0 "Dostajesz cory Kanady i jej dywizje"
+
+PFN_CAN_categories:0 "CAN Categories"
+PFN_CAN_categories_desc:0 ""
+PFN_can_annex_saf:0 "Annex SAF"
+PFN_can_annex_saf_desc:0 "Anektujesz SAF-a i jego dywizje(czyli 1)"
+
+PFN_RAJ_categories:0 "RAJ Categories"
+PFN_RAJ_categories_desc:0 ""
+RAJ_annex_brm:0 "Annex Burmy"
+RAJ_annex_brm_desc:0 "Dostajesz 100 compliancu na Burmie"
+PFN_raj_annex_ast:0 "Annex Australii i Nowej Zelandii"
+PFN_raj_annex_ast_desc:0 "Dostajesz annexa Australii i Nowej Zelandii"
+
+PFN_AST_categories:0 "AST Categories"
+PFN_AST_categories_desc:0 ""
+PFN_ast_annex_nzl:0 "Annex Nowej Zelandii"
+PFN_ast_annex_nzl_desc:0 "Anektujesz Nową Zelandie"
+
+PFN_FRA_categories:0 "FRA Categories"
+PFN_FRA_categories_desc:0 ""
+PFN_fra_annex_ire:0 "Annex Irlanii"
+PFN_fra_annex_ire_desc:0 "Anektujesz Irlandie"
+
+PFN_ITA_categories:0 "ITA Categories"
+PFN_ITA_categories_desc:0 ""
+PFN_ita_annex_bul:0 "Annex Bułgarii"
+PFN_ita_annex_bul_desc:0 "Anektujesz Bułgarie"
+
+PFN_ROM_categories:0 "ROM Categories"
+PFN_ROM_categories_desc:0 ""
+PFN_rom_annex_hun:0 "Annex Węgier"
+PFN_rom_annex_hun_desc:0 "Anektujesz Węgry z corami"
+
+PFN_HUN_categories:0 "HUN Categories"
+PFN_HUN_categories_desc:0 ""
+PFN_hun_annex_rom:0 "Annex Rumunii"
+PFN_hun_annex_rom_desc:0 "Anektujesz Rumunie z corami"
+
+PFN_JAP_categories:0 "JAP Categories"
+PFN_JAP_categories_desc:0 ""
+PFN_jap_annex_man:0 "Annex Mandzurii"
+PFN_jap_annex_man_desc:0 "Ungabunga Chinole do pracy"
+
