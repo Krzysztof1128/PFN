@@ -10946,6 +10946,7 @@ focus_tree = {
 		}
 		search_filters = {FOCUS_FILTER_POLITICAL}	
 		completion_reward = {
+			add_research_slot = 1
 			add_political_power = 150
 			custom_effect_tooltip = generic_skip_one_line_tt
 			every_country = {

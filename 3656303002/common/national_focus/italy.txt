@@ -491,18 +491,7 @@ focus_tree = {
 		relative_position_id = ITA_develop_libya
 		cost = 5
 		available = {
-			OR = {
-				any_controlled_state = {
-					is_fully_controlled_by = ROOT
-					has_state_flag = ITA_improved_infrastructure_in_state_flag
-				}
-				any_subject_country = {
-					any_controlled_state = {
-						is_fully_controlled_by = PREV
-						has_state_flag = ITA_improved_infrastructure_in_state_flag
-					}
-				}
-			}
+
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -572,20 +561,7 @@ focus_tree = {
 		relative_position_id = ITA_regional_development
 		cost = 5
 		available = {
-			OR = {
-				448 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				449 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				450 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				451 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
+
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -635,16 +611,8 @@ focus_tree = {
 		relative_position_id = ITA_regional_development
 		cost = 5
 
-		bypass = {
-			662 = {
-				has_state_flag = sirte_oil_developed
-			}
-		}
-
 		available = {
-			662 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
+
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -689,13 +657,8 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			450 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-				NOT = {
-					has_state_flag = benghazi_oil_developed
-				}
-			}
-			has_tech = synth_oil_experiments
+		
+
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -1126,8 +1089,8 @@ focus_tree = {
 			add_to_variable = { ITA_iri_consumer_goods_factor = -0.10 }
 			custom_effect_tooltip = ITA_investments_in_edison_ricostruzione_industriale2_tt
 
-						159{
-				add_extra_state_shared_building_slots = 
+						159 = {
+				add_extra_state_shared_building_slots = 10
 				add_building_construction = {
 					type = dam
 					level = 1
