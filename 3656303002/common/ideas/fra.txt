@@ -1,0 +1,26 @@
+ideas = {
+
+	country = {
+
+
+FRA_ungabunga = {
+            picture = generic_monarchist_uprising
+            allowed = {
+                original_tag = FRA
+                always = no
+            }
+
+            allowed_civil_war = {
+                not = { has_government = communism }
+                not = { has_government = fascism }
+            }
+
+            removal_cost = -1
+            modifier = {
+                production_factory_start_efficiency_factor = 1.0
+                industrial_capacity_factory = 3
+            }
+        }
+
+}
+}

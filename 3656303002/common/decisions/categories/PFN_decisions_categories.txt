@@ -1,0 +1,114 @@
+#################
+###### PFN ######
+#################
+
+PFN_ENG_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = ENG
+	}
+	visible = {
+	}
+}
+
+PFN_SAF_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = SAF
+	}
+	visible = {
+	}
+}
+
+PFN_CAN_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = CAN
+	}
+	visible = {
+	}
+}
+
+PFN_RAJ_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = RAJ
+	}
+	visible = {
+	}
+}
+
+PFN_AST_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = AST
+	}
+	visible = {
+	}
+}
+
+PFN_FRA_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = FRA
+	}
+	visible = {
+	}
+}
+
+PFN_ITA_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = ITA
+	}
+	visible = {
+	}
+}
+
+PFN_ROM_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = ROM
+	}
+	visible = {
+	}
+}
+
+PFN_HUN_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = HUN
+	}
+	visible = {
+	}
+}
+
+PFN_JAP_categories = {
+	priority = 20
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = JAP
+	}
+	visible = {
+	}
+}
+
+PFN_SPR_categories = {
+	priority = 1000
+	icon = ger_mefo_bills
+	allowed = {
+		original_tag = SPR
+	}
+	visible = {
+	}
+}
+

@@ -1,0 +1,301 @@
+ongoing_riots_eng = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource
+	
+	recruitable_population_factor = -0.25
+	state_resources_factor = -0.3
+	state_production_speed_buildings_factor = -0.3
+	local_factories = -0.1
+	local_factory_sabotage = 0.25
+	local_intel_to_enemies = 0.15
+	disable_strategic_redeployment = 1
+}
+
+ENG_german_imports = { #STATE MODIFIER
+	enable = { always = yes }
+
+	icon = GFX_modifiers_increased_metal_production
+
+	state_resource_steel = 20
+	state_resource_aluminium = 10
+}
+
+# Royal Air Force
+ENG_royal_air_force_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ENG_royal_air_force
+
+	custom_modifier_tooltip = ENG_air_force_modifier_tt #Bonuses applied via hidden NS or tech 
+
+	air_accidents_factor = ENG_english_airforce_air_accidents_factor #0.5
+	air_ace_generation_chance_factor = ENG_english_airforce_air_ace_generation_chance_factor #-0.25
+	air_night_penalty = ENG_english_airforce_air_night_penalty #0.15
+	air_mission_xp_gain_factor = ENG_english_airforce_air_mission_xp_gain_factor #0.1
+	air_training_xp_gain_factor = ENG_english_airforce_air_training_xp_gain_factor #-0.1
+	air_doctrine_cost_factor = ENG_english_airforce_doctrine_cost_factor #0.1 -> Air Training
+	air_fuel_consumption_factor = ENG_english_airforce_air_fuel_consumption_factor #0.05 -> Bomber Command
+	air_agility_factor = ENG_english_airforce_air_agility_factor #0.05 -> Fighter Command
+	air_range_factor = ENG_english_airforce_air_range_factor #0.05  -> Bomber Command
+	air_strategic_bomber_bombing_factor = ENG_english_airforce_air_strategic_bomber_bombing_factor #0.05 -> Bomber Command
+	air_strategic_bomber_night_penalty = ENG_english_airforce_air_strategic_bomber_night_penalty #-0.1 -> Bomber Command
+	air_nav_efficiency = ENG_english_airforce_air_nav_efficiency #0.1 -> Naval Command
+	naval_strike_attack_factor = ENG_english_naval_strike_attack_factor # 0.05 -> Naval Command
+	naval_strike_targetting_factor = ENG_english_naval_strike_targetting_factor #0.05 -> Naval Command
+}
+
+# Red Air Force
+ENG_communist_air_force_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ENG_communist_airforce
+
+	custom_modifier_tooltip = ENG_air_force_modifier_tt #Bonuses applied via hidden NS or tech 
+
+	air_accidents_factor = ENG_english_airforce_air_accidents_factor #0.5
+	air_ace_generation_chance_factor = ENG_english_airforce_air_ace_generation_chance_factor #-0.25
+	air_night_penalty = ENG_english_airforce_air_night_penalty #0.15
+	air_mission_xp_gain_factor = ENG_english_airforce_air_mission_xp_gain_factor #0.1
+	air_training_xp_gain_factor = ENG_english_airforce_air_training_xp_gain_factor #-0.1
+	air_doctrine_cost_factor = ENG_english_airforce_doctrine_cost_factor #0.1 -> Air Training
+	air_fuel_consumption_factor = ENG_english_airforce_air_fuel_consumption_factor #0.05 -> Bomber Command
+	air_agility_factor = ENG_english_airforce_air_agility_factor #0.05 -> Fighter Command
+	air_range_factor = ENG_english_airforce_air_range_factor #0.05  -> Bomber Command
+	air_strategic_bomber_bombing_factor = ENG_english_airforce_air_strategic_bomber_bombing_factor #0.05 -> Bomber Command
+	air_strategic_bomber_night_penalty = ENG_english_airforce_air_strategic_bomber_night_penalty #-0.1 -> Bomber Command
+	air_nav_efficiency = ENG_english_airforce_air_nav_efficiency #0.1 -> Naval Command
+	naval_strike_attack_factor = ENG_english_naval_strike_attack_factor # 0.05 -> Naval Command
+	naval_strike_targetting_factor = ENG_english_naval_strike_targetting_factor #0.05 -> Naval Command
+}
+
+# Royal Navy
+ENG_rn_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ENG_royal_navy
+
+	naval_morale_factor = ENG_rn_naval_morale_factor #0.1
+	naval_doctrine_cost_factor = ENG_rn_naval_doctrine_cost_factor #0.1
+	naval_coordination = ENG_rn_naval_coordination #-0.1
+	spotting_chance = ENG_rn_spotting_chance #-0.05
+
+	# later stuff
+	navy_org_factor = ENG_rn_navy_org_factor
+	naval_defense_factor = ENG_rn_naval_defense_factor
+	naval_has_potf_in_combat_attack = ENG_rn_naval_has_potf_in_combat_attack #0.05
+	navy_screen_attack_factor = ENG_rn_navy_screen_attack_factor #0.05
+	naval_heavy_gun_hit_chance_factor = ENG_rn_naval_heavy_gun_hit_chance_factor
+	naval_light_gun_hit_chance_factor = ENG_rn_naval_light_gun_hit_chance_factor
+	naval_invasion_capacity = ENG_rn_naval_invasion_capacity #10
+	naval_invasion_planning_bonus_speed = ENG_rn_naval_invasion_planning_bonus_speed
+	invasion_preparation = ENG_rn_invasion_preparation #-0.1
+	strike_force_movement_org_loss = ENG_rn_strike_force_movement_org_loss #-0.05
+	sortie_efficiency = ENG_rn_sortie_efficiency #0.05
+	screening_without_screens = ENG_rn_screening_without_screens #0.10
+	screening_efficiency = ENG_rn_screening_efficiency #0.10
+	convoy_escort_efficiency = ENG_rn_convoy_escort_efficiency	
+	naval_strike_attack_factor = ENG_rn_naval_strike_attack_factor
+	naval_strike_targetting_factor = ENG_rn_naval_strike_targetting_factor
+	naval_strike_agility_factor = ENG_rn_naval_strike_agility_factor
+	navy_fuel_consumption_factor = ENG_rn_navy_fuel_consumption_factor
+
+	experience_gain_destroyer_combat_factor = ENG_rn_experience_gain_destroyer_combat_factor #0.1
+	experience_gain_destroyer_training_factor = ENG_rn_experience_gain_destroyer_training_factor #0.1
+	sp_naval_modern_carrier_speed_factor = ENG_rn_sp_naval_modern_carrier_speed_factor
+}
+
+# Red Navy
+ENG_red_navy_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ENG_communist_navy
+
+	naval_morale_factor = ENG_rn_naval_morale_factor #0.1
+	naval_doctrine_cost_factor = ENG_rn_naval_doctrine_cost_factor #0.1
+	naval_coordination = ENG_rn_naval_coordination #-0.1
+	spotting_chance = ENG_rn_spotting_chance #-0.05
+
+	# later stuff
+	navy_org_factor = ENG_rn_navy_org_factor
+	naval_defense_factor = ENG_rn_naval_defense_factor
+	naval_has_potf_in_combat_attack = ENG_rn_naval_has_potf_in_combat_attack #0.05
+	navy_screen_attack_factor = ENG_rn_navy_screen_attack_factor #0.05
+	naval_heavy_gun_hit_chance_factor = ENG_rn_naval_heavy_gun_hit_chance_factor
+	naval_light_gun_hit_chance_factor = ENG_rn_naval_light_gun_hit_chance_factor
+	naval_invasion_capacity = ENG_rn_naval_invasion_capacity #10
+	naval_invasion_planning_bonus_speed = ENG_rn_naval_invasion_planning_bonus_speed
+	invasion_preparation = ENG_rn_invasion_preparation #-0.1
+	strike_force_movement_org_loss = ENG_rn_strike_force_movement_org_loss #-0.05
+	sortie_efficiency = ENG_rn_sortie_efficiency #0.05
+	screening_without_screens = ENG_rn_screening_without_screens #0.10
+	screening_efficiency = ENG_rn_screening_efficiency #0.10
+	convoy_escort_efficiency = ENG_rn_convoy_escort_efficiency	
+	naval_strike_attack_factor = ENG_rn_naval_strike_attack_factor
+	naval_strike_targetting_factor = ENG_rn_naval_strike_targetting_factor
+	naval_strike_agility_factor = ENG_rn_naval_strike_agility_factor
+	navy_fuel_consumption_factor = ENG_rn_navy_fuel_consumption_factor
+
+	experience_gain_destroyer_combat_factor = ENG_rn_experience_gain_destroyer_combat_factor #0.1
+	experience_gain_destroyer_training_factor = ENG_rn_experience_gain_destroyer_training_factor #0.1
+	sp_naval_modern_carrier_speed_factor = ENG_rn_sp_naval_modern_carrier_speed_factor
+}
+
+# Royal Army
+ENG_royal_army_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ENG_royal_army
+
+	#custom_modifier_tooltip = ENG_army_modifier_tt #Bonuses applied via hidden NS or tech
+
+	experience_gain_army_factor = ENG_royal_army_experience_gain_army_factor
+	army_org_factor = ENG_royal_army_org_factor
+	army_morale_factor = ENG_royal_army_morale_factor
+	planning_speed = ENG_royal_army_planning_speed
+	max_planning = ENG_royal_army_max_planning
+	org_loss_when_moving = ENG_royal_army_org_loss_when_moving
+	army_attack_factor = ENG_royal_army_attack
+	army_defence_factor = ENG_royal_army_defence
+	breakthrough_factor = ENG_royal_army_breakthrough_factor
+	army_armor_speed_factor = ENG_royal_army_armor_speed_factor
+	army_infantry_attack_factor = ENG_royal_army_infantry_attack_factor
+	army_artillery_attack_factor = ENG_royal_army_artillery_attack_factor
+	army_artillery_defence_factor = ENG_royal_army_artillery_defence_factor
+	modifier_army_sub_unit_marine_attack_factor = ENG_royal_army_modifier_army_sub_unit_marine_attack_factor
+	modifier_army_sub_unit_marine_defence_factor = ENG_royal_army_modifier_army_sub_unit_marine_defence_factor
+	extra_marine_supply_grace = ENG_royal_army_extra_marine_supply_grace
+	coordination_bonus = ENG_royal_army_coordination_bonus
+	conscription = ENG_royal_army_conscription
+	max_dig_in_factor = ENG_royal_army_max_dig_in_factor
+	special_forces_cap = ENG_royal_army_special_forces_cap
+	coastal_bunker_effectiveness_factor = ENG_royal_army_coastal_bunker_effectiveness_factor
+	army_spirit_category_type_cost_factor = ENG_royal_army_spirit_category_type_cost_factor
+	land_doctrine_cost_factor = ENG_royal_army_land_doctrine_cost_factor
+	max_command_power = ENG_royal_army_max_command_power
+	mobilization_speed = ENG_royal_army_mobilization_speed
+	command_power_gain_mult = ENG_royal_army_command_power_gain_mult
+	army_leader_cost_factor = ENG_royal_army_army_leader_cost_factor
+}
+
+# Communist Army
+ENG_communist_army_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ENG_communist_army
+
+	custom_modifier_tooltip = ENG_army_modifier_tt #Bonuses applied via hidden NS or tech 
+
+	experience_gain_army_factor = ENG_royal_army_experience_gain_army_factor
+	army_org_factor = ENG_royal_army_org_factor
+	army_morale_factor = ENG_royal_army_morale_factor
+	planning_speed = ENG_royal_army_planning_speed
+	max_planning = ENG_royal_army_max_planning
+	org_loss_when_moving = ENG_royal_army_org_loss_when_moving
+	breakthrough_factor = ENG_royal_army_breakthrough_factor
+	army_armor_speed_factor = ENG_royal_army_armor_speed_factor
+	army_infantry_attack_factor = ENG_royal_army_infantry_attack_factor
+	army_artillery_attack_factor = ENG_royal_army_artillery_attack_factor
+	army_artillery_defence_factor = ENG_royal_army_artillery_defence_factor
+	modifier_army_sub_unit_marine_attack_factor = ENG_royal_army_modifier_army_sub_unit_marine_attack_factor
+	modifier_army_sub_unit_marine_defence_factor = ENG_royal_army_modifier_army_sub_unit_marine_defence_factor
+	extra_marine_supply_grace = ENG_royal_army_extra_marine_supply_grace
+	coordination_bonus = ENG_royal_army_coordination_bonus
+	conscription = ENG_royal_army_conscription
+	max_dig_in_factor = ENG_royal_army_max_dig_in_factor
+	special_forces_cap = ENG_royal_army_special_forces_cap
+	coastal_bunker_effectiveness_factor = ENG_royal_army_coastal_bunker_effectiveness_factor
+	army_spirit_category_type_cost_factor = ENG_royal_army_spirit_category_type_cost_factor
+	land_doctrine_cost_factor = ENG_royal_army_land_doctrine_cost_factor
+	max_command_power = ENG_royal_army_max_command_power
+	mobilization_speed = ENG_royal_army_mobilization_speed
+	command_power_gain_mult = ENG_royal_army_command_power_gain_mult
+	army_leader_cost_factor = ENG_royal_army_army_leader_cost_factor
+}
+
+# Economy Idea
+ENG_stagnant_industry_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_ENG_stagnant_industry
+
+	stability_factor = ENG_stagnant_industry_modifier_stability_factor
+	consumer_goods_factor = ENG_stagnant_industry_modifier_consumer_goods_factor
+	production_speed_buildings_factor = ENG_stagnant_industry_modifier_production_speed_buildings_factor
+	production_speed_industrial_complex_factor = ENG_stagnant_industry_modifier_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = ENG_stagnant_industry_modifier_production_speed_arms_factory_factor
+	production_speed_dockyard_factor = ENG_stagnant_industry_modifier_production_speed_dockyard_factor
+	production_speed_steel_mill_factor = ENG_stagnant_industry_modifier_production_speed_steel_mill_factor
+	industrial_capacity_factory = ENG_stagnant_industry_modifier_industrial_capacity_factory
+	industrial_capacity_dockyard = ENG_stagnant_industry_modifier_industrial_capacity_dockyard
+	conversion_cost_civ_to_mil_factor = ENG_stagnant_industry_modifier_conversion_cost_civ_to_mil_factor
+	production_factory_max_efficiency_factor = ENG_stagnant_industry_modifier_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = ENG_stagnant_industry_modifier_production_factory_efficiency_gain_factor
+	production_factory_start_efficiency_factor = ENG_stagnant_industry_modifier_production_factory_start_efficiency_factor
+	line_change_production_efficiency_factor = ENG_stagnant_industry_modifier_line_change_production_efficiency_factor
+	global_building_slots_factor = ENG_stagnant_industry_modifier_global_building_slots_factor
+	local_resources_factor = ENG_stagnant_industry_modifier_local_resources_factor
+}
+
+ENG_industrial_powerhouse_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_industrialized_economy
+
+	stability_factor = ENG_stagnant_industry_modifier_stability_factor
+	consumer_goods_factor = ENG_stagnant_industry_modifier_consumer_goods_factor
+	production_speed_buildings_factor = ENG_stagnant_industry_modifier_production_speed_buildings_factor
+	production_speed_industrial_complex_factor = ENG_stagnant_industry_modifier_production_speed_industrial_complex_factor
+	production_speed_arms_factory_factor = ENG_stagnant_industry_modifier_production_speed_arms_factory_factor
+	production_speed_dockyard_factor = ENG_stagnant_industry_modifier_production_speed_dockyard_factor
+	production_speed_steel_mill_factor = ENG_stagnant_industry_modifier_production_speed_steel_mill_factor
+	industrial_capacity_factory = ENG_stagnant_industry_modifier_industrial_capacity_factory
+	industrial_capacity_dockyard = ENG_stagnant_industry_modifier_industrial_capacity_dockyard
+	conversion_cost_civ_to_mil_factor = ENG_stagnant_industry_modifier_conversion_cost_civ_to_mil_factor
+	production_factory_max_efficiency_factor = ENG_stagnant_industry_modifier_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = ENG_stagnant_industry_modifier_production_factory_efficiency_gain_factor
+	production_factory_start_efficiency_factor = ENG_stagnant_industry_modifier_production_factory_start_efficiency_factor
+	line_change_production_efficiency_factor = ENG_stagnant_industry_modifier_line_change_production_efficiency_factor
+	global_building_slots_factor = ENG_stagnant_industry_modifier_global_building_slots_factor
+	local_resources_factor = ENG_stagnant_industry_modifier_local_resources_factor
+}
+
+ENG_rising_resistance_modifier = {
+	enable = { always = yes }
+	icon = GFX_modifiers_bul_macedonian_revolutionaries
+	resistance_damage_to_garrison = 0.15
+	resistance_activity = 0.2
+	resistance_growth = 0.5
+	resistance_target = 0.8
+	compliance_growth = -0.1
+}
+
+ENG_protests_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_col_strikes
+
+	local_building_slots_factor = -0.1
+	local_factories = -0.1
+	state_production_speed_buildings_factor = -0.25
+	recruitable_population_factor = -0.3
+}
+
+ENG_widespread_protests_modifier = { #TODO
+	enable = { always = yes }
+
+	icon = GFX_modifiers_col_strikes
+
+	local_building_slots_factor = -0.2
+	local_factories = -0.2
+	state_production_speed_buildings_factor = -0.25
+	recruitable_population_factor = -0.6
+	disable_strategic_redeployment = 1
+}
+
+ENG_redirected_funds = {
+	enable = { always = yes }
+
+	icon = GFX_state_construction
+
+	state_production_speed_buildings_factor = 0.05
+}

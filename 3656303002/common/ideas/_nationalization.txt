@@ -1,0 +1,232 @@
+ideas = {
+
+	nationalization = { 
+	
+		law = yes
+		
+		#State Property
+		nationalization_full = {
+		    available = {
+				NOT = {
+				    OR = { 
+					    has_government = democratic
+					    has_government = fascism
+					    has_government = neutrality
+					    AND = {
+					    	tag = SOV
+					    	has_government = communism
+					    }
+				    }
+				}
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.05
+				min_export = -0.15
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				factory_energy_consumption = -0.05
+			}
+			cost = 100
+			
+			
+			
+			ai_will_do = {
+   				base = 80
+   			}
+		}
+		
+		#Soviet Wealth
+		soviet_nationalization_full = {
+		
+			allowed = {
+				original_tag = SOV
+			}
+		    available = {
+				has_government = communism
+			}
+
+			visible = {
+				has_war = no
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_war = yes
+						has_government = communism
+					}
+					add_ideas = soviet_nationalization_half
+				}
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.125
+				min_export = -0.20
+				consumer_goods_factor = 0.05
+				factory_energy_consumption = -0.1
+			}
+			cost = 100
+			
+			
+			
+			ai_will_do = {
+   				base = 1000
+   			}
+		}
+
+		#Soviet Wealth
+		soviet_nationalization_half = {
+	
+			name = soviet_nationalization_full
+			picture = soviet_nationalization_full
+			allowed = {
+				original_tag = SOV
+			}
+		    available = {
+				has_government = communism
+			}
+
+			visible = {
+				has_war = yes
+			}
+
+			on_remove = {
+				if = {
+					limit = {
+						has_war = no
+						has_government = communism
+					}
+					add_ideas = soviet_nationalization_full
+				}
+			}
+			
+			modifier = {
+				local_resources_factor = 0.125
+				min_export = -0.15
+				consumer_goods_factor = 0.1
+				factory_energy_consumption = -0.05
+			}
+			cost = 100
+			
+			
+			
+			ai_will_do = {
+   				base = 1000
+   			}
+		}
+		
+		#State Capitalism
+		nationalization_partial = {
+		    available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			
+			modifier = {
+				local_building_slots_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.125
+				min_export = -0.10
+				factory_energy_consumption = -0.05
+				
+			}
+			cost = 100
+			
+
+			ai_will_do = {
+   				base = 0
+   			}
+		}
+		
+		#Capitalism
+		nationalization_capital = {
+		    available = {
+				OR = {
+				tag = SPR
+				tag = AFG
+				tag = ATC
+				NOT = {
+				    OR = { 
+					    has_government = communism
+					    has_government = fascism
+				    }
+				}
+			}
+		}
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = 0.05
+				local_resources_factor = 0.20
+				min_export = 0.1
+				resource_trade_cost_bonus_per_factory = 1
+			}
+			cost = 100
+			
+
+			ai_will_do = {
+   				base = 100
+   			}
+		}
+
+		#Owner of Capitalism
+		nationalization_owner_capitalism = {
+			picture = nationalization_capital
+		    allowed = {
+				OR = {
+					#original_tag = JAP
+					original_tag = HON
+					original_tag = GER
+					original_tag = ECU
+				}
+			}
+
+			visible = {
+				# if = {
+				# 	limit = {
+				# 		original_tag = JAP
+				# 	}
+				# 	has_completed_focus = JAP_arasaka_takes_over_the_government
+				# }
+				if = {
+					limit = {
+						original_tag = HON
+					}
+					has_completed_focus = HON_banana_empire
+				}
+				if = {
+					limit = {
+						original_tag = GER
+					}
+					has_completed_focus = GER_empower_your_crafters
+				}
+				if = {
+					limit = {
+						original_tag = ECU
+					}
+					has_global_flag = ECU_banana_company_takeover_flag
+				}
+			}
+			
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.05
+				factory_energy_consumption = 0.05
+			}
+
+			cost = 100
+			
+
+			ai_will_do = {
+   				base = 10
+   			}
+		}
+	}
+}

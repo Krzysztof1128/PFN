@@ -1,0 +1,271 @@
+#####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
+
+ideas = {
+
+	r56i_laws_leadership = { 
+	
+		law = yes
+
+		use_list_view = yes
+		
+		#Power and Politics 
+		#r56i_laws_leadership_politics = {
+		#	
+		#	available = {
+		#		NOT = {
+		#			has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+		#		}
+		#	}
+		#
+		#	modifier = {
+		#		political_power_gain = 0.
+		#		stability_factor = -0.02
+		#	}
+		#
+		#	cost = 150
+		#	
+		#	cancel_if_invalid = no
+		#	
+		#	ai_will_do = {
+		#		   factor = 1.5
+
+				# Always good to pic IMO
+				#	modifier = {
+				#		has_government = fascism
+				#		factor = 2
+				#	}
+			   #}
+			
+			#}
+		
+		#Personality Cult
+		r56i_laws_leadership_cult = {
+
+			available = {
+				OR = {
+					is_puppet = no
+					OVERLORD = {	
+						has_government = fascism
+					}					
+					
+				}
+				
+					
+				#NOT = {	
+				#	has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+				#}
+
+				if = {
+					limit = {
+						tag = BEL
+					}
+					custom_trigger_tooltip = {
+						tooltip = BEL_leadership_ideas_locked_tt
+						NOT = { has_country_flag = BEL_leadership_ideas_locked }
+					}
+				}
+			}
+
+
+			modifier = {
+				fascism_drift = 0.05
+				justify_war_goal_time = -0.25
+				political_power_cost = 0.05
+			}
+
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				base = 0
+			}
+		}
+		
+		#Secular Institutions
+		r56i_laws_leadership_secular = {
+
+			available = {
+				NOT = {
+					has_government = neutrality
+					is_puppet = yes
+					#has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+				}
+				if = {
+					limit = {
+						tag = BEL
+					}
+					custom_trigger_tooltip = {
+						tooltip = BEL_leadership_ideas_locked_tt
+						NOT = { has_country_flag = BEL_leadership_ideas_locked }
+					}
+				}
+			}
+			
+			modifier = {
+				democratic_drift = 0.05
+				research_speed_factor = 0.04
+				political_power_cost = 0.05
+			}
+
+			cost = 150
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 0
+
+   				modifier = {
+					OR = {
+						has_government = democratic
+						democratic > 0.5
+						has_idea_with_trait = democratic_reformer						
+					}
+					
+					add = 1
+				}
+   			}
+		}
+		
+		#Divine Inspiration
+		r56i_laws_leadership_divine = {
+		
+			available = {
+				NOT = {
+					OR = {
+						has_government = communism
+						is_puppet = yes
+					
+						#has_global_flag = NATIONAL_CHARACTERS_BLOCKED			
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = not_anarchist_leader_tt
+					NOT = {
+						has_country_leader_ideology = anarchism
+					}
+				}	
+				if = {
+					limit = {
+						tag = BEL
+					}
+					custom_trigger_tooltip = {
+						tooltip = BEL_leadership_ideas_locked_tt
+						NOT = { has_country_flag = BEL_leadership_ideas_locked }
+					}
+				}
+			}
+			
+			modifier = {
+				neutrality_drift = 0.10
+				war_support_factor = 0.10
+				political_power_cost = 0.05	
+			}
+
+			cost = 150
+			
+			
+
+			ai_will_do = {
+				base = 0
+
+				modifier = {
+					has_government = neutrality
+					NOT = {
+						OR = {
+							fascism > 0.3
+							communism > 0.3
+						}
+					}
+					add = 1.5
+				}
+				modifier = {
+					has_war_support > 0.9	
+					factor = 0					
+				}
+					
+				modifier = {
+					has_war = no
+					factor = 0					
+				}					
+   			}
+		}
+		
+		#Will of the People
+		r56i_laws_leadership_people = {
+
+			available = {
+				NOT = {
+					has_government = fascism
+					is_puppet = yes
+					#has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+				}
+				if = {
+					limit = {
+						tag = BEL
+					}
+					custom_trigger_tooltip = {
+						tooltip = BEL_leadership_ideas_locked_tt
+						NOT = { has_country_flag = BEL_leadership_ideas_locked }
+					}
+				}
+				if = {
+					limit = {
+						tag = SAU
+					}
+					if = {
+						limit = {
+							has_country_flag = SAU_cooperation_with_soviets_flag
+						}
+						has_completed_focus = SAU_reform_the_government
+					}
+					else = {
+						NOT = { has_government = neutrality }
+					}
+				}
+			}
+			
+			modifier = {
+				communism_drift = 0.05
+				supply_consumption_factor = -0.07
+				political_power_cost = 0.05
+			}
+
+			cost = 150
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				base = 0
+
+   			}
+		}
+		#Divine Inspiration
+		r56i_laws_leadership_communal_decision_making = {
+			picture = SPR_collectivized_society
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = has_anarchist_leader_tt
+					OR = {
+						has_country_leader_ideology = anarchism
+						has_country_leader_ideology = anarchist_communism	
+					}
+				}
+			}
+			
+			modifier = {
+				neutrality_drift = 0.15
+				political_power_cost = -0.05	
+			}
+
+			cost = 150
+			
+			
+
+			ai_will_do = {
+				base = 0					
+   			}
+		}		
+	}
+}
+
+#####---------------------------------------------------------------------> End
