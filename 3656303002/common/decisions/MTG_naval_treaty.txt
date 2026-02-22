@@ -1,3 +1,0 @@
-#MTG_naval_treaties = {
-	
-}

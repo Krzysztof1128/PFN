@@ -1,6 +1,0 @@
-african_union_category = {
-
-	
-}
-
-

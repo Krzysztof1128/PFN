@@ -1,5 +1,0 @@
-#SWI_debug_decisions_category = {
-	
-}
-
-
