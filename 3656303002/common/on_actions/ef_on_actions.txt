@@ -1,0 +1,4111 @@
+on_actions = {
+
+	######## ATOM BUMB ########
+
+	# on_startup = {
+	# 	effect = {
+	# 		# every_state = {
+	# 		# 	set_variable = {
+	# 		# 		var = ef_radiation_army_speed_factor
+	# 		# 		value = -0.15
+	# 		# 	}
+	# 		# 	set_variable = {
+	# 		# 		var = ef_radiation_attrition
+	# 		# 		value = 0.50
+	# 		# 	}
+	# 		# 	set_variable = {
+	# 		# 		var = ef_radiation_army_org_regain
+	# 		# 		value = -0.15
+	# 		# 	}
+	# 		# 	set_variable = {
+	# 		# 		var = ef_radiation_army_attack_factor
+	# 		# 		value = -0.10
+	# 		# 	}
+	# 		# }
+	# 		# THIS = {
+				
+	# 		# 	if = {
+	# 		# 		limit = {  
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP > 30.0
+	# 		# 			}
+	# 		# 			NOT = {
+	# 		# 				is_in_array = {
+	# 		# 					array = global.strong_countries_regional_power
+	# 		# 					value = THIS.id
+	# 		# 				}
+	# 		# 			}
+	# 		# 		}
+	# 		# 		add_to_array = {
+	# 		# 			array = global.strong_countries_super_power
+	# 		# 			value = THIS.id
+	# 		# 		}
+	# 		# 	}
+	# 		# 	if = {
+	# 		# 		limit = {  
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP > 10.0
+	# 		# 			}
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP < 30.0
+	# 		# 			}
+	# 		# 			NOT = {
+	# 		# 				is_in_array = {
+	# 		# 					array = global.strong_countries_great_power
+	# 		# 					value = THIS.id
+	# 		# 				}
+	# 		# 			}
+	# 		# 		}
+	# 		# 		add_to_array = {
+	# 		# 			array = global.strong_countries_great_power
+	# 		# 			value = THIS.id
+	# 		# 		}
+	# 		# 	}
+	# 		# 	if = {
+	# 		# 		limit = {  
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP > 5.0
+	# 		# 			}
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP < 10.0
+	# 		# 			}
+	# 		# 			NOT = {
+	# 		# 				is_in_array = {
+	# 		# 					array = global.strong_countries_rising_power
+	# 		# 					value = THIS.id
+	# 		# 				}
+	# 		# 			}
+	# 		# 		}
+	# 		# 		add_to_array = {
+	# 		# 			array = global.strong_countries_rising_power
+	# 		# 			value = THIS.id
+	# 		# 		}
+	# 		# 	}
+	# 		# 	if = {
+	# 		# 		limit = {  
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP < 5.0
+	# 		# 			}
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP > 3.50
+	# 		# 			}
+	# 		# 			NOT = {
+	# 		# 				is_in_array = {
+	# 		# 					array = global.strong_countries_regional_power
+	# 		# 					value = THIS.id
+	# 		# 				}
+	# 		# 			}
+	# 		# 		}
+	# 		# 		add_to_array = {
+	# 		# 			array = global.strong_countries_regional_power
+	# 		# 			value = THIS.id
+	# 		# 		}
+	# 		# 	}
+	# 		# 	if = {
+	# 		# 		limit = {  
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP < 3.50
+	# 		# 			}
+	# 		# 			check_variable = {
+	# 		# 				percentage_of_GDP > 1.00
+	# 		# 			}
+	# 		# 			NOT = {
+	# 		# 				is_in_array = {
+	# 		# 					array = global.strong_countries_middle_power
+	# 		# 					value = THIS.id
+	# 		# 				}
+	# 		# 			}
+	# 		# 		}
+	# 		# 		add_to_array = {
+	# 		# 			array = global.strong_countries_middle_power
+	# 		# 			value = THIS.id
+	# 		# 		}
+	# 		# 	}
+	# 		# }
+	# 	}
+	# }
+
+	#on_nuke_drop = {
+	#	effect = {
+	#		FROM = {
+	#			set_state_flag = {
+	#				flag = ef_has_radiation
+	#				days = 120
+	#			}
+	#			add_dynamic_modifier = { modifier = EF_radiation_state_modifier }
+	#			damage_building = {
+	#				type = infrastructure
+	#				damage = 3
+	#			}
+	#			damage_building = {
+	#				type = supply_node
+	#				damage = 1
+	#			}
+	#			#add_to_array = {
+	#			#	array = FROM.state_population
+	#			#	value = global.state_pop_multi_var
+	#			#}
+	#			#multiply_variable = {
+	#			#	var = global.state_pop_multi_var
+	#			#	value = 10
+	#			#}
+	#			#divide_variable = {
+	#			#	var = global.state_pop_multi_var
+	#			#	value = 100
+	#			#}
+	#			#subtract_from_temp_variable = { 
+	#			#	var = global.state_pop_multi_var
+	#			#	value = FROM.state_population
+	#			#}
+	#			if = {
+	#				limit = {
+	#					FROM = { state_population > 1000 }
+	#				}
+	#				random_list = {
+	#					33 = {
+	#						FROM = { add_manpower = -100000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -200000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -300000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -400000}
+	#					}
+	#				}
+	#			}	
+	#			else_if = {
+	#				limit = {
+	#					FROM = { state_population_k < 1000 }
+	#				}
+	#				random_list = {
+	#					33 = {
+	#						FROM = { add_manpower = -10000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -20000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -30000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -40000}
+	#					}
+	#				}
+	#			}
+	#			else_if = {
+	#				limit = {
+	#					FROM = { state_population_k < 5000 }
+	#				}
+	#				random_list = {
+	#					33 = {
+	#						FROM = { add_manpower = -1000000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -200000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -300000}
+	#					}
+	#					33 = {
+	#						FROM = { add_manpower = -400000}
+	#					}
+	#				}
+	#			}	
+	#		}
+	#	}
+	#}
+
+	######## STATE COMPLIANCE ########
+
+	on_state_control_changed = {
+		effect = {
+			every_state = {
+				limit = { 
+					is_core_of = FROM
+					is_controlled_by = ROOT
+					FROM = {
+						is_subject_of = ROOT
+						is_ai = yes
+					}
+					FROM.FROM = {
+						NOT = { has_state_flag = Compliance_Flag }
+					}
+				}
+				set_state_flag = Compliance_Flag
+				set_compliance = 17.5
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					original_tag = SPR
+					OR = {
+						has_war_with = SPA
+						has_war_with = SPB
+						has_war_with = SPC
+						has_war_with = SPD
+					}
+					FROM = {
+						OR = {
+							tag = SPA
+							tag = SPB
+							tag = SPC
+							tag = SPD
+						}
+					}
+					FROM.FROM = {
+						OR = {
+							is_core_of = SPA
+							is_core_of = SPB
+							is_core_of = SPC
+							is_core_of = SPD
+							is_claimed_by = ROOT
+						}
+						not = { has_state_flag = SPR_civil_war_state_cooldown }
+					}
+				}
+				FROM.FROM = {
+					save_event_target_as = SPR_liberated_state
+					set_state_flag = {
+						flag = SPR_civil_war_state_cooldown
+						days = 180
+						value = 1
+					}
+					state_event = { id = EF_events.3 trigger_for = controller }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					original_tag = ENG
+					has_completed_focus = ENG_pan_celtic_campaign
+					FROM.FROM = {
+						OR = {
+							is_core_of = BEL
+							is_core_of = FRA
+							is_core_of = SPR
+							is_core_of = POR
+							is_core_of = SWI
+							is_core_of = AUS
+						}
+						has_resistance = yes
+						is_controlled_by = ENG
+					}
+				}
+				FROM.FROM = {
+					add_compliance = 10
+				}
+			}
+		}
+	}
+
+	######## PRESS CHANGE ########
+
+	#on_daily = {
+	#	effect = {
+	#		every_country = {
+	#			if = {
+	#				limit = {
+	#					OR = {
+	#						has_idea = free_press_fake 
+	#						has_idea = censored_press_fake
+	#						has_idea = resistance_press_fake
+	#						has_idea = productive_press_fake
+	#						has_idea = mobilization_press_fake
+	#						has_idea = aggressive_press_fake
+	#						has_idea = nationalism_press_fake
+	#						has_idea = security_press_fake
+	#					}
+	#				}
+	#				ROOT = {
+	#					if = {
+	#						limit = {
+	#							NOT = {
+	#								has_country_flag = EF_press_changing
+	#							}
+	#						}
+	#						set_country_flag = EF_press_changing
+	#						country_event = { id = EF_events.2 days = 70 }
+	#					}
+	#				}
+	#				if = {
+	#					limit = {
+	#						check_variable = { ROOT.EF_press_variable = 0 }
+	#					}
+	#					set_variable = {
+	#						var = THIS.EF_press_variable
+	#						value = 70
+	#					}
+	#				}
+	#			}
+	#			if = {
+	#				limit = {
+	#					check_variable = { ROOT.EF_press_variable > 0 }
+	#				}
+	#				add_to_variable = {
+	#					var = THIS.EF_press_variable
+	#					value = -1
+	#				}
+	#			}
+	#		}
+	#	}
+	#}
+
+#	on_daily = {
+#	  	effect = {
+#			if = {
+#	  			limit = {
+#	  				is_in_array = {
+#	  					array = global.strong_countries_middle_power
+#	  					value = THIS.id
+#	  				}
+#	  				check_variable = {
+#	  					percentage_of_GDP < 1.00
+#	  				}
+#	  			}
+#	  			remove_from_array = {
+#	  				array = global.strong_countries_middle_power
+#	  				value = THIS.id
+#	  			}
+#	  		}
+#			else_if = {
+#	  			limit = {
+#	  				is_in_array = {
+#	  					array = global.strong_countries_regional_power
+#	  					value = THIS.id
+#	  				}
+#	  				check_variable = {
+#	  					percentage_of_GDP < 3.50
+#	  				}
+#	  			}
+#	  			remove_from_array = {
+#	  				array = global.strong_countries_regional_power
+#	  				value = THIS.id
+#	  			}
+#	  		}
+#			else_if = {
+#	  			limit = {
+#	  				is_in_array = {
+#	  					array = global.strong_countries_rising_power
+#	  					value = THIS.id
+#	  				}
+#	  				check_variable = {
+#	  					percentage_of_GDP < 5.0
+#	  				}
+#	  			}
+#	  			remove_from_array = {
+#	  				array = global.strong_countries_rising_power
+#	  				value = THIS.id
+#	  			}
+#	  		}
+#	  		else_if = {
+#	  			limit = {
+#	  				is_in_array = {
+#	  					array = global.strong_countries_great_power
+#	  					value = THIS.id
+#	  				}
+#	  				check_variable = {
+#	  					percentage_of_GDP < 10.0
+#	  				}
+#	  			}
+#	  			remove_from_array = {
+#	  				array = global.strong_countries_great_power
+#	  				value = THIS.id
+#	  			}
+#	  		}
+#	  		else_if = {
+#	  			limit = {
+#	  				is_in_array = {
+#	  					array = global.strong_countries_super_power
+#	  					value = THIS.id
+#	  				}
+#	  				check_variable = {
+#						percentage_of_GDP < 30.0
+#	  				}
+#	  			}
+#				remove_from_array = {
+# 					array = global.strong_countries_super_power
+# 					value = THIS.id
+#				}
+#	  		}
+#			else = {
+#				
+#			}
+#
+#
+#
+#	  		THIS = {
+#				if = {
+#	  				limit = {  
+#	  					check_variable = {
+#	  						percentage_of_GDP < 3.50
+#	  					}
+#	  					check_variable = {
+#	  						percentage_of_GDP > 1.00
+#	  					}
+#	  					NOT = {
+#	  						is_in_array = {
+#	  							array = global.strong_countries_middle_power
+#	  							value = THIS.id
+#	  						}
+#	  					}
+#	  				}
+#	  				add_to_array = {
+#	  					array = global.strong_countries_middle_power
+#	  					value = THIS.id
+#	  				}
+#	  			}
+#				else_if = {
+#	  				limit = {  
+#	  					check_variable = {
+#	  						percentage_of_GDP < 5.0
+#	  					}
+#	  					check_variable = {
+#	  						percentage_of_GDP > 3.50
+#	  					}
+#	  					NOT = {
+#	  						is_in_array = {
+#	  							array = global.strong_countries_regional_power
+#	  							value = THIS.id
+#	  						}
+#	  					}
+#	  				}
+#	  				add_to_array = {
+#	  					array = global.strong_countries_regional_power
+#	  					value = THIS.id
+#	  				}
+#	  			}
+#				else_if = {
+#	  				limit = {  
+#	  					check_variable = {
+#	  						percentage_of_GDP > 5.0
+#	  					}
+#	  					check_variable = {
+#	  						percentage_of_GDP < 10.0
+#	  					}
+#	  					NOT = {
+#	  						is_in_array = {
+#	  							array = global.strong_countries_rising_power
+#	  							value = THIS.id
+#	  						}
+#	  					}
+#	  				}
+#	  				add_to_array = {
+#	  					array = global.strong_countries_rising_power
+#	  					value = THIS.id
+#	  				}
+#	  			}
+#				else_if = {
+#	  				limit = {  
+#	  					check_variable = {
+#	  						percentage_of_GDP > 10.0
+#	  					}
+#	  					check_variable = {
+#	  						percentage_of_GDP < 30.0
+#	  					}
+#	  					NOT = {
+#	  						is_in_array = {
+#	  							array = global.strong_countries_great_power
+#	  							value = THIS.id
+#	  						}
+#	  					}
+#	  				}
+#	  				add_to_array = {
+#	  					array = global.strong_countries_great_power
+#	  					value = THIS.id
+#	  				}
+#	  			}
+#	  			else_if = {
+#	  				limit = {  
+#	  					check_variable = {
+#	  						percentage_of_GDP > 30.0
+#	  					}
+#	  					NOT = {
+#	  						is_in_array = {
+#	  							array = global.strong_countries_regional_power
+#	  							value = THIS.id
+#	  						}
+#	  					}
+#	  				}
+#	  				add_to_array = {
+#	  					array = global.strong_countries_super_power
+#	  					value = THIS.id
+#	  				}
+#	  			}
+#				else = {
+#					
+#				}
+#	  		}
+#
+#
+#	  		#clear_array = global.strong_countries_super_power
+#	 # 		#	clear_array = global.strong_countries_great_power
+#	 # 		#	clear_array = global.strong_countries_rising_power
+#	 # 		#	clear_array = global.strong_countries_regional_power
+#	 # 		#	clear_array = global.strong_countries_middle_power
+#	  	}
+#	}
+
+	on_monthly_TUR = {
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						has_completed_focus = TUR_establish_the_oguz_empire
+						has_stability < 0.45
+						NOT = {
+							has_country_flag = TUR_kemalist_revolt
+						}
+					}
+				}
+				random = {
+					chance = 50
+					country_event = { id = bftb_turkey.170 }
+					set_country_flag = TUR_kemalist_revolt
+				}
+			}
+		}
+	}
+
+	######## FACTORY RIGHTS ########
+
+	on_monthly = {
+		effect = {
+			THIS = {
+				if = {
+					limit = {  
+						check_variable = {
+							mounthly_var < 13
+						}
+					}
+					add_to_variable = {
+						var = mounthly_var
+						value = 1
+					}
+				}
+				if = {
+					limit = {  
+						check_variable = {
+							var = mounthly_var
+							value = 12
+							compare = equals
+						}
+					}
+					set_variable = {
+						var = mounthly_var
+						value = 0
+					}
+					add_to_variable = {
+						var = factory_right
+						value = 5
+						tooltip = add_factory_tt
+					}
+					add_to_variable = {
+						var = factory_right_limit
+						value = 5
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							is_on_continent = south_america
+						}
+						NOT = { has_idea = BRA_south_american_country }
+					}
+					add_ideas = BRA_south_american_country
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							NOT = { is_on_continent = south_america }
+						}
+						has_idea = BRA_south_american_country
+					}
+					remove_ideas  = BRA_south_american_country
+				}
+			}
+			if = {
+				limit = {
+					TUR = { has_completed_focus = TUR_Ashes_of_the_Fallen_Empire }
+				}
+				TUR = {
+					every_subject_country = {
+						limit = {
+							AND = {
+								is_subject_of = TUR
+								NOT = {
+									has_idea = TUR_Ashes_of_the_Fallen_Empire
+								}
+							}
+						}
+						add_ideas = TUR_Ashes_of_the_Fallen_Empire
+					}
+				}
+			}
+		}
+
+		#War Crime Modifier
+		effect = {
+			THIS = {
+				if = { # Add War Crime Rate Modifier
+					limit = {
+						NOT = { has_dynamic_modifier = { modifier = war_crime_rate_modifier } }
+						OR = { 
+							is_special_project_completed = sp:sp_nuclear_reactor
+							num_of_nukes > 0 
+							check_variable = { war_crime_rate > 0 }
+						}
+					}
+					add_dynamic_modifier = { modifier = war_crime_rate_modifier }
+				}
+
+				if = { # Calculate War Crime Rate
+					limit = { check_variable = { war_crime_rate > 0 } }
+					set_variable = { ROOT.war_crime_rate_calculate = ROOT.war_crime_rate }
+					set_variable = { ROOT.war_crime_rate_calculate_pp = ROOT.war_crime_rate }
+					set_variable = { ROOT.war_crime_rate_conscription = ROOT.war_crime_rate }
+
+					if = { # Specific Countries
+						limit = {
+							original_tag = JAP
+							OR = {
+								has_government = fascism
+								has_government = neutrality
+							}
+						}
+
+						divide_variable = {
+							var = ROOT.war_crime_rate_calculate
+							value = -10
+						}
+						divide_variable = {
+							var = ROOT.war_crime_rate_conscription
+							value = -100
+						}
+					}
+					else = { # Default
+						divide_variable = {
+							var = ROOT.war_crime_rate_calculate
+							value = -2
+						}
+						divide_variable = {
+							var = ROOT.war_crime_rate_conscription
+							value = -40
+						}
+					}
+					divide_variable = {
+						var = ROOT.war_crime_rate_calculate_pp
+						value = -2
+					}
+
+
+					set_variable = { ROOT.war_crime_rate_stability = ROOT.war_crime_rate_calculate }
+					set_variable = { ROOT.war_crime_rate_political = ROOT.war_crime_rate_calculate_pp }
+					set_variable = { ROOT.war_crime_rate_population = ROOT.war_crime_rate_conscription }
+					set_variable = { ROOT.war_crime_rate_war = ROOT.war_crime_rate_calculate }
+
+					subtract_from_variable = {
+						var = ROOT.war_crime_rate
+						value = 0.02
+					}
+					clamp_variable = {
+						var = ROOT.war_crime_rate
+						min = 0
+						max = 1
+					}
+				}
+			}
+			#force_update_map_mode = { mapmode = TWR_government_type_map_mode }
+			#force_update_map_mode = { mapmode = TWR_industrialisation_map_mode }
+		}
+	}
+
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = remove_all_multiplayer_tools
+						option = BLOCKED
+					}
+				}
+				set_global_flag = EF_multiplayer_tools_available_flag
+			}
+		}
+		effect = {
+			every_country = {
+				limit = {
+					OR = { 
+						has_idea = undisturbed_isolation
+						has_idea = undisturbed_isolation_lesser
+						has_idea = isolation
+					}
+				}
+				set_country_flag = isolation_country
+			}
+		}
+		effect = {
+			random_country = {
+				set_global_flag = scornful_insults_mod_enabled
+			}
+		}
+		effect = {
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = CHI
+						original_tag = PRC
+						original_tag = GXC
+						original_tag = YUN
+						original_tag = SHX
+						original_tag = XSM
+						original_tag = GDC
+						original_tag = SND
+						original_tag = SIC
+						original_tag = NXM
+						original_tag = GSM
+						original_tag = XIC
+						original_tag = KHM
+						original_tag = KUM
+						original_tag = RNG
+						original_tag = HBC
+						original_tag = TNG
+					}
+				}
+				add_to_array = { global.ef_chi_countries = THIS }
+			}
+		}
+		effect = {
+			every_state = {
+				limit = { 
+					is_core_of = CHI
+					has_resources_amount = {
+						resource = coal
+						amount > 1
+					}
+				}
+				add_to_array = {
+					array = global.ef_chi_coal_states
+				}
+			}
+		}
+		effect = {
+			random_country = {
+				limit = { is_ai = no }
+				country_event = {
+					id = prca.6
+					days = 1
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = { ROOT.marked_states = 0 }
+			}
+		}
+		effect = {
+			FRA = {
+				# You can put this in the country's history file alternatively too.
+				parliament_gui_initial = yes
+			}
+			if = { 
+				limit = { 
+					NOT = { 
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+				MEN = { #Mongol United Gov
+					country_event = { id = EF_events.4 days = 900 random_days = 100 } 
+				}
+			}
+			MON = { #Genden and Amar
+				country_event = { id = EF_events.4 days = 80 } 
+				country_event = { id = EF_events.4 days = 1163 } 
+			}
+			SAU = { #Old Flag
+				country_event = { id = EF_events.4 days = 360 random_days = 60 }
+			}
+			TUR = { #Old Flag
+				country_event = { id = EF_events.4 days = 150 }
+			}
+			CAN = {
+				set_variable = { CAN_quebec_state_reform_recruitable = 0.10 }
+				set_variable = { CAN_quebec_state_reform_slots = 0.10 }
+				set_variable = { CAN_quebec_state_reform_resources = 0.10 }
+				set_variable = { CAN_quebec_state_reform_building = 0.10 }
+				set_variable = { CAN_british_state_reform_political = -0.30 }
+				set_variable = { CAN_british_state_reform_population = -0.40 }
+			}
+			RAJ = {
+				if = {
+					limit = { has_dlc = "Together for Victory" }
+					
+					set_variable = { RAJ_agrarian_society_production_value = 0 }
+				}
+			}
+			every_country = {
+				add_to_variable = {
+					var = factory_right
+					value = 10
+					tooltip = add_factory_tt
+				}
+				add_to_variable = {
+					var = factory_right_limit
+					value = 10
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							is_on_continent = south_america
+						}
+						NOT = { has_idea = BRA_south_american_country }
+					}
+					add_ideas = BRA_south_american_country
+				}
+			}
+			TUR = { 
+				set_variable = { current_religion_icon_frame = 4 } 
+				add_ideas = neutrality_influence_idea
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = azerbaycan_rule
+						option = ALLOWED
+					}
+				}
+				SOV = {
+					add_resource = {
+						type = oil
+						amount = 75
+						state = 232
+					}
+					add_resource = {
+						type = oil
+						amount = 10
+						state = 229
+					}
+					229 = { remove_core_of = SOV }
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = azerbaycan_rule
+						option = BLOCKED
+					}
+				}
+				SOV = {
+					annex_country = {
+						target = AZR
+						transfer_troops = no
+					}
+					AZR = {
+						set_politics = {
+							ruling_party = democratic
+							last_election = "1920.4.4"
+							election_frequency = 200
+							elections_allowed = no
+						}
+					}
+					add_resource = {
+						type = oil
+						amount = 75
+						state = 229
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = allow_cyprus_rule
+						option = ALLOWED
+					}
+				}
+				CYP = {
+					random_core_state = {
+						prioritize = { 183 }
+						limit = {
+							is_fully_controlled_by = PREV
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+					random_core_state = {
+						prioritize = { 183 }
+						limit = {
+							is_fully_controlled_by = PREV
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = allow_cyprus_rule
+						option = BLOCKED
+					}
+				}
+				ENG = {
+					annex_country = {
+						target = CYP
+						transfer_troops = no
+					}
+					#transfer_state = 183
+				}
+				183 = {
+					set_compliance = 70
+					set_resistance = 0
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = delete_states
+						option = ALLOWED
+					}
+				}
+				USA = { add_offsite_building = { type = industrial_complex level = 8 } }
+				BRA = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				COL = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				ECU = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				PRU = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				BOL = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				CHL = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				PAR = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				ARG = {
+					every_owned_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				URG = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				VEN = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = delete_states
+						option = ALLOWED_BRA
+					}
+				}
+				USA = { add_offsite_building = { type = industrial_complex level = 8 } }
+				COL = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				ECU = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				PRU = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				BOL = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				CHL = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				PAR = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				ARG = {
+					every_owned_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				URG = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				VEN = {
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = ef_historical_only
+						option = ENABLED_EU
+					}
+				}
+				set_global_flag = his_only
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = JAP
+							original_tag = MAN
+							original_tag = MEN
+							original_tag = CHI
+							original_tag = SIA
+							original_tag = INS
+							original_tag = NZL
+							original_tag = PHI
+						}
+						NOT = {
+							OR = {
+								original_tag = HOL # Apparently they get included when they go into exile in Curacao
+								original_tag = ENG # Just in case
+								original_tag = FRA # Just in case
+							}
+						}
+					}
+					every_core_state = {
+						transfer_state_to = AFG
+						add_core_of = AFG
+						remove_core_of = PREV
+						remove_claim_by = PREV
+						remove_core_of = PRC
+						remove_core_of = YUN
+						remove_core_of = GXC
+						remove_core_of = SIK
+						remove_core_of = TNG
+						remove_core_of = TIB
+					}
+				}
+				ARG = {
+					every_owned_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = MEX
+							original_tag = USA
+						}
+					}
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+						remove_core_of = PREV
+						remove_claim_by = PREV
+					}
+				}
+				USA = {
+					every_controlled_state = {
+						add_core_of = ATC
+					}
+				}
+				JAP = {
+					every_controlled_state = {
+						add_core_of = AFG
+					}
+				}
+				AFG = {
+					transfer_state = 525
+					transfer_state = 527
+					add_state_core = 525
+					add_state_core = 527
+					annex_country = { target = JAP transfer_troops = no }
+				}
+				ATC = {
+					annex_country = { target = USA transfer_troops = no }
+				}
+			}
+
+
+-- Hist
+	
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = his_only
+					}
+				}
+				set_global_flag = his_only
+				set_global_flag = EF_HIST_MP_ONLY_FLAG
+				set_global_flag = KR_no_unit_limits
+				TUR = {
+					release_on_controlled = KUR
+				}
+				POR = {
+					release = ANG
+					release = MZB
+				}
+				every_country = {
+					limit = {
+						OR = {
+							capital_scope = { is_on_continent = south_america }
+							original_tag = CUB
+							original_tag = HAI
+							original_tag = DOM
+						}
+						NOT = {
+							OR = {
+								original_tag = HOL # Apparently they get included when they go into exile in Curacao
+								original_tag = ENG # Just in case
+								original_tag = FRA # Just in case
+							}
+						}
+					}
+					every_core_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+						remove_core_of = PREV
+						remove_claim_by = PREV
+						remove_core_of = BZE
+						remove_core_of = BUS
+						remove_core_of = IBR
+						remove_core_of = BRC
+						remove_core_of = SAO
+						remove_core_of = RPA
+						remove_core_of = DRJ
+					}
+				}
+				ARG = {
+					every_owned_state = {
+						transfer_state_to = ATC
+						add_core_of = ATC
+					}	
+				}
+				ATC = {
+					add_victory_points = { province = 5023 value = 50 }
+					set_capital = { state = 649 }
+					#set_province_name = { id = 5023 name = "Batuhan abi moda daha çok bak" }
+					swap_ideas = {
+						remove_idea = south_america_neutral_zone_idea
+						add_idea = EF_neutral_zone_idea
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = SAU
+							original_tag = OMA
+							original_tag = TIB
+							original_tag = LIB
+							original_tag = TUR
+							original_tag = POR
+							original_tag = SWE
+							original_tag = SWI
+							original_tag = ANG
+							original_tag = MZB
+							original_tag = TNG
+						}
+						NOT = {
+							OR = {
+								original_tag = HOL # Just in case
+								original_tag = ENG # Just in case
+								original_tag = FRA # Just in case
+							}
+						}
+					}
+					every_owned_state = {
+						transfer_state_to = AFG
+						add_core_of = AFG
+						remove_core_of = PREV
+						remove_claim_by = PREV
+						remove_core_of = TNG
+						remove_core_of = KUR
+					}
+				}
+				AFG = {
+					add_stability = 0.5
+					set_cosmetic_tag = AFG_neutral_zone
+					transfer_state = 296
+					transfer_state = 350
+					transfer_state = 352
+					transfer_state = 353
+					transfer_state = 800
+					transfer_state = 702
+					transfer_state = 721
+					add_state_core = 293
+					add_state_core = 296
+					add_state_core = 350
+					add_state_core = 352
+					add_state_core = 353
+					add_state_core = 800
+					add_state_core = 702
+					add_state_core = 721
+					#transfer_state = 603
+					#transfer_state = 748
+					#transfer_state = 750
+					#transfer_state = 605
+					#transfer_state = 744
+					add_ideas = EF_neutral_zone_idea_afg
+					annex_country = { target = YEM transfer_troops = no }
+					give_resource_rights = { receiver = SPR state = 181 }
+					add_victory_points = { province = 6050 value = 30 }
+					set_capital = { state = 141 }
+					#set_province_name = { id = 6050 name = "Maxmarine getirdiğimiz ülkeleri oyna" }
+					create_country_leader = {
+						name = "Council"
+						desc = "POLITICS_ATC_COUNCIL_DESC"
+						picture = "gfx/leaders/CHL/portrait_chl_anarchist_commune.dds"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+						}
+					}
+					load_focus_tree = atc_focus
+					remove_dynamic_modifier = { modifier = AFG_subsistence_economy_modifier }
+					remove_dynamic_modifier = { modifier = AFG_quami_modifier }
+					remove_ideas = AFG_mohammad_zahir_shah_ns
+					remove_ideas = AFG_pashtunwali
+					remove_ideas = AFG_turkish_military_mission
+				}
+				FRA = {
+					annex_country = { target = SYR transfer_troops = NO }
+					annex_country = { target = LEB transfer_troops = NO }
+							every_state = {
+        					limit = {
+           					 owner = FRA
+            				is_core_of = LEB
+        							}
+        					add_compliance = 60
+							}
+							every_state = {
+        					limit = {
+           					 owner = FRA
+            				is_core_of = SYR
+        							}
+        					add_compliance = 60
+							}
+				}
+				ENG = {
+					annex_country = { target = PAL transfer_troops = NO }
+					every_state = {
+        			limit = {
+           			owner = ENG
+            		is_core_of = PAL
+        			}
+        			add_compliance = 60
+					}
+					EUYL_add_1_civilian = yes
+					EUYL_add_1_military = yes
+					add_relation_modifier = {
+						target = CAN
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = RAJ
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = SAF
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = NZL
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = AST
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = USA
+						modifier = USA_allies_military_developments
+					}
+				}
+				RAJ = { 
+					add_state_core = 323
+					add_state_core = 324
+					annex_country = { target = NEP transfer_troops = no } 
+					annex_country = { target = BHU transfer_troops = no } 
+					add_relation_modifier = {
+						target = CAN
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = ENG
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = SAF
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = NZL
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = AST
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = USA
+						modifier = USA_allies_military_developments
+					}
+				}
+				CHI = {
+					annex_country = { target = GXC transfer_troops = yes }
+					annex_country = { target = GDC transfer_troops = yes }
+					annex_country = { target = SIC transfer_troops = yes }
+					annex_country = { target = XIC transfer_troops = yes }
+					annex_country = { target = SND transfer_troops = yes }
+					annex_country = { target = HBC transfer_troops = yes }
+					annex_country = { target = NXM transfer_troops = yes }
+					annex_country = { target = GSM transfer_troops = yes }
+					annex_country = { target = SHX transfer_troops = yes }
+					annex_country = { target = PRC transfer_troops = yes }
+					annex_country = { target = YUN transfer_troops = yes }
+					annex_country = { target = XSM transfer_troops = yes }
+					annex_country = { target = KHM transfer_troops = yes }
+					annex_country = { target = SIK transfer_troops = yes }
+					create_faction = chinese_united_front
+				}
+				PHI = {
+				every_owned_state = {
+						transfer_state_to = USA
+					}
+				}	
+				COG = {
+				every_owned_state = {
+						transfer_state_to = FRA
+						add_core_of = FRA
+					}
+				}	
+				SIK = { annex_country = { target = TNG transfer_troops = no } }
+				MAN = { 
+					annex_country = { target = MEN transfer_troops = yes } 
+					add_state_core = 612
+					add_state_core = 611
+					612 = {
+						add_extra_state_shared_building_slots = 6
+						add_building_construction = {
+							type = industrial_complex
+							level = 6
+							instant_build = yes
+						}
+					}
+					611 = {
+						add_extra_state_shared_building_slots = 4
+						add_building_construction = {
+							type = arms_factory
+							level = 4
+							instant_build = yes
+						}
+					}
+				}
+				GER = {
+					GER_lower_naval_treaty = yes
+					EUYL_add_2_civilian = yes
+					EUYL_add_1_civilian = yes
+					EUYL_add_4_military = yes
+					EUYL_add_4_military = yes
+					swap_ideas = {
+						remove_idea = GER_rapid_militarize
+						add_idea = GER_rapid_militarize_hist
+					}
+					add_relation_modifier = {
+						target = ROM
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = HUN
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = ITA
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = BUL
+						modifier = GER_axis_military_developments
+					}
+				}
+				ITA = {
+					annex_country = { target = AFA transfer_troops = yes }
+					EUYL_add_2_civilian = yes
+					EUYL_add_1_military = yes
+					add_relation_modifier = {
+						target = ROM
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = HUN
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = GER
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = BUL
+						modifier = GER_axis_military_developments
+					}
+				}
+				HUN = {
+					add_relation_modifier = {
+						target = ROM
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = ITA
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = GER
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = BUL
+						modifier = GER_axis_military_developments
+					}
+				}
+				ROM = {
+					add_relation_modifier = {
+						target = HUN
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = ITA
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = BUL
+						modifier = GER_axis_military_developments
+					}
+				}
+				BUL = {
+					add_relation_modifier = {
+						target = HUN
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = ITA
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = GER
+						modifier = GER_axis_military_developments
+					}
+					add_relation_modifier = {
+						target = ROM
+						modifier = GER_axis_military_developments
+					}
+				}
+				JAP = {
+					add_offsite_building = { type = industrial_complex level = 10 }
+					EUYL_add_2_civilian = yes
+					EUYL_add_1_civilian = yes
+					EUYL_add_4_military = yes
+					create_faction = JAP_greater_east_asian_co_prosperity_sphere
+					add_to_faction = MAN
+					swap_ideas = {
+						remove_idea = JAP_kenpeitai_idea
+						add_idea = JAP_kenpeitai_idea_alt
+					}
+				}
+				USA = { 
+					every_state = {
+        			limit = {
+           	 		owner = USA
+            		is_core_of = PHI
+        							}
+        			add_compliance = 100
+					}
+					transfer_state = 685
+					685 = {
+						set_compliance = 70
+						set_resistance = 0
+						set_garrison_strength = 1.0
+					}
+					add_relation_modifier = {
+						target = CAN
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = RAJ
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = SAF
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = NZL
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = AST
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = ENG
+						modifier = USA_allies_military_developments
+					}
+				}
+				CAN = {
+					add_relation_modifier = {
+						target = ENG
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = RAJ
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = SAF
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = NZL
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = AST
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = USA
+						modifier = USA_allies_military_developments
+					}
+				}
+				SAF = {
+					add_relation_modifier = {
+						target = CAN
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = RAJ
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = ENG
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = NZL
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = AST
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = USA
+						modifier = USA_allies_military_developments
+					}
+				}
+				AST = {
+					add_relation_modifier = {
+						target = CAN
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = RAJ
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = SAF
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = NZL
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = ENG
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = USA
+						modifier = USA_allies_military_developments
+					}
+				}
+				NZL = {
+					add_relation_modifier = {
+						target = CAN
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = RAJ
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = SAF
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = ENG
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = AST
+						modifier = USA_allies_military_developments
+					}
+					add_relation_modifier = {
+						target = USA
+						modifier = USA_allies_military_developments
+					}
+				}
+				TUR = {
+					transfer_state = 797
+				}
+				160 = {
+					add_resource = {
+						type = steel
+						amount = 5
+					}
+				}
+				330 = {
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+					add_resource = {
+						type = tungsten
+						amount = 10
+					}
+				}
+			}
+			PER = {
+				give_resource_rights = { receiver = ENG state = 413 }
+			}
+			LUX = { add_ideas = BEL_customs_union }
+		}
+		effect = {
+			every_country = { 
+				limit = {
+					is_ai = yes
+					if = {
+						limit = {
+							OR = {
+								has_game_rule = {
+									rule = remove_all_multiplayer_tools
+									option = ALLOWED
+								}
+								has_game_rule = {
+									rule = allow_ai_optimisation
+									option = BLOCKED
+								}
+							}
+						}
+						always = no
+					}
+					else_if = {
+						limit = {
+							has_game_rule = {
+								rule = remove_all_multiplayer_tools
+								option = BLOCKED
+							}
+						}
+						always = yes
+					}
+					NOT = {
+						tag = GER
+						tag = FRA
+						tag = POL
+						tag = ENG
+						tag = SOV
+						tag = USA
+						tag = CAN
+						tag = TUR
+						tag = ROM
+						tag = ITA
+						tag = SPR
+						tag = POR
+						tag = YUG
+						tag = HUN
+						tag = CZE
+						tag = RAJ
+						tag = CHI
+						tag = SHX
+						tag = PRC
+						tag = XSM
+						tag = SIK
+						tag = GXC
+						tag = YUN
+						tag = JAP
+						tag = MAN
+						tag = MEN
+						tag = AST
+						tag = NZL
+						tag = SIA
+						tag = ETH
+						tag = SAF
+						tag = BUL
+						tag = GRE
+						tag = FIN
+						tag = MEX
+						tag = BRA
+						tag = IRQ
+						tag = SAU
+						tag = YEM
+						tag = PER
+						tag = EST
+						tag = LAT
+						tag = LIT
+						tag = NOR
+						tag = SWE
+						tag = DEN
+						tag = TNG
+						tag = TIB
+						tag = SIC
+						tag = XIC
+						tag = GDC
+						tag = NXM
+						tag = GSM
+						tag = KHM
+						tag = IRE
+						tag = SWI
+						tag = INS
+						tag = BRM
+						tag = PHI
+						tag = HBC
+						tag = SND
+						tag = PAL
+					}
+				}
+				add_ideas = ai_optimisation
+				country_lock_all_division_template = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+							rule = remove_all_multiplayer_tools
+							option = ALLOWED
+						}
+					}
+					NOT = {
+						has_game_rule = {
+							rule = allow_ai_optimisation
+							option = BLOCKED
+						}
+					}
+				}
+				if = {
+					limit = {
+						POR = { is_ai = yes }
+					}
+					BRA = { add_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						TUR = { is_ai = yes }
+					}
+					IRQ = { add_ideas = ai_optimisation }
+					SAU = { add_ideas = ai_optimisation }
+					YEM = { add_ideas = ai_optimisation }
+					PER = { add_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						ENG = { is_ai = yes }
+					}
+					IRE = { add_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						SAU = { is_ai = no }
+					}
+					IRQ = { remove_ideas = ai_optimisation }
+					YEM = { remove_ideas = ai_optimisation }
+					OMA = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						PRC = { is_ai = yes }
+					}
+					TIB = { add_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						OR = {
+							GER = { is_ai = no }
+							HUN = { is_ai = no }
+						}
+					}
+					AUS = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						OR = {
+							HOL = { is_ai = no }
+							BEL = { is_ai = no }
+							LUX = { is_ai = no }
+						}
+					}
+					HOL = { remove_ideas = ai_optimisation }
+					BEL = { remove_ideas = ai_optimisation }
+					LUX = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						BRA = { is_ai = no }
+					}
+					ARG = { remove_ideas = ai_optimisation }
+					PAR = { remove_ideas = ai_optimisation }
+					BOL = { remove_ideas = ai_optimisation }
+					COL = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						COL = { is_ai = no }
+					}
+					VEN = { remove_ideas = ai_optimisation }
+					PRU = { remove_ideas = ai_optimisation }
+					ECU = { remove_ideas = ai_optimisation }
+					BRA = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						PRU = { is_ai = no }
+					}
+					COL = { remove_ideas = ai_optimisation }
+					BOL = { remove_ideas = ai_optimisation }
+					ECU = { remove_ideas = ai_optimisation }
+					CHL = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						CHL = { is_ai = no }
+					}
+					ARG = { remove_ideas = ai_optimisation }
+					BOL = { remove_ideas = ai_optimisation }
+					PRU = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						OR = {
+							VEN = { is_ai = no }
+							ECU = { is_ai = no }
+						}
+					}
+					BRA = { remove_ideas = ai_optimisation }
+					COL = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						OR = {
+							URG = { is_ai = no }
+							PAR = { is_ai = no }
+							BOL = { is_ai = no }
+						}
+					}
+					ARG = { remove_ideas = ai_optimisation }
+					BRA = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						ETH = { is_ai = no }
+					}
+					AFA = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						AFG = { is_ai = no }
+					}
+					PER = { remove_ideas = ai_optimisation }
+					IRQ = { remove_ideas = ai_optimisation }
+					AFG = { remove_ideas = ai_optimisation }
+				}
+				if = {
+					limit = {
+						OR = {
+							PER = { is_ai = no }
+							IRQ = { is_ai = no }
+						}
+					}
+					PER = { remove_ideas = ai_optimisation }
+					IRQ = { remove_ideas = ai_optimisation }
+					AFG = { remove_ideas = ai_optimisation }
+					SAU = { remove_ideas = ai_optimisation }
+					YEM = { remove_ideas = ai_optimisation }
+					OMA = { remove_ideas = ai_optimisation }
+				}
+			}
+			every_country = { 
+				limit = {
+					is_ai = no
+					has_idea = ai_optimisation
+				}
+				remove_ideas = ai_optimisation
+				set_rule = {
+					can_not_declare_war = no
+				}
+				country_lock_all_division_template = no	
+			}
+		}
+		effect = {
+			BEL = {
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = BEL_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = BEL_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						25 = {
+							BEL = {
+								set_country_flag = BEL_AI_RANDOM_HISTORICAL
+							}
+						}
+						20 = {
+							BEL = {
+								set_country_flag = BEL_AI_RANDOM_FASCIST_PUPPET
+							}
+						}
+						10 = {
+							BEL = {
+								set_country_flag = BEL_AI_RANDOM_FASCIST_DUTCHLAND
+							}
+						}
+						15 = {
+							BEL = {
+								set_country_flag = BEL_AI_RANDOM_SOCIAL_DEMOCRACY
+							}
+						}
+						10 = {
+							BEL = {
+								set_country_flag = BEL_AI_RANDOM_COMMUNIST
+							}
+						}
+						20 = {
+							BEL = {
+								set_country_flag = BEL_AI_RANDOM_MONARCHY
+							}
+						}
+					}
+				}
+			}
+			PER = {
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = PER_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = PER_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						25 = {
+							PER = {
+								set_country_flag = PER_AI_RANDOM_HISTORICAL
+							}
+						}
+						20 = {
+							PER = {
+								set_country_flag = PER_AI_RANDOM_DEMOCRATIC
+							}
+						}
+						10 = {
+							PER = {
+								set_country_flag = PER_AI_RANDOM_EMBRACE_PERSIAN
+							}
+						}
+						15 = {
+							PER = {
+								set_country_flag = PER_AI_RANDOM_QAJAR
+							}
+						}
+						10 = {
+							PER = {
+								set_country_flag = PER_AI_RANDOM_COMMUNIST
+							}
+						}
+						20 = {
+							PER = {
+								set_country_flag = PER_AI_RANDOM_ISLAMIST
+							}
+						}
+					}
+				}
+			}
+			SAU = {
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = SAU_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = SAU_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						25 = {
+							SAU = {
+								set_country_flag = SAU_AI_RANDOM_HISTORICAL
+							}
+						}
+						20 = {
+							SAU = {
+								set_country_flag = SAU_AI_RANDOM_ALLIES_SIDE
+							}
+						}
+						20 = {
+							SAU = {
+								set_country_flag = SAU_AI_RANDOM_AXIS_SIDE
+							}
+						}
+						15 = {
+							SAU = {
+								set_country_flag = SAU_AI_RANDOM_ARAB_LEAGUE
+							}
+						}
+						20 = {
+							SAU = {
+								set_country_flag = SAU_AI_RANDOM_ISLAMIC_STATE
+							}
+						}
+					}
+				}
+			}
+		}
+
+		effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 528
+						state = 530
+						state = 529
+						state = 531
+						state = 532
+						state = 535
+						state = 282
+						state = 534
+						state = 533
+						state = 536
+						state = 526
+						state = 537
+						state = 555
+						state = 611
+						state = 612
+						state = 328
+						state = 610
+						state = 714
+						state = 715
+						state = 716
+						state = 717
+						state = 761
+						state = 743
+						state = 1038
+						state = 614
+						state = 597
+						state = 608
+						state = 525
+						state = 527
+						state = 607
+						state = 615
+						state = 621
+						state = 1018
+						state = 1020
+						state = 1028
+						state = 1029
+						state = 1030
+						state = 1031
+						state = 1039
+						state = 1043
+						state = 1019
+						state = 609
+						state = 745
+					}
+				}
+				set_state_flag = JAP_greater_states_flag
+			}
+		}
+	}
+
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					has_variable = last_insult_sent_this_amount_of_days_ago
+				}
+				clear_variable = last_insult_sent_this_amount_of_days_ago
+			}
+		}
+		effect = {
+			ROOT = {
+				if = { 
+					limit = {
+						check_variable = { ROOT.peace_var > 8 }
+					}
+					set_variable = {
+						var = ROOT.peace_var
+						value = 0
+					}
+				} 
+				else_if = { 
+					limit = {
+						check_variable = { ROOT.peace_var > 0 }
+					}
+					add_to_variable = {
+						var = ROOT.peace_var
+						value = 1
+					}
+				} 
+			}
+		}
+	}
+	
+	on_daily_FRA = {
+		effect = {
+			if = {
+				limit = {
+					FRA = {
+						is_faction_leader = yes
+						is_in_faction_with = ENG
+						has_completed_focus = UFRA_the_napoleon_referundum
+						NOT = { is_subject_of = ENG }
+					}
+					ENG = {
+						NOT = { is_subject_of = FRA }
+					}
+				}
+				FRA = { remove_from_faction = ENG }
+			}
+			else_if = {
+				limit = {  
+					FRA = { 
+						is_in_faction_with = ENG
+						has_completed_focus = UFRA_the_napoleon_referundum
+						NOT = { is_subject_of = ENG }
+					}
+					ENG = {
+						NOT = { is_subject_of = FRA }
+					}
+				}
+				FRA = {
+					leave_faction = yes
+				}
+			}
+		}
+	}
+	
+	on_daily_TUR = {
+		effect = {
+			if = {
+				limit = { 
+					NOT = {
+						has_global_flag = EF_TUR_the_montreux_convention
+						has_country_flag = EF_current_dard_strait_trigger_1
+					}
+					NOT = { has_country_flag = TUR_strait_compromise_set }
+				}
+				set_country_flag = EF_current_dard_strait_trigger_1
+			}
+			else_if = {
+				limit = { 
+					OR = {
+						has_global_flag = EF_TUR_the_montreux_convention
+						has_country_flag = TUR_strait_compromise_set
+					}
+				}
+				clr_country_flag = EF_current_dard_strait_trigger_1
+			}
+			else = {
+				
+			}			
+			if = {
+				limit = { 
+					NOT = {
+						has_global_flag = EF_TUR_the_montreux_convention
+						has_country_flag = EF_current_ist_strait_trigger_1
+					}
+					has_country_flag = controlled_state_for_ist_strait
+					NOT = { has_country_flag = TUR_strait_compromise_set }
+				}
+				set_country_flag = EF_current_ist_strait_trigger_1
+			}
+			else_if = {
+				limit = { 
+					OR = {
+						has_global_flag = EF_TUR_the_montreux_convention
+						NOT = {
+							has_country_flag = controlled_state_for_ist_strait
+						}
+						has_country_flag = TUR_strait_compromise_set
+					}
+				}
+				clr_country_flag = EF_current_ist_strait_trigger_1
+			}
+			else = {
+				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = EF_current_ist_strait_trigger_2
+					}
+					has_country_flag = controlled_state_for_ist_strait
+					has_country_flag = TUR_strait_compromise_set
+				}
+				set_country_flag = EF_current_ist_strait_trigger_2
+			}
+			else_if = {
+				limit = { 
+					NOT = {
+						OR = {
+							has_country_flag = controlled_state_for_ist_strait
+							has_country_flag = TUR_strait_compromise_set
+						}
+					}
+				}
+				clr_country_flag = EF_current_ist_strait_trigger_2
+			}
+			else = {
+				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_leader = {
+							character = TUR_mustafa_kemal_ataturk
+							ruling_only = yes
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_idea = neutrality_influence_idea
+					}
+					remove_ideas = neutrality_influence_idea
+				}
+				else_if = {
+					limit = {
+						has_idea = american_1
+					}
+					remove_ideas = american_1
+				}
+				else_if = {
+					limit = {
+						has_idea = american_2
+					}
+					remove_ideas = american_2
+				}
+				else_if = {
+					limit = {
+						has_idea = american_3
+					}
+					remove_ideas = american_3
+				}
+				else_if = {
+					limit = {
+						has_idea = soviet_1
+					}
+					remove_ideas = soviet_1
+				}
+				else_if = {
+					limit = {
+						has_idea = soviet_2
+					}
+					remove_ideas = soviet_2
+				}
+				else_if = {
+					limit = {
+						has_idea = soviet_3
+					}
+					remove_ideas = soviet_3
+				}
+			}
+			if = {
+				limit = {  
+					original_tag = TUR
+					has_country_leader = {
+						character = TUR_mustafa_kemal_ataturk
+						ruling_only = yes
+					}
+					is_subject = no
+					if = {
+						limit = {
+							has_completed_focus = TUR_continue_to_prioritise_balkan_integrity
+						}
+						any_allied_country = { 
+							is_major = yes
+							is_balkans = no
+							NOT = { is_subject_of = TUR }
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								PER = {
+									OR = {
+										has_completed_focus = PER_the_sadabat_pact
+										has_completed_focus = PER_formalize_sadabat_pact
+									}
+									is_faction_leader = yes
+								}
+							}
+							any_allied_country = { 
+								is_major = yes
+								NOT = { is_subject_of = TUR }
+								NOT = { original_tag = PER }
+								NOT = { original_tag = IRQ }
+								NOT = { original_tag = AFG }
+							}
+						}
+						else = {
+							any_allied_country = { 
+								is_major = yes
+								NOT = { is_subject_of = TUR }
+							}
+						}
+					}
+				}
+				if = {
+					limit = { 
+						has_completed_focus = TUR_continue_to_prioritise_balkan_integrity
+						OR = {
+							is_faction_leader = yes
+							any_allied_country = {
+								is_balkans = yes
+								is_faction_leader = yes
+							}
+						}
+					}
+					every_other_country = {
+						limit = {
+							is_in_faction_with = TUR
+							is_major = yes
+							is_balkans = no
+						}
+						leave_faction = yes
+					}
+				}
+				else_if = {
+					limit = { is_faction_leader = yes }
+					every_other_country = {
+						limit = {
+							is_in_faction_with = TUR
+							is_major = yes
+						}
+						leave_faction = yes
+					}
+				}
+				else = {
+					TUR = {
+						leave_faction = yes
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					check_variable = { party_popularity@democratic > party_popularity@communism }
+				}
+				set_variable = { democrat_party = party_popularity@democratic }
+				subtract_from_temp_variable = { democrat_party = party_popularity@communism }
+				if = {
+					limit = {
+						check_variable = { democrat_party > 0.05 }
+					}
+					add_to_variable = { popularity_level = 1 }
+					set_variable = { current_religion_icon_frame = 5 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { democrat_party > 0.10 }
+					}
+					add_to_variable = { popularity_level = 2 }
+					set_variable = { current_religion_icon_frame = 6 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { democrat_party > 0.15 }
+					}
+					add_to_variable = { popularity_level = 3 }
+					set_variable = { current_religion_icon_frame = 7 }
+				}
+			}
+			
+			if = {
+				limit = {
+					check_variable = { party_popularity@democratic < party_popularity@communism }
+				}
+				set_variable = { communism_party = party_popularity@communism }
+				subtract_from_temp_variable = { communism_party = party_popularity@democratic }
+				if = {
+					limit = {
+						check_variable = { communism_party > 0.05 }
+					}
+					add_to_variable = { popularity_level = -1 }
+					set_variable = { current_religion_icon_frame = 3 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { communism_party > 0.10 }
+					}
+					add_to_variable = { popularity_level = -2 }
+					set_variable = { current_religion_icon_frame = 2 }
+				}
+				else_if = {
+					limit = {
+						check_variable = { communism_party > 0.15 }
+					}
+					add_to_variable = { popularity_level = -3 }
+					set_variable = { current_religion_icon_frame = 1 }
+				}
+			}
+			
+			else_if = {
+				limit = {
+					OR = {
+						check_variable = { party_popularity@democratic = party_popularity@communism }
+						check_variable = { party_popularity@democratic > party_popularity@communism }
+						check_variable = { party_popularity@democratic < party_popularity@communism }
+					}
+				}
+				set_variable = { popularity_level = 0 }
+				set_variable = { current_religion_icon_frame = 4 }
+			}
+		}
+		effect = {
+			if = {
+				limit = {  
+					is_in_faction = yes
+					is_faction_leader = no
+					is_subject = no
+					has_completed_focus = TUR_nihal_atsiz_movement
+					NOT = { 
+						all_allied_country = {
+							OR = {		
+								original_tag = KAZ
+								original_tag = TUR
+								original_tag = TAN
+								original_tag = AZR
+								original_tag = TMS
+								original_tag = UZB
+								original_tag = KYR
+								original_tag = ETS
+								original_tag = TAT
+								original_tag = CHU
+								original_tag = BSK
+								original_tag = ALT
+								original_tag = TAN
+								original_tag = TAY
+								original_tag = KHA
+								original_tag = YAK
+								AND = {
+ 									original_tag = CYP
+ 									has_cosmetic_tag = CYP_TUR 
+								} 
+							}
+						}
+					}
+				}
+				TUR = {
+					leave_faction = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						OR = {
+							has_idea = TUR_sectarian_woes
+							has_idea = TUR_sectarian_woes_2
+							has_idea = TUR_sectarian_woes_1
+						}
+						all_controlled_state = {
+							NOT = { has_dynamic_modifier = { modifier = kurdish_rebellion } }
+							NOT = { has_dynamic_modifier = { modifier = kurdish_separatism } }
+							NOT = { has_dynamic_modifier = { modifier = kurdish_agitation } }
+							NOT = { has_dynamic_modifier = { modifier = islamist_opposition } }
+							NOT = { has_dynamic_modifier = { modifier = islamist_sedition } }
+							NOT = { has_dynamic_modifier = { modifier = islamist_insurgency } }
+							NOT = { has_dynamic_modifier = { modifier = kemalist_schemers } }
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_idea = TUR_sectarian_woes
+					}
+					remove_ideas = TUR_sectarian_woes
+				}
+				if = {
+					limit = {
+						has_idea = TUR_sectarian_woes_2
+					}
+					remove_ideas = TUR_sectarian_woes_2
+				}
+				if = {
+					limit = {
+						has_idea = TUR_sectarian_woes_1
+					}
+					remove_ideas = TUR_sectarian_woes_1
+				}
+			}
+		}
+	}
+	
+	on_daily_VEN = {
+		effect = {
+			if = {
+				limit = {
+					VEN = {
+						OR = {
+							has_idea = great_depression_3
+							has_idea = great_depression_2
+							has_idea = great_depression
+						}
+					}
+				}
+				if = {
+					limit = { USA = { has_idea = great_depression_2 } }
+					VEN = { 
+						add_ideas = great_depression_2
+						remove_ideas = great_depression
+					}
+				}
+				else_if = {
+					limit = { USA = { has_idea = great_depression_3 } }
+					VEN = { 
+						add_ideas = great_depression_3
+						remove_ideas = great_depression_2
+					}
+				}
+				else_if = {
+					limit = { 
+						USA = { 
+							NOT = {
+								AND = {
+									has_idea = great_depression_3
+									has_idea = great_depression_2
+									has_idea = great_depression
+								}
+							}
+						} 
+					}
+					VEN = { 
+						remove_ideas = great_depression_3 
+						remove_ideas = great_depression_2
+						remove_ideas = great_depression
+					}
+				}
+			}
+		}
+	}
+	on_startup = {
+		effect = {
+			SOV = {
+			add_ideas = { PFN_Vols_6 }
+			}
+			GER = {
+			add_ideas = {PFN_Vols_6_GER}
+			}
+			ITA = {
+			add_ideas = {PFN_Vols_6_ITA}
+			}
+			JAP = {
+			add_ideas = {PFN_Vols_6_JAP}
+			}
+			FRA = {
+			add_ideas = {PFN_Vols_3}
+			}
+			ENG = {
+			add_ideas = {PFN_Vols_3}
+			}
+			CAN = {
+			add_ideas = {PFN_Vols_1}
+			}
+			SAF = {
+			add_ideas = {PFN_Vols_1}
+			}
+			RAJ = {
+			add_ideas = {PFN_Vols_1}
+			}
+			BUL = {
+			add_ideas = {PFN_Vols_1}
+			}
+			HUN = {
+			add_ideas = {PFN_Vols_1}
+			}
+			ROM = {
+			add_ideas = {PFN_Vols_1}
+			}
+			FIN = {
+			add_ideas = {PFN_Vols_1}
+			}
+			AST = {
+			add_ideas = {PFN_Vols_1}
+			}
+
+		}
+		effect = {
+			every_country = {
+			add_ideas = { PFN_Vols_0 }
+			}
+		}
+
+		effect = { 
+			every_country = {
+				 add_timed_idea = {
+				idea = PFN_Produkcja
+				 days = 5
+				 }
+		}
+		}
+
+		effect = { # optimizasyon
+			every_country = {
+				limit = {
+					controls_state = 797
+				}
+				set_country_flag = controlled_state_for_ist_strait
+			}			
+		}
+		effect = {
+			every_country = {
+				if = {
+					limit = { 
+						OR = {
+							has_country_flag = prca_enabled			# Has PRCA enabled?
+							tag = ROOT
+						}
+						NOT = {	AND = {						# Is AI enabled? 
+							is_ai = yes
+							has_game_rule = {
+								rule = prca_ai_campaings_enabled
+								option = BLOCKED
+							}
+						} }
+						NOT = {	AND = {						# Is SOV enabled?
+							tag = SOV
+							has_game_rule = {
+								rule = prca_sov_campaings_enabled
+								option = BLOCKED
+							}
+						} }
+					}
+					set_country_flag = ef_prca_enabled
+				}
+			}
+		}
+	}
+	on_weekly_SOV = { 
+		effect = { 
+			if = { 
+				limit = { 
+					has_completed_focus = SOV_beaten_but_not_defeated
+				}
+				set_country_flag = ef_prca_enabled
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			if = {
+				limit = { prca_enabled_trigger = yes }
+				add_to_variable = {
+					THIS.prca_tokens = THIS.prca_tokens_weekly
+				}
+				THIS_clamp_max_tokens = yes
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					prca_enabled_trigger = yes
+					NOT = {
+						has_country_flag = ef_prca_enabled	
+					}
+				}
+				set_country_flag = ef_prca_enabled
+			}
+		}
+		effect = {
+			every_country = {
+				if = {
+					limit = {
+						is_ai = yes
+						NOT = {
+							has_country_flag = ai_country
+						}
+					}
+					set_country_flag = ai_country
+				}
+				else_if = {
+					limit = { 
+						is_ai = no
+						has_country_flag = ai_country
+					}
+					clr_country_flag = ai_country
+				}
+			}
+		}
+	}
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						tag = JAP 
+						NOT = { has_country_flag = japan_usa_war_flag }
+					}
+					FROM = { 
+						tag = USA
+					}
+				}
+				JAP = {
+					add_timed_idea = { 
+						idea = JAP_tora_tora_tora_idea
+						days = 250
+					}
+					set_country_flag = japan_usa_war_flag
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { 
+						tag = USA
+					}
+					FROM = { 
+						tag = JAP
+						NOT = { has_country_flag = japan_usa_war_flag }
+					}
+				}
+				JAP = {
+					add_timed_idea = { 
+						idea = JAP_tora_tora_tora_idea
+						days = 250
+					}
+					set_country_flag = japan_usa_war_flag
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { is_ai = no }
+					FROM = { 
+						AND = {
+							is_ai = yes 
+							has_idea = ai_optimisation
+						}
+					}
+				}
+				FROM = {
+					if = {
+						limit = {
+							has_idea = ai_optimisation
+						}
+						remove_ideas = ai_optimisation
+					}
+					add_timed_idea = {
+						idea = ai_optimisation_buff
+						days = 365
+					}
+					set_rule = {
+						can_not_declare_war = no
+					}
+					country_lock_all_division_template = no	
+					division_template = {
+						name = "AI Defend Division"
+						division_names_group = SPAN_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							infantry = { x = 2 y = 3 }
+						}
+					}
+					every_owned_state = {
+						create_unit = {
+							division = "division_template = \"AI Defend Division\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+						create_unit = {
+							division = "division_template = \"AI Defend Division\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+							owner = PREV
+						}
+					}
+					
+					if = {
+						limit = {
+							OR = {
+								tag = VEN
+								tag = COL
+							}
+						}
+						every_owned_state = {
+							create_unit = {
+								division = "division_template = \"AI Defend Division\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+								owner = PREV
+							}
+							create_unit = {
+								division = "division_template = \"AI Defend Division\" start_experience_factor = 0 start_equipment_factor = 1.0" 
+								owner = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_country = { 
+						has_character = CHI_gao_zhihang
+					}
+				}
+				random_country = {
+					limit = { has_character = CHI_gao_zhihang }
+					country_event = { id = kmt.690 days = 130 }
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = SOV }
+					FROM = { tag = PER }
+					NOT = { has_global_flag = PER_soviet_war_flag }
+				}
+				set_global_flag = PER_soviet_war_flag
+				PER = {
+					set_country_flag = PER_soviet_war_ongoing_flag
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						original_tag = CYP 
+						has_completed_focus = CYP_legacy_of_hospitallers
+					}
+					FROM = {
+						NOT = { original_tag = CYP }
+						any_controlled_state = {
+							OR = {
+								state = 164
+								state = 116
+								state = 454
+								state = 553
+								state = 677
+								state = 799
+							}
+						}
+					}
+				}
+				FROM = {
+					add_to_array = { 
+						array = CYP.CYP_war_targets_array 
+						value = THIS
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { 
+						original_tag = CYP 
+						has_completed_focus = CYP_legacy_of_hospitallers
+					}
+					ROOT = { 
+						NOT = { original_tag = CYP }
+						any_controlled_state = {
+							OR = {
+								state = 164
+								state = 116
+								state = 454
+								state = 553
+								state = 677
+								state = 799
+							}
+						}
+					}
+				}
+				ROOT = {
+					add_to_array = { 
+						array = CYP.CYP_war_targets_array 
+						value = THIS
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = { 
+						tag = GER
+						has_government = fascism
+					}
+					FROM = {
+						OR = {
+							tag = ENG
+							tag = FRA
+							tag = POL
+						}
+						has_government = democratic
+					}
+				}
+				ROOT = {
+					set_country_flag = GER_started_wwii_flag
+				}
+			}
+		}
+	}
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = GER }
+					FROM = { original_tag = FRA }
+					BEL = {
+						exists = yes
+						has_country_flag = BEL_secret_pact_flag
+						is_subject = no
+						NOT = {
+							is_in_faction_with = FROM
+							has_subject = FROM
+							has_non_aggression_pact_with = FROM
+							has_guaranteed = FROM
+						}
+					}
+				}
+				BEL = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = FRA
+						hostility_reason = asked_to_join
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = { 
+						original_tag = YEM
+						has_completed_focus = YEM_further_arming_the_tribal_army
+						has_war_with_major = yes
+						has_civil_war = no 
+						is_subject = no  
+						has_capitulated = no 
+						exists = yes
+						NOT = { has_country_flag = YEM_militas_spawned }
+					}
+				}
+				YEM = {
+					country_event = { id = YEM.5641 hours = 12 } 
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = JAP
+					FROM = { original_tag = USA }
+					NOT = { has_country_flag = japan_usa_war_flag }
+				}
+				JAP = {
+					add_timed_idea = { 
+						idea = JAP_tora_tora_tora_idea
+						days = 250
+					}
+					set_country_flag = japan_usa_war_flag
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = JAP
+					#has_completed_focus = JAP_intervene_in_china
+					FROM = { tag = CHI }
+					NOT = { has_global_flag = JAP_declare_war_on_chi_flag }
+				}
+				set_global_flag = JAP_declare_war_on_chi_flag
+			}
+		}
+	}
+
+	on_peace = {
+		effect = {
+			if = {
+				limit = {
+					THIS = {
+						original_tag = YEM
+						has_completed_focus = YEM_further_arming_the_tribal_army
+						has_war_with_major = no
+						has_civil_war = no 
+						is_subject = no  
+						has_capitulated = no 
+						exists = yes
+						has_country_flag = YEM_militas_spawned
+					}
+				}
+				THIS = {
+					country_event = { id = YEM.5642 hours = 12 } 
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					original_tag = PER
+					has_country_flag = PER_soviet_war_ongoing_flag
+					NOT = { has_war_with = SOV }
+				}
+				clr_country_flag = PER_soviet_war_ongoing_flag
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							GER = {
+								exists = yes
+								has_country_flag = GER_started_wwii_flag
+								any_other_country = {
+									OR = {
+										tag = ENG
+										tag = FRA
+										tag = POL
+									}
+									has_government = democratic
+									NOT = { has_war_with = GER }
+								}
+							}
+						}
+						WGR = {
+							exists = yes
+						}
+					}
+				}
+				BEL = { set_country_flag = GER_started_ww2_and_surrendered }
+				GER = { set_country_flag = GER_started_ww2_and_surrendered }
+				WGR = { set_country_flag = GER_started_ww2_and_surrendered }
+			}
+		}
+	}
+	
+	# on_join_faction = {
+	# 	effect = {
+	# 		if = {
+	# 			limit = {
+	# 				tag = FRA
+	# 				FRA = { has_completed_focus = UFRA_the_napoleon_referundum }
+	# 				FROM = {
+	# 					tag = ENG
+	# 				}
+	# 			}
+	# 			always = no
+	# 		}
+	# 	}
+	# }
+
+	on_subject_free = {
+		effect = {
+			if = {
+				limit = {
+					original_tag = CAN
+					original_tag = IRE
+					original_tag = SAF
+					original_tag = NZL
+					original_tag = AST
+					original_tag = MAL
+					original_tag = EGY
+					NOT = { is_subject_of = ENG	}
+					ENG = {
+						OR = {
+							has_country_leader_with_trait = king_of_uk_and_dominions
+							has_country_leader_with_trait = queen_of_uk_and_dominions
+						}
+					}
+				}
+				remove_country_leader_trait = king_of_uk_and_dominions
+				remove_country_leader_trait = queen_of_uk_and_dominions
+			}
+			if = {
+				limit = {
+					original_tag = RAJ
+					NOT = { is_subject_of = ENG	}
+					ENG = {
+						OR = {
+							has_country_leader_with_trait = eng_emperor_of_india
+							has_country_leader_with_trait = eng_empress_of_india
+						}
+					}
+				}
+				remove_country_leader_trait = eng_emperor_of_india
+				remove_country_leader_trait = eng_empress_of_india
+			}
+		}
+	}
+
+	on_civil_war_end_before_annexation = {
+		effect = {
+			#Release BHU and NEP
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = RAJ			
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}	
+					}
+					FROM = {
+						is_subject_of = ENG
+					}
+				}
+				NEP = {
+					if = {
+						limit = {
+							is_subject_of = ENG
+						}
+						ENG = {
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_free
+							}
+						}
+						leave_faction = yes
+					}
+				}
+				BHU = {
+					if = {
+						limit = {
+							is_subject_of = ENG
+						}
+						ENG = {
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_free
+							}
+						}
+						leave_faction = yes
+					}
+				}
+			}
+		}
+	}
+	
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 797 }
+				}
+				FROM = { 
+					clr_country_flag = controlled_state_for_ist_strait
+				}
+				ROOT = { 
+					set_country_flag = controlled_state_for_ist_strait
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 288 }
+				}
+				FROM = { 
+					clr_country_flag = controlled_state_288_for_burma_road
+					if = {
+						limit = { 
+							has_global_flag = target_overlord_gained_flag_controlled_state_288_for_burma_road_flagged
+						}
+						var:target_overlord_gained_flag_controlled_state_288_for_burma_road = {
+							clear_variable = target_overlord_gained_flag_controlled_state_288_for_burma_road 
+							clr_country_flag = controlled_state_288_for_burma_road
+						}
+						clr_global_flag = target_overlord_gained_flag_controlled_state_288_for_burma_road_flagged
+					}
+				}
+				ROOT = {
+					set_country_flag = controlled_state_288_for_burma_road
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						OVERLORD = {
+							set_variable = {
+								var = target_overlord_gained_flag_controlled_state_288_for_burma_road
+							}
+							set_global_flag = target_overlord_gained_flag_controlled_state_288_for_burma_road_flagged
+							set_country_flag = controlled_state_288_for_burma_road
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 325 }
+				}
+				FROM = { 
+					clr_country_flag = controlled_state_325_for_burma_road
+					if = {
+						limit = { 
+							has_global_flag = target_overlord_gained_flag_controlled_state_325_for_burma_road_flagged
+						}
+						var:target_overlord_gained_flag_controlled_state_325_for_burma_road = {
+							clear_variable = target_overlord_gained_flag_controlled_state_325_for_burma_road 
+							clr_country_flag = controlled_state_325_for_burma_road
+						}
+						clr_global_flag = target_overlord_gained_flag_controlled_state_325_for_burma_road_flagged
+					}
+				}
+				ROOT = {
+					set_country_flag = controlled_state_325_for_burma_road
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						OVERLORD = {
+							set_variable = {
+								var = target_overlord_gained_flag_controlled_state_325_for_burma_road
+							}
+							set_global_flag = target_overlord_gained_flag_controlled_state_325_for_burma_road_flagged
+							set_country_flag = controlled_state_325_for_burma_road
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 640 }
+				}
+				FROM = { 
+					clr_country_flag = controlled_state_640_for_burma_road
+					if = {
+						limit = { 
+							has_global_flag = target_overlord_gained_flag_controlled_state_640_for_burma_road_flagged
+						}
+						var:target_overlord_gained_flag_controlled_state_640_for_burma_road = {
+							clear_variable = target_overlord_gained_flag_controlled_state_640_for_burma_road 
+							clr_country_flag = controlled_state_640_for_burma_road
+						}
+						clr_global_flag = target_overlord_gained_flag_controlled_state_640_for_burma_road_flagged
+					}
+				}
+				ROOT = {
+					set_country_flag = controlled_state_640_for_burma_road
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						OVERLORD = {
+							set_variable = {
+								var = target_overlord_gained_flag_controlled_state_640_for_burma_road
+							}
+							set_global_flag = target_overlord_gained_flag_controlled_state_640_for_burma_road_flagged
+							set_country_flag = controlled_state_640_for_burma_road
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 432 }
+				}
+				FROM = { 
+					clr_country_flag = controlled_state_432_for_burma_road
+					if = {
+						limit = { 
+							has_global_flag = target_overlord_gained_flag_controlled_state_432_for_burma_road_flagged
+						}
+						var:target_overlord_gained_flag_controlled_state_432_for_burma_road = {
+							clear_variable = target_overlord_gained_flag_controlled_state_432_for_burma_road 
+							clr_country_flag = controlled_state_432_for_burma_road
+						}
+						clr_global_flag = target_overlord_gained_flag_controlled_state_432_for_burma_road_flagged
+					}
+				}
+				ROOT = {
+					set_country_flag = controlled_state_432_for_burma_road
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						OVERLORD = {
+							set_variable = {
+								var = target_overlord_gained_flag_controlled_state_432_for_burma_road
+							}
+							set_global_flag = target_overlord_gained_flag_controlled_state_432_for_burma_road_flagged
+							set_country_flag = controlled_state_432_for_burma_road
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = { 
+					FROM.FROM = { state = 432 }
+				}
+				FROM = { 
+					clr_country_flag = controlled_state_432_for_burma_road
+					if = {
+						limit = { 
+							has_global_flag = target_overlord_gained_flag_controlled_state_432_for_burma_road_flagged
+						}
+						var:target_overlord_gained_flag_controlled_state_432_for_burma_road = {
+							clear_variable = target_overlord_gained_flag_controlled_state_432_for_burma_road 
+							clr_country_flag = controlled_state_432_for_burma_road
+						}
+						clr_global_flag = target_overlord_gained_flag_controlled_state_432_for_burma_road_flagged
+					}
+				}
+				ROOT = {
+					set_country_flag = controlled_state_432_for_burma_road
+					if = {
+						limit = { 
+							is_subject = yes
+						}
+						OVERLORD = {
+							set_variable = {
+								var = target_overlord_gained_flag_controlled_state_432_for_burma_road
+							}
+							set_global_flag = target_overlord_gained_flag_controlled_state_432_for_burma_road_flagged
+							set_country_flag = controlled_state_432_for_burma_road
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = his_only
+						
+					}
+					GER = {
+						has_war_with = ENG
+						has_war_with = FRA
+						has_war_with = NOR
+						has_completed_focus = GER_operation_weserubung
+					}
+					ENG = {
+						is_in_faction_with = NOR
+					}
+				}
+				if = {
+					limit = {
+						GER = { NOT = { has_country_flag = GER_sweden_resources_flag } }
+						110 = {
+							CONTROLLER = {
+								OR = {
+									tag = GER
+									is_subject_of = GER
+								}
+							}
+						}
+						142 = {
+							CONTROLLER = {
+								OR = {
+									tag = GER
+									is_subject_of = GER
+								}
+							}
+						}
+						143 = {
+							CONTROLLER = {
+								OR = {
+									tag = GER
+									is_subject_of = GER
+								}
+							}
+						}
+						144 = {
+							CONTROLLER = {
+								OR = {
+									tag = GER
+									is_subject_of = GER
+								}
+							}
+						}
+					}
+					GER = { set_country_flag = GER_sweden_resources_flag }
+					AFG = { give_resource_rights = { receiver = GER state = 666 } }
+				}
+				else_if = {
+					limit = {
+						GER = { has_country_flag = GER_sweden_resources_flag }
+						NOT = {
+							110 = {
+								CONTROLLER = {
+									OR = {
+										tag = GER
+										is_subject_of = GER
+									}
+								}
+							}
+							142 = {
+								CONTROLLER = {
+									OR = {
+										tag = GER
+										is_subject_of = GER
+									}
+								}
+							}
+							143 = {
+								CONTROLLER = {
+									OR = {
+										tag = GER
+										is_subject_of = GER
+									}
+								}
+							}
+							144 = {
+								CONTROLLER = {
+									OR = {
+										tag = GER
+										is_subject_of = GER
+									}
+								}
+							}
+						}
+					}
+					GER = { 
+						remove_resource_rights = 666
+						clr_country_flag = GER_sweden_resources_flag
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = BEL
+						has_completed_focus = BEL_declare_absolute_neutrality
+						has_completed_focus = BEL_increase_social_expenditures
+					}
+					FROM.FROM = {
+						NOT = { has_state_flag = BEL_been_taken_by_kingdom_belgium_once }
+					}
+				}
+				FROM.FROM = {
+					add_compliance = 10
+					set_resistance = 0
+					set_state_flag = BEL_been_taken_by_kingdom_belgium_once
+				}
+			}
+		}
+	}
+
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { original_tag = JAP }
+					FROM = { original_tag = MAN }
+					OR = {
+						has_global_flag = his_only
+						
+					}
+				}
+				ROOT = {
+					every_state = {
+						limit = { 
+							is_core_of = MAN
+							is_controlled_by = JAP
+						}
+						add_compliance = 60
+						set_resistance = 1
+						set_garrison_strength = 1.0
+					}
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { original_tag = SOV }
+					FROM = {
+						OR = {
+							original_tag = EST 
+							original_tag = LIT
+							original_tag = LAT
+						}
+						has_country_flag = SOV_ultimatum_sent_flag
+					}
+				}
+				ROOT = {
+					every_state = {
+						limit = { 
+							OR = {
+								is_core_of = EST
+								is_core_of = LIT
+								is_core_of = LAT
+							}
+							is_controlled_by = ROOT
+							NOT = { has_state_flag = SOV_ultimatum_compliance_flag }
+						}
+						set_state_flag = SOV_ultimatum_compliance_flag
+						add_compliance = 50
+						set_resistance = 1
+						set_garrison_strength = 1.0
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT is subject FROM is overlord
+	on_subject_annexed = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						is_ai = yes
+						is_subject_of = FROM
+					}
+					FROM = {
+						is_ai = no
+					}
+				}
+				every_state = {
+					limit = { 
+						is_core_of = ROOT
+						is_controlled_by = FROM
+					}
+					set_resistance = 5
+					set_compliance = 25
+				}
+			}
+		}	
+	}
+
+	#For Iran
+	on_puppet = {
+		effect = { 
+			if = {
+				limit = {
+					original_tag = PER
+					FROM = { 
+						tag = SOU 
+						has_government = communism
+					}
+				}
+				PER = {
+					PER_iraj_eskandari = {
+						add_country_leader_role = {
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = marxism
+								traits = {
+								}
+							}
+							promote_leader = yes
+						}
+					}
+					set_party_name = {
+						ideology = communism
+						long_name = PER_tudeh_party_long
+						name = PER_tudeh_party
+					}
+				}
+			}
+		}
+	}
+
+	#For UK and USA
+	on_ruling_party_change = {
+		#Changing UK Military Modifiers
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = ENG
+					}
+				}
+				#ARMY MODIFIERS
+				if = {
+					limit = {
+						NOT = {
+							has_government = communism
+						}
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = ENG_communist_army_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = ENG_communist_army_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = ENG_royal_army_modifier
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					if =  {
+						limit = {
+							has_dynamic_modifier = { modifier = ENG_royal_army_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = ENG_royal_army_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = ENG_communist_army_modifier
+						}
+					}
+				}
+				#NAVY MODIFIERS
+				if = {
+					limit = {
+						has_government = communism
+					}
+					if =  {
+						limit = {
+							has_dynamic_modifier = { modifier = ENG_rn_dynamic_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = ENG_rn_dynamic_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = ENG_red_navy_dynamic_modifier
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_government = communism
+						}
+					}
+					if =  {
+						limit = {
+							has_dynamic_modifier = { modifier = ENG_red_navy_dynamic_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = ENG_red_navy_dynamic_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = ENG_rn_dynamic_modifier
+						}
+					}
+				}
+				#AIRFORCE
+				if = {
+					limit = {
+						NOT = {
+							has_government = communism
+						}
+					}
+					if =  {
+						limit = {
+							has_dynamic_modifier = { modifier = ENG_communist_air_force_dynamic_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = ENG_communist_air_force_dynamic_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = ENG_royal_air_force_dynamic_modifier
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					if =  {
+						limit = {
+							has_dynamic_modifier = { modifier = ENG_royal_air_force_dynamic_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = ENG_royal_air_force_dynamic_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = ENG_communist_air_force_dynamic_modifier
+						}
+					}
+				}
+			}			
+		}
+		#Changing US Military Modifiers
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = USA
+					}
+				}
+				#ARMY MODIFIERS
+				if = {
+					limit = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_army_communist_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_army_communist_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = USA_army_modifier
+						}
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_army_confederate_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_army_confederate_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = USA_army_modifier
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_army_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_army_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = USA_army_communist_modifier
+						}
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_army_confederate_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_army_confederate_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = USA_army_communist_modifier
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_army_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_army_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = USA_army_confederate_modifier
+						}
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_army_communist_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_army_communist_modifier
+						}
+						add_dynamic_modifier = {
+							modifier = USA_army_confederate_modifier
+						}
+					}
+				}
+				#NAVY MODIFIERS
+				if = {
+					limit = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_navy_communist_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_navy_communist_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_navy_modifier
+					    }
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_navy_confederate_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_navy_confederate_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_navy_modifier
+					    }
+					}
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_navy_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_navy_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_navy_communist_modifier
+					    }
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_navy_confederate_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_navy_confederate_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_navy_communist_modifier
+					    }
+					}
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_navy_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_navy_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_navy_confederate_modifier
+					    }
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_navy_communist_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_navy_communist_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_navy_confederate_modifier
+					    }
+					}
+				}
+				#AIRFORCE MODIFIERS
+				if = {
+					limit = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_airforce_communist_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_airforce_communist_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_airforce_modifier
+					    }
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_airforce_confederate_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_airforce_confederate_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_airforce_modifier
+					    }
+					}
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_airforce_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_airforce_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_airforce_communist_modifier
+					    }
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_airforce_confederate_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_airforce_confederate_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_airforce_communist_modifier
+					    }
+					}
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_airforce_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_airforce_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_airforce_confederate_modifier
+					    }
+					}
+					else_if = {
+						limit = {
+							has_dynamic_modifier = { modifier = USA_airforce_communist_modifier }
+						}
+						remove_dynamic_modifier = {
+							modifier = USA_airforce_communist_modifier
+						}
+						add_dynamic_modifier = {
+						    modifier = USA_airforce_confederate_modifier
+					    }
+					}
+				}
+			}
+		}
+	}
+}
