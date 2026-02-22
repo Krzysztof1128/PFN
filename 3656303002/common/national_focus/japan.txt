@@ -5898,10 +5898,8 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
 				bypass = {
 			Date > 1942.1.1
-		}
 		}
 
 		cancel_if_invalid = yes
@@ -6974,11 +6972,11 @@ focus_tree = {
 			}
 		}
 
+
 		bypass = {
-				bypass = {
-			Date > 1942.1.1
+		Date > 1942.1.1
 		}
-		}
+		
 		bypass_effect = {
 		annex_country = {
 		target = SIA
@@ -7030,7 +7028,9 @@ focus_tree = {
 			}
 		}	
 					}
-
+		bypass = {
+		Date > 1942.1.1
+		}
 	
 		bypass_effect = { 			
 			JAP = {
