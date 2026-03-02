@@ -37,7 +37,6 @@ on_actions = {
 					type = train_equipment_1
 					amount = 82
 				}
-				
 			}
 			SAF = {
 				add_equipment_to_stockpile = {
@@ -152,7 +151,17 @@ on_actions = {
 					producer = GER
 					variant_name = "Panzer I Ausf. A"
 				}
-			}	
+			}
+			JAP = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 30000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 1200
+				}
+			}
 		}
 	}
 }
